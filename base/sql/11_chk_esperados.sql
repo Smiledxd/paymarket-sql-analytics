@@ -180,6 +180,194 @@ INSERT INTO chk.ejercicio_columna (ejercicio_id, orden, nombre, familia, hash_co
     ('s04_reto', 3, N'monto_total', 'numero', 0x738F699D13082F05444683B7F1A0546F5A026ED880E7152EC34C316BBBDA7C36, NULL),
     ('s04_reto', 4, N'es_fin_de_mes', 'numero', 0xC189DAF72036A99BCB01ECDDC87DFC5552BFBA4794D3222E01F028AC91F50E93, N'Vale 1 si la fecha es el último día de su mes y 0 si no.');
 
+INSERT INTO chk.ejercicio (ejercicio_id, sesion, titulo, num_filas, pista_filas, hash_total) VALUES
+    ('s05_e1', 'S05', N'Radiografía de 2025', 1, NULL, 0x78CAC9DA0896DFC426FF3A53489A259201C5C644A501BC838EE94BCD6D950E56);
+INSERT INTO chk.ejercicio_columna (ejercicio_id, orden, nombre, familia, hash_columna, pista) VALUES
+    ('s05_e1', 1, N'operaciones', 'numero', 0x74ED2F525A3400B19DF33B3A1F88BD6F1ED8924DC3995C46AE6881F7A84F2830, N'¿Tus filas son solo las operaciones aprobadas, en soles y de todo 2025?'),
+    ('s05_e1', 2, N'facturacion', 'numero', 0x3E87C0B38D6649BADB6FA5BAD1653E190C3C8D42484CF29DEEFD421D8B3F91A9, NULL),
+    ('s05_e1', 3, N'ticket_promedio', 'numero', 0x3A5F912A21F4FB422611BDD672248788C5950C32FC2CBE4619432B717DF0724C, N'El ticket promedio es el monto promedio de las operaciones que cuentas: revisa que sean solo las aprobadas en soles.'),
+    ('s05_e1', 4, N'ticket_minimo', 'numero', 0x26733E6BE55B5CC1BC02047DCAC99D1D0FC6B2BC4F50AF4685F59439642A9977, NULL),
+    ('s05_e1', 5, N'ticket_maximo', 'numero', 0xBCDF89CA42D26D37A8840A6CA5AA3358245FCEE408C590F9D9502370F355EE4C, NULL);
+
+INSERT INTO chk.ejercicio (ejercicio_id, sesion, titulo, num_filas, pista_filas, hash_total) VALUES
+    ('s05_e2', 'S05', N'Junio 2026 en números', 1, NULL, 0x96018ACF38D62D29342CD8C2E987670ADF9DBD3A2B7414277BAB136D9C91D1D0);
+INSERT INTO chk.ejercicio_columna (ejercicio_id, orden, nombre, familia, hash_columna, pista) VALUES
+    ('s05_e2', 1, N'operaciones_aprobadas', 'numero', 0xB8FBF17FAE208DAB0BBE8D29F0A469C0B83F9A79954E558B3A9412AB7CF82C51, NULL),
+    ('s05_e2', 2, N'cuentas_distintas', 'numero', 0x605D8A049098BA29D1E0DA09ABB848A094D2DE1113BAE536D7BD40311553DB49, N'Una misma cuenta paga muchas veces. ¿Estás contando cuentas o filas?'),
+    ('s05_e2', 3, N'comercios_distintos', 'numero', 0xB40131C3CF3CD830048CA0A6AE3DD3AE7BDC8DCA91478EA1A1168D9116000373, N'Un mismo comercio cobra muchas veces. ¿Estás contando comercios distintos o filas?'),
+    ('s05_e2', 4, N'operaciones_con_promocion', 'numero', 0x44D4C76B176C54F3F7F0C92B593F0F2A82DAE4F5294087318A81E398BDBAB649, N'Cuenta las operaciones que tienen una promoción aplicada, no cuántas promociones distintas hubo.');
+
+INSERT INTO chk.ejercicio (ejercicio_id, sesion, titulo, num_filas, pista_filas, hash_total) VALUES
+    ('s05_e3', 'S05', N'Facturación y ticket promedio por canal', 4, N'Debe salir una fila por canal.', 0x4C9DC4C24DC8EC93CE7BA90FAC74BCDD5ED1F48D9EC16F776DB606D8271608D4);
+INSERT INTO chk.ejercicio_columna (ejercicio_id, orden, nombre, familia, hash_columna, pista) VALUES
+    ('s05_e3', 1, N'canal_id', 'numero', 0xAD25A219F00CCF8526FADCB96CEED4F9A285600F232BD1B8898F56C29FD55E94, NULL),
+    ('s05_e3', 2, N'operaciones', 'numero', 0xBFBF69590D8D2CBDA5FB2F021DDEDEC34A6C26579A63C6C9E99FDE7D25808CC7, NULL),
+    ('s05_e3', 3, N'facturacion', 'numero', 0xC628E1792A299A38DE8A794538CDEE207FACBAC53EAE5DDA3B4CC762B391DD36, N'Solo cuentan las operaciones aprobadas en soles del primer semestre de 2026.'),
+    ('s05_e3', 4, N'ticket_promedio', 'numero', 0x368A3BA4127D451A9C851D2B74CF6486CE6E62EF41217E46C4AD7FDE04BC31F7, NULL);
+
+INSERT INTO chk.ejercicio (ejercicio_id, sesion, titulo, num_filas, pista_filas, hash_total) VALUES
+    ('s05_e4', 'S05', N'Tiempo de respuesta del servidor por canal', 4, NULL, 0x1DD3B4434E2D73E1706B181F76BC2BD9CB0D1194B5BCA1F92F1EA994EFBED59F);
+INSERT INTO chk.ejercicio_columna (ejercicio_id, orden, nombre, familia, hash_columna, pista) VALUES
+    ('s05_e4', 1, N'canal_id', 'numero', 0xAD25A219F00CCF8526FADCB96CEED4F9A285600F232BD1B8898F56C29FD55E94, NULL),
+    ('s05_e4', 2, N'latencia_promedio_ms', 'numero', 0x094E75059881FF94EF6DC933A8E0FD1E5F38404DEDD26EA95F643CAE7F58B2AF, N'latencia_ms es un número entero, y el promedio de enteros en SQL Server también sale entero (se pierden los decimales). Convierte antes de promediar.'),
+    ('s05_e4', 3, N'latencia_maxima_ms', 'numero', 0xE5C4260DA249A932612DAA2A44AD5E673BA593F2691AEC7647F2C6C0270CAFD0, N'Revisa que solo entren las operaciones aprobadas de mayo de 2026.');
+
+INSERT INTO chk.ejercicio (ejercicio_id, sesion, titulo, num_filas, pista_filas, hash_total) VALUES
+    ('s05_reto', 'S05', N'Los 10 comercios que más facturaron en el segundo trimestre', 10, NULL, 0x88547B7F8796B1403242CBECD171F2F3F05A8E6EAEFCD2213F5BECDD77C8E903);
+INSERT INTO chk.ejercicio_columna (ejercicio_id, orden, nombre, familia, hash_columna, pista) VALUES
+    ('s05_reto', 1, N'comercio_id', 'numero', 0xDA040C345637BD32D2A920D40EA10D010BD5661C0E2CFCF9DA69412D6C3EB86E, N'El top es por facturación (de mayor a menor), con desempate por comercio_id menor.'),
+    ('s05_reto', 2, N'operaciones', 'numero', 0x8A22EA95FBD83337A67738A7FE4A2C1C7EE3D59ED3D10E0DFBFD90D1ED0A95C1, NULL),
+    ('s05_reto', 3, N'cuentas_distintas', 'numero', 0xD458BC0679E6B7DF93DC94A4BFD4A69787882B41EF3F733B6F751C21B43EFB96, N'Una cuenta que paga varias veces en el mismo comercio cuenta una sola vez.'),
+    ('s05_reto', 4, N'facturacion', 'numero', 0x548A986793908F85F3B7DD419D7FA7704BF38642C130AD9E96522764810696DD, NULL),
+    ('s05_reto', 5, N'ticket_promedio', 'numero', 0x2E841824063C8ACED45BBF33B32E3D671E768057012223E4EE167376D9593B43, NULL),
+    ('s05_reto', 6, N'comision_total', 'numero', 0xCE2B47B6B3EEB50930491D4CCEB9D30EC922549C0A94EC2FD110FE3A53744E1B, NULL);
+
+INSERT INTO chk.ejercicio (ejercicio_id, sesion, titulo, num_filas, pista_filas, hash_total) VALUES
+    ('s06_e1', 'S06', N'Tasa de aprobación por canal', 4, NULL, 0x691E063F18D324F85C324686059DA3A0E77775704DEE4CA686AEC8342A3449EC);
+INSERT INTO chk.ejercicio_columna (ejercicio_id, orden, nombre, familia, hash_columna, pista) VALUES
+    ('s06_e1', 1, N'canal_id', 'numero', 0xAD25A219F00CCF8526FADCB96CEED4F9A285600F232BD1B8898F56C29FD55E94, NULL),
+    ('s06_e1', 2, N'intentos', 'numero', 0x61144054E243C96B2B2D22E31E63115F61F20496C80341B3DB0557E4CD48C24E, NULL),
+    ('s06_e1', 3, N'aprobadas', 'numero', 0xFA66C5E696B76DDE1B7257E842EAB9E0752D91105C93C5410EE547CB011F91CB, N'Una operación cuenta como aprobada si su codigo_respuesta es ''00''. Las extornadas también fueron aprobadas en su momento.'),
+    ('s06_e1', 4, N'tasa_aprobacion', 'numero', 0xEEAE5E5B06CD9D0BE35A15A05FBDD78923AD67E066669D06B6C0A7F389FF2D31, N'Es aprobadas entre intentos, por 100. Si divides dos enteros, SQL Server devuelve un entero: revisa los decimales.');
+
+INSERT INTO chk.ejercicio (ejercicio_id, sesion, titulo, num_filas, pista_filas, hash_total) VALUES
+    ('s06_e2', 'S06', N'Operaciones por tramo de monto', 3, N'Deben salir 3 filas, una por tramo.', 0x109219E3F14C79B7E45BD7864AFE738B5472F0EFB7136314A55253496D30F0B0);
+INSERT INTO chk.ejercicio_columna (ejercicio_id, orden, nombre, familia, hash_columna, pista) VALUES
+    ('s06_e2', 1, N'tramo', 'texto', 0x4360975010549522A174B8D18F2D46AB2F6BAD9D5381F3DF60CC38900B95B743, N'Los nombres de los tramos son exactamente ''bajo'', ''medio'' y ''alto'', en minúsculas.'),
+    ('s06_e2', 2, N'operaciones', 'numero', 0x095A8557E696E1478B6B3DEA7E9030478F397F45DA2D23A76BDA3E200AB5D716, N'Revisa los límites: 50 exacto va en ''medio'' y 200 exacto va en ''alto''.'),
+    ('s06_e2', 3, N'facturacion', 'numero', 0xC5C59F61807CCAA83012B6391382B88FC086A546949FD7863F8788F730E9504A, NULL);
+
+INSERT INTO chk.ejercicio (ejercicio_id, sesion, titulo, num_filas, pista_filas, hash_total) VALUES
+    ('s06_e3', 'S06', N'Comercios grandes con ticket alto', 30, N'Las dos condiciones son sobre el resumen de cada comercio (cuántas operaciones tuvo y su ticket promedio), no sobre cada operación. ¿Están en el HAVING?', 0xB4D368587633280D660F3DFF2976238E8F1CE337656D660E73FFE55B4F5656E2);
+INSERT INTO chk.ejercicio_columna (ejercicio_id, orden, nombre, familia, hash_columna, pista) VALUES
+    ('s06_e3', 1, N'comercio_id', 'numero', 0x39BE773B47C4097029E6953B309D9A4771437E409CBBFE787F281025F1984EAD, NULL),
+    ('s06_e3', 2, N'operaciones', 'numero', 0xB2D7E0B888DD05C665FF9697A739E52EC285F3E6246CA8D96377F1C6535378A1, NULL),
+    ('s06_e3', 3, N'ticket_promedio', 'numero', 0xE0A3992F050463AEF067051C371D7627CFF846F8B9BC2BE16E6C3505FE186601, NULL);
+
+INSERT INTO chk.ejercicio (ejercicio_id, sesion, titulo, num_filas, pista_filas, hash_total) VALUES
+    ('s06_e4', 'S06', N'Tabla cruzada de rechazos por canal', 4, NULL, 0x01ABCD2E7D08E5D0D738EF6ADD43FFC7750A5CF86D6E6AB564E3BB3EA7D1593B);
+INSERT INTO chk.ejercicio_columna (ejercicio_id, orden, nombre, familia, hash_columna, pista) VALUES
+    ('s06_e4', 1, N'canal_id', 'numero', 0xAD25A219F00CCF8526FADCB96CEED4F9A285600F232BD1B8898F56C29FD55E94, NULL),
+    ('s06_e4', 2, N'rechazos_cliente', 'numero', 0x1C85E010E9D9D96289C4A0CE11D0C637DCADA3EDF72631061854A1DF46955FB9, N'Revisa en core.codigo_respuesta TODOS los códigos de tipo ''Rechazo del cliente''.'),
+    ('s06_e4', 3, N'rechazos_tecnicos', 'numero', 0x34D0D80ED8A8E1046969EB7E83799864C632C3968405F8CD13B7B2CE498E5B96, N'Revisa en core.codigo_respuesta TODOS los códigos de tipo ''Rechazo técnico''.'),
+    ('s06_e4', 4, N'rechazos_fraude', 'numero', 0xDF757411FE06FE30D2A434F610F95F8563939E3955CD1355C9B380AB3C4F643C, N'Revisa en core.codigo_respuesta TODOS los códigos de tipo ''Sospecha de fraude''.');
+
+INSERT INTO chk.ejercicio (ejercicio_id, sesion, titulo, num_filas, pista_filas, hash_total) VALUES
+    ('s06_reto', 'S06', N'Tablero mensual del primer semestre', 6, N'Debe salir una fila por mes, de enero a junio de 2026.', 0x31B610E7F48FCC349A08C385C30A8DAB487CE7F9D2FF9BD532C41555756898EC);
+INSERT INTO chk.ejercicio_columna (ejercicio_id, orden, nombre, familia, hash_columna, pista) VALUES
+    ('s06_reto', 1, N'mes', 'numero', 0xEB00841473A576A4C61B4D9621F1D70DF1466FA4FD0094561FCD2C543FE4FFC6, NULL),
+    ('s06_reto', 2, N'intentos', 'numero', 0x394D8853BB0B4B6E7AF58B1C49EDB0D9DD0AD684321B30633B7FC84C702F991E, NULL),
+    ('s06_reto', 3, N'tasa_aprobacion', 'numero', 0x1A3C76822D01F2A7E9D667736FA1787F41B87AE993066F2AADE7BFC2FD4568B5, N'Aprobadas (código ''00'') entre intentos, por 100, con decimales.'),
+    ('s06_reto', 4, N'tasa_rechazo_tecnico', 'numero', 0x139D3B71FFBF305517E4A3B493651325DB2F175FC947412BD0351C67A27ED0D7, N'Rechazos técnicos entre intentos (todos los intentos del mes), por 100, con decimales.'),
+    ('s06_reto', 5, N'facturacion_pen', 'numero', 0xCD56422DA269A9F42D546DA66EA2B8191C1F0ABC3FEF09F00BEF572A889BD2C1, N'Solo suma el monto de las operaciones aprobadas (estado ''Aprobada'') en soles; el resto suma 0.');
+
+INSERT INTO chk.ejercicio (ejercicio_id, sesion, titulo, num_filas, pista_filas, hash_total) VALUES
+    ('s07_e1', 'S07', N'Facturación presencial y online', 2, N'Debe salir una fila por modalidad (Presencial y Online).', 0x4C5F897586B5771802277951D1D32F7FAD616144C992796488195F0D5302BF1E);
+INSERT INTO chk.ejercicio_columna (ejercicio_id, orden, nombre, familia, hash_columna, pista) VALUES
+    ('s07_e1', 1, N'modalidad', 'texto', 0x3B1F239734068E36E1DC0B8870B023BFAD2743354CB8794B1426DD099A70BCC2, NULL),
+    ('s07_e1', 2, N'operaciones', 'numero', 0xDF9FB5D9DB49885C8763B0DCBDCEA417E836FB224E538B856322E8CF5626C338, NULL),
+    ('s07_e1', 3, N'facturacion', 'numero', 0xC7572ECF1F717A4A5F6588028E5B53084C30E3BBA54942F0F44574ECE985B71E, N'Solo operaciones aprobadas en soles del primer semestre de 2026.');
+
+INSERT INTO chk.ejercicio (ejercicio_id, sesion, titulo, num_filas, pista_filas, hash_total) VALUES
+    ('s07_e2', 'S07', N'Facturación y comisión por grupo de rubro', 12, N'Debe salir una fila por grupo de rubro (la columna grupo de core.rubro_mcc), no por MCC.', 0x3A8A159CA23042D21F8FA17B57B2D596F74D7879C3CF6CE47FAA137EC664273B);
+INSERT INTO chk.ejercicio_columna (ejercicio_id, orden, nombre, familia, hash_columna, pista) VALUES
+    ('s07_e2', 1, N'grupo', 'texto', 0x8FC05C7EEFC891BF817D7E7ED95C7747FD135A1BB9715B5449AD4008980A6A7E, NULL),
+    ('s07_e2', 2, N'operaciones', 'numero', 0x7F0C0E24712CC3A533B6B4C1C8779299D116BAFD022D664FB416C2E92E7E55C7, NULL),
+    ('s07_e2', 3, N'facturacion', 'numero', 0x3A2EFCC684CD76F38B900D9723CE0AB4B8B9D46ADB2F8E49B51C705583F2316E, NULL),
+    ('s07_e2', 4, N'comision_total', 'numero', 0x06BC7A41EE308EA32450A783EAE0736C968F5CCB4F649CD80AAFC4DB603F7582, N'Revisa que solo entren operaciones aprobadas en soles.');
+
+INSERT INTO chk.ejercicio (ejercicio_id, sesion, titulo, num_filas, pista_filas, hash_total) VALUES
+    ('s07_e3', 'S07', N'Clientes y facturación por departamento del cliente', 23, NULL, 0x66532070D22242DF54A7AA67098FB7DA41A23078FBE573C4883A93980BE7B07F);
+INSERT INTO chk.ejercicio_columna (ejercicio_id, orden, nombre, familia, hash_columna, pista) VALUES
+    ('s07_e3', 1, N'departamento', 'texto', 0x091BCECC80E884275596B15E2735D3EE664A0966A22FE8746B8B4A7EAA194389, N'El departamento es el de donde vive el cliente (cuenta → cliente → ubigeo), no el del comercio.'),
+    ('s07_e3', 2, N'clientes', 'numero', 0xB4A08E75D2789252058B97670568DD7B488E13CF8E04F86C3B3BD910DDCC2A5F, N'Un cliente hace muchas operaciones. ¿Estás contando clientes distintos o filas?'),
+    ('s07_e3', 3, N'facturacion', 'numero', 0x04D34612D5AF60DB39BA551780D1E387E47861DBF582D4EE0624973586550628, N'El departamento es el de donde vive el cliente (cuenta → cliente → ubigeo), no el del comercio.');
+
+INSERT INTO chk.ejercicio (ejercicio_id, sesion, titulo, num_filas, pista_filas, hash_total) VALUES
+    ('s07_e4', 'S07', N'Dólares a soles con el tipo de cambio del día', 2, NULL, 0x412A50C97EFA9CCB5ECB7FA665B4B760613925ABBE0731A211732C812BE9631D);
+INSERT INTO chk.ejercicio_columna (ejercicio_id, orden, nombre, familia, hash_columna, pista) VALUES
+    ('s07_e4', 1, N'moneda', 'texto', 0x30ADF9EF81907AD39DD412DCF8EBF29E1BB19365612DBB203DE472D5AF13D69A, NULL),
+    ('s07_e4', 2, N'operaciones', 'numero', 0x21A7A7D1F63790E9302A18FDD0D37A067B6E486DBF16CCBEE7DF9F28EA38AF2F, NULL),
+    ('s07_e4', 3, N'facturacion_original', 'numero', 0x70672784C85E69949032075D5E03A7D90A0DDF6B6B633B9833029DE8724D5CE0, NULL),
+    ('s07_e4', 4, N'facturacion_soles', 'numero', 0x5359513D151BEDB54354994AC63EB133A1336844AC032CEF5CBAB9F522655E8B, N'Solo los montos en dólares se multiplican por el tipo de cambio de COMPRA del día de la operación; los montos en soles quedan igual.');
+
+INSERT INTO chk.ejercicio (ejercicio_id, sesion, titulo, num_filas, pista_filas, hash_total) VALUES
+    ('s07_reto', 'S07', N'¿Qué rubros y departamentos facturan más?', 10, NULL, 0xBE44A71A0990456BAA22A2301510DBC1DA2ECEF79DD1191F4F22C77678109D64);
+INSERT INTO chk.ejercicio_columna (ejercicio_id, orden, nombre, familia, hash_columna, pista) VALUES
+    ('s07_reto', 1, N'departamento', 'texto', 0xDAE84B2348A05F4A544E4D9D42FA63A9F3EE93B4489223DFD8D7F739A9378F29, N'El departamento es el del cliente (donde vive), no el del comercio.'),
+    ('s07_reto', 2, N'grupo', 'texto', 0x7DA95D148385E6DB0130E18F152C2EFDF5AB8BF74764C747252F08969CAE8764, N'El grupo es la columna grupo de core.rubro_mcc.'),
+    ('s07_reto', 3, N'facturacion_soles', 'numero', 0xE03833AD6E9E0AFAA421AB388CC926CE8F06D9570753AFB33671AFDCD000A779, N'Las operaciones en dólares se convierten con el tipo de cambio de compra del día; las de soles quedan igual. Solo aprobadas del primer semestre de 2026.');
+
+INSERT INTO chk.ejercicio (ejercicio_id, sesion, titulo, num_filas, pista_filas, hash_total) VALUES
+    ('s08_e1', 'S08', N'Billeteras en soles que nunca se usaron', 1, NULL, 0xC275FBF33DB01D946828B214CC199C0FC6D984FBAF0448EAF2925E597CBEE025);
+INSERT INTO chk.ejercicio_columna (ejercicio_id, orden, nombre, familia, hash_columna, pista) VALUES
+    ('s08_e1', 1, N'cuentas_sin_operaciones', 'numero', 0xC275FBF33DB01D946828B214CC199C0FC6D984FBAF0448EAF2925E597CBEE025, N'Busca las cuentas en soles que no tienen pareja en core.transaccion (ninguna operación, aprobada o no). Con INNER JOIN esas cuentas desaparecen antes de que puedas contarlas.');
+
+INSERT INTO chk.ejercicio (ejercicio_id, sesion, titulo, num_filas, pista_filas, hash_total) VALUES
+    ('s08_e2', 'S08', N'¿Quiénes se registraron y nunca pagaron?', 3, N'Debe salir una fila por canal de adquisición.', 0x8F4B2CF66DC4DEE979AE6395EF5AA20BBBE92CFF8A4C47EFEF0DCB59FB91FF7E);
+INSERT INTO chk.ejercicio_columna (ejercicio_id, orden, nombre, familia, hash_columna, pista) VALUES
+    ('s08_e2', 1, N'canal_adquisicion', 'texto', 0x81A0996FE36A78BB74B5898FE790210E3A754B8A9994D6A65280BE5F3154D1C2, NULL),
+    ('s08_e2', 2, N'clientes', 'numero', 0x82BA0F8752730AC7ED0700CBEAEC3B5012256021674DF1BE03A4F090B1A3541C, N'Al unir con las operaciones, cada cliente aparece muchas veces. ¿Estás contando clientes distintos?'),
+    ('s08_e2', 3, N'clientes_sin_pago', 'numero', 0x3F6FBFB0ACBE6C1C3F873AD16940455E40F7012EEAEEBBC8525CD4B8B41C740C, N'Si la condición sobre el estado de la operación va en el WHERE, el LEFT JOIN se comporta como un INNER JOIN y los clientes sin pagos desaparecen. ¿Dónde debe ir esa condición?'),
+    ('s08_e2', 4, N'pct_sin_pago', 'numero', 0xA026F310374CDF154BA3C7B247E10297BD5DCD0832E967A2C24E3C77A9B738D9, N'Es clientes sin pago entre clientes, por 100, con decimales.');
+
+INSERT INTO chk.ejercicio (ejercicio_id, sesion, titulo, num_filas, pista_filas, hash_total) VALUES
+    ('s08_e3', 'S08', N'Comercios afiliados que nunca vendieron', 32, N'Son los comercios sin ninguna operación aprobada. Con un LEFT JOIN, ¿cómo reconoces las filas que no encontraron pareja?', 0x39B840C7630B80FF8EB8FCD4C8825E4161FD56CB3F2E2893AC22D58BAD82D574);
+INSERT INTO chk.ejercicio_columna (ejercicio_id, orden, nombre, familia, hash_columna, pista) VALUES
+    ('s08_e3', 1, N'comercio_id', 'numero', 0x7C09CCF1FCE89ADCCF3D19D6EB78BED4DE62FD9A9457781D252CDE894B3CCEFB, NULL),
+    ('s08_e3', 2, N'nombre_comercial', 'texto', 0xD81571CBFC067ABE7FBD55038B2E60E49837C5373F8657A57F3F7ED076B5EAE8, NULL),
+    ('s08_e3', 3, N'fecha_afiliacion', 'fecha', 0xDE0AC06AA126AB13C846C123FCAE43233B3E2FAED58988F128B673C907FFC15C, NULL);
+
+INSERT INTO chk.ejercicio (ejercicio_id, sesion, titulo, num_filas, pista_filas, hash_total) VALUES
+    ('s08_e4', 'S08', N'Clientes y facturación por sexo', 2, NULL, 0x7B81DD850DBE3DFEDD4925201C3B785B117E9EA2A000E98FD3A374F2086A3A82);
+INSERT INTO chk.ejercicio_columna (ejercicio_id, orden, nombre, familia, hash_columna, pista) VALUES
+    ('s08_e4', 1, N'sexo', 'texto', 0x1B75908F5BF851487065D00565ED4B73444FD122E27911AF41208BAC666FB2B2, NULL),
+    ('s08_e4', 2, N'clientes', 'numero', 0xE63A59129BB9726AF4B86279F7A8A6A0F71D768505018DCF8085E9D42D515144, N'Después del JOIN hay una fila por operación, no por cliente. ¿Estás contando clientes distintos?'),
+    ('s08_e4', 3, N'operaciones', 'numero', 0x7C1DFB9FD18CDACA992F4C3A5B2D713C6E92647B641EFE0A56E242C871E94DB7, NULL),
+    ('s08_e4', 4, N'facturacion', 'numero', 0xA4C042826D962740EA0042762C3693856D50628E48CACF59748B56466A298D29, NULL);
+
+INSERT INTO chk.ejercicio (ejercicio_id, sesion, titulo, num_filas, pista_filas, hash_total) VALUES
+    ('s08_reto', 'S08', N'Tasa de contracargos por grupo de rubro', 12, N'Debe salir una fila por grupo de rubro.', 0x2A6D0C17CB198E4A3C0DF9B274919079B26467BB7A628300C332D36626ACD261);
+INSERT INTO chk.ejercicio_columna (ejercicio_id, orden, nombre, familia, hash_columna, pista) VALUES
+    ('s08_reto', 1, N'grupo', 'texto', 0x8FC05C7EEFC891BF817D7E7ED95C7747FD135A1BB9715B5449AD4008980A6A7E, NULL),
+    ('s08_reto', 2, N'aprobadas', 'numero', 0x848E9832916EC1F71CD65B5734780991D17BB62719DA1866FA575916B8997251, NULL),
+    ('s08_reto', 3, N'contracargos', 'numero', 0xB059FAEE10983484507B09F0BE2760E598128D784554A2F8723A247001E39E0E, N'Las operaciones sin contracargo también deben quedarse en el resultado (para contarlas como aprobadas). Cuenta una columna de core.contracargo, no las filas.'),
+    ('s08_reto', 4, N'tasa_contracargo', 'numero', 0x578E9254FDBD03FE3FF59F583BE82C6AA640F5F82329502764A8F9889AFED0E0, N'Es contracargos entre aprobadas, por 100, con decimales.');
+
+INSERT INTO chk.ejercicio (ejercicio_id, sesion, titulo, num_filas, pista_filas, hash_total) VALUES
+    ('s09_e1', 'S09', N'La línea de tiempo de un cliente', 12, N'Son todos los pagos aprobados con la billetera más todos los pagos de cuotas del cliente 222 en junio de 2026. Si faltan filas, revisa si estás usando UNION (que borra filas repetidas) en lugar de UNION ALL.', 0x23A987947EDE1E9A89D62F2694CCEAA1C43CF140AD79843261F10C2843953D4C);
+INSERT INTO chk.ejercicio_columna (ejercicio_id, orden, nombre, familia, hash_columna, pista) VALUES
+    ('s09_e1', 1, N'fecha', 'fecha', 0xE6A8EF860597A1FAA14605875C333D73323586C16909B2231E435A2233BA5FD8, N'La fecha va sin hora (tipo DATE).'),
+    ('s09_e1', 2, N'tipo_movimiento', 'texto', 0x8785FF13807B6D738B87DFA1A43BB1D7CBA805BCF04B2BB5B4AE126BA4FBBE87, N'Los textos son exactamente ''billetera'' y ''cuota'', en minúsculas.'),
+    ('s09_e1', 3, N'monto', 'numero', 0x20F7572A984F83B9A220C53ACDAE9BCEA3A641E4DB85FFB81725947FB70274A2, N'En la parte de la billetera solo van los pagos aprobados.');
+
+INSERT INTO chk.ejercicio (ejercicio_id, sesion, titulo, num_filas, pista_filas, hash_total) VALUES
+    ('s09_e2', 'S09', N'Clientes con actividad en junio', 8174, N'Cada cliente debe aparecer una sola vez, aunque haya pagado con la billetera y además pagado una cuota. ¿UNION o UNION ALL?', 0x9E8D516466DA7D8A7A99671AB3D74EC53D6C0E23421A09027FEF2F4CED54C910);
+INSERT INTO chk.ejercicio_columna (ejercicio_id, orden, nombre, familia, hash_columna, pista) VALUES
+    ('s09_e2', 1, N'cliente_id', 'numero', 0x9E8D516466DA7D8A7A99671AB3D74EC53D6C0E23421A09027FEF2F4CED54C910, NULL);
+
+INSERT INTO chk.ejercicio (ejercicio_id, sesion, titulo, num_filas, pista_filas, hash_total) VALUES
+    ('s09_e3', 'S09', N'Clientes con crédito que dejaron de usar la billetera', 794, N'Son clientes con al menos un crédito en estado ''Vigente'' para los que NO EXISTE ningún pago aprobado con la billetera en mayo de 2026. Cada cliente una sola vez.', 0x0FA4F3ECA2263A95355DB541C3091B594D00AF1E659AA762805C93501280FC1D);
+INSERT INTO chk.ejercicio_columna (ejercicio_id, orden, nombre, familia, hash_columna, pista) VALUES
+    ('s09_e3', 1, N'cliente_id', 'numero', 0x0FA4F3ECA2263A95355DB541C3091B594D00AF1E659AA762805C93501280FC1D, NULL);
+
+INSERT INTO chk.ejercicio (ejercicio_id, sesion, titulo, num_filas, pista_filas, hash_total) VALUES
+    ('s09_e4', 'S09', N'¿Quién trajo a cada cliente nuevo?', 329, NULL, 0xD970E3A9A97E9002204B44C33441573DED6BFA7F8543BC2027B8A9E1F96A6EC6);
+INSERT INTO chk.ejercicio_columna (ejercicio_id, orden, nombre, familia, hash_columna, pista) VALUES
+    ('s09_e4', 1, N'cliente_id', 'numero', 0xAE7CB643C99156F4E62F44B1029988A9A38D363E8CF938CA218487A64E0428FE, NULL),
+    ('s09_e4', 2, N'referidor_id', 'numero', 0x2A505444752F0DE8D1504D9FEF35D8764B3A0A35AA67374FC29BBFB962ECB448, NULL),
+    ('s09_e4', 3, N'nombre_referidor', 'texto', 0xF69FC28BBE45DB664ADBA51DB1FA9576B4CE29295668983FF25004CC42C2F4A5, N'Es el nombre del REFERIDOR (la segunda copia de core.cliente), no del cliente nuevo.'),
+    ('s09_e4', 4, N'dias_desde_alta_referidor', 'numero', 0xC075FC6E608D25C5218A06FE94A3ACC710C97A63CF91720057059E2C695D6334, N'Son los días entre el alta del referidor y el alta del cliente nuevo: debe ser positivo.');
+
+INSERT INTO chk.ejercicio (ejercicio_id, sesion, titulo, num_filas, pista_filas, hash_total) VALUES
+    ('s09_reto', 'S09', N'¿Los clientes referidos gastan más que los orgánicos?', 3, N'Debe salir una fila por canal de adquisición, solo con clientes que se registraron en 2025.', 0x5B303FD616E4702854FD0A4EB2BD3602A7C4029E3062615545F2CC2521CF5C74);
+INSERT INTO chk.ejercicio_columna (ejercicio_id, orden, nombre, familia, hash_columna, pista) VALUES
+    ('s09_reto', 1, N'canal_adquisicion', 'texto', 0x81A0996FE36A78BB74B5898FE790210E3A754B8A9994D6A65280BE5F3154D1C2, NULL),
+    ('s09_reto', 2, N'clientes', 'numero', 0xA6FEA90FFBE3662DAC18442EC674EAE8037B14695829180D560D45BC47D2BC4A, N'Son todos los clientes registrados en 2025 de ese canal, hayan pagado o no.'),
+    ('s09_reto', 3, N'clientes_con_pago', 'numero', 0x584A34BA93FF0838F451F383BE19455CACE08328F11D64B21AD6CFE3356FAD27, N'Son los clientes con al menos un pago aprobado en soles. La condición sobre el pago no puede ir en el WHERE si quieres conservar a los que no pagaron.'),
+    ('s09_reto', 4, N'facturacion', 'numero', 0xF6CE1F1F09D4731135194AAE031081E15AA4B10C6A7C868749FB269688BBC5A5, NULL),
+    ('s09_reto', 5, N'gasto_por_cliente_con_pago', 'numero', 0xF7DC07F6B1C15437C7A673D111D80BC3D567895B22E3FAE390D49FA3CA186FB6, N'Es la facturación dividida entre los clientes que sí pagaron, no entre todos.');
+
 GO
 CREATE OR ALTER PROCEDURE chk.s00_e1 AS EXEC chk.verificar 's00_e1';
 GO
@@ -228,4 +416,54 @@ GO
 CREATE OR ALTER PROCEDURE chk.s04_e4 AS EXEC chk.verificar 's04_e4';
 GO
 CREATE OR ALTER PROCEDURE chk.s04_reto AS EXEC chk.verificar 's04_reto';
+GO
+CREATE OR ALTER PROCEDURE chk.s05_e1 AS EXEC chk.verificar 's05_e1';
+GO
+CREATE OR ALTER PROCEDURE chk.s05_e2 AS EXEC chk.verificar 's05_e2';
+GO
+CREATE OR ALTER PROCEDURE chk.s05_e3 AS EXEC chk.verificar 's05_e3';
+GO
+CREATE OR ALTER PROCEDURE chk.s05_e4 AS EXEC chk.verificar 's05_e4';
+GO
+CREATE OR ALTER PROCEDURE chk.s05_reto AS EXEC chk.verificar 's05_reto';
+GO
+CREATE OR ALTER PROCEDURE chk.s06_e1 AS EXEC chk.verificar 's06_e1';
+GO
+CREATE OR ALTER PROCEDURE chk.s06_e2 AS EXEC chk.verificar 's06_e2';
+GO
+CREATE OR ALTER PROCEDURE chk.s06_e3 AS EXEC chk.verificar 's06_e3';
+GO
+CREATE OR ALTER PROCEDURE chk.s06_e4 AS EXEC chk.verificar 's06_e4';
+GO
+CREATE OR ALTER PROCEDURE chk.s06_reto AS EXEC chk.verificar 's06_reto';
+GO
+CREATE OR ALTER PROCEDURE chk.s07_e1 AS EXEC chk.verificar 's07_e1';
+GO
+CREATE OR ALTER PROCEDURE chk.s07_e2 AS EXEC chk.verificar 's07_e2';
+GO
+CREATE OR ALTER PROCEDURE chk.s07_e3 AS EXEC chk.verificar 's07_e3';
+GO
+CREATE OR ALTER PROCEDURE chk.s07_e4 AS EXEC chk.verificar 's07_e4';
+GO
+CREATE OR ALTER PROCEDURE chk.s07_reto AS EXEC chk.verificar 's07_reto';
+GO
+CREATE OR ALTER PROCEDURE chk.s08_e1 AS EXEC chk.verificar 's08_e1';
+GO
+CREATE OR ALTER PROCEDURE chk.s08_e2 AS EXEC chk.verificar 's08_e2';
+GO
+CREATE OR ALTER PROCEDURE chk.s08_e3 AS EXEC chk.verificar 's08_e3';
+GO
+CREATE OR ALTER PROCEDURE chk.s08_e4 AS EXEC chk.verificar 's08_e4';
+GO
+CREATE OR ALTER PROCEDURE chk.s08_reto AS EXEC chk.verificar 's08_reto';
+GO
+CREATE OR ALTER PROCEDURE chk.s09_e1 AS EXEC chk.verificar 's09_e1';
+GO
+CREATE OR ALTER PROCEDURE chk.s09_e2 AS EXEC chk.verificar 's09_e2';
+GO
+CREATE OR ALTER PROCEDURE chk.s09_e3 AS EXEC chk.verificar 's09_e3';
+GO
+CREATE OR ALTER PROCEDURE chk.s09_e4 AS EXEC chk.verificar 's09_e4';
+GO
+CREATE OR ALTER PROCEDURE chk.s09_reto AS EXEC chk.verificar 's09_reto';
 GO
