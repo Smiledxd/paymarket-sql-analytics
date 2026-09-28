@@ -1,0 +1,28 @@
+# Carpeta privada del curso (nunca se versiona)
+paymarket-privado/
+../paymarket-privado/
+**/paymarket-privado/
+
+# SSMS
+*.ssmssqlproj
+*.ssmssln
+*.sqlsuo
+*.suo
+*.user
+*.bak
+*.tmp
+~*.sql
+~$*
+
+# Power BI
+*.pbix.bak
+powerbi/**/*.pbit.bak
+powerbi/**/.pbi/
+powerbi/**/localSettings.json
+powerbi/**/cache.abf
+
+# Sistema
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/

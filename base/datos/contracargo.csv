@@ -1,0 +1,320 @@
+contracargo_id|transaccion_id|fecha_contracargo|motivo|estado|monto
+1|1529|2025-04-02|No reconoce la compra|A favor del cliente|15.57
+2|5962|2025-04-16|Producto o servicio no recibido|A favor del cliente|511.82
+3|9192|2025-04-22|No reconoce la compra|A favor del cliente|80.04
+4|4334|2025-04-26|Producto defectuoso o distinto al ofrecido|A favor del comercio|74.90
+5|4103|2025-05-10|Fraude con tarjeta|A favor del cliente|22.80
+6|14688|2025-05-13|Producto defectuoso o distinto al ofrecido|A favor del comercio|231.84
+7|5999|2025-05-15|No reconoce la compra|A favor del cliente|65.29
+8|8416|2025-05-16|Producto o servicio no recibido|A favor del cliente|54.82
+9|10561|2025-05-23|Producto o servicio no recibido|A favor del comercio|212.35
+10|16253|2025-05-23|Producto o servicio no recibido|A favor del cliente|113.20
+11|16886|2025-05-27|Fraude con tarjeta|A favor del comercio|219.39
+12|12120|2025-06-05|No reconoce la compra|A favor del cliente|32.10
+13|19973|2025-06-05|Producto o servicio no recibido|A favor del comercio|256.58
+14|10169|2025-06-12|Fraude con tarjeta|A favor del cliente|187.39
+15|11757|2025-06-12|Producto defectuoso o distinto al ofrecido|A favor del comercio|109.67
+16|11786|2025-06-12|Producto o servicio no recibido|A favor del comercio|110.98
+17|15663|2025-06-12|Producto o servicio no recibido|A favor del comercio|19.57
+18|19111|2025-06-16|Producto defectuoso o distinto al ofrecido|A favor del cliente|32.01
+19|11338|2025-06-24|No reconoce la compra|A favor del comercio|78.86
+20|18676|2025-06-30|Producto defectuoso o distinto al ofrecido|A favor del cliente|103.02
+21|22993|2025-07-08|No reconoce la compra|A favor del cliente|127.34
+22|21040|2025-07-13|No reconoce la compra|A favor del cliente|267.93
+23|25420|2025-07-13|Producto o servicio no recibido|A favor del comercio|62.07
+24|14029|2025-07-15|Producto o servicio no recibido|A favor del cliente|65.70
+25|17318|2025-07-15|No reconoce la compra|A favor del cliente|90.70
+26|18081|2025-07-24|No reconoce la compra|A favor del cliente|16.72
+27|31737|2025-07-26|Fraude con tarjeta|A favor del cliente|5693.41
+28|29632|2025-07-27|No reconoce la compra|A favor del comercio|100.91
+29|26253|2025-07-30|Cobro duplicado|A favor del comercio|73.43
+30|22430|2025-08-02|No reconoce la compra|A favor del comercio|110.44
+31|36644|2025-08-03|Fraude con tarjeta|A favor del cliente|844.62
+32|25902|2025-08-07|Fraude con tarjeta|A favor del cliente|1607.96
+33|30575|2025-08-12|Producto o servicio no recibido|A favor del cliente|33.58
+34|34560|2025-08-15|Producto defectuoso o distinto al ofrecido|A favor del comercio|14.38
+35|23582|2025-08-17|Cobro duplicado|A favor del cliente|112.13
+36|38715|2025-08-17|Fraude con tarjeta|A favor del cliente|44.59
+37|25849|2025-08-18|Producto o servicio no recibido|A favor del comercio|75.10
+38|26439|2025-08-21|Producto o servicio no recibido|A favor del comercio|62.05
+39|23075|2025-08-23|Producto o servicio no recibido|A favor del cliente|46.13
+40|38376|2025-08-29|Producto defectuoso o distinto al ofrecido|A favor del cliente|246.37
+41|47312|2025-09-03|Producto o servicio no recibido|A favor del comercio|54.49
+42|29272|2025-09-09|Producto o servicio no recibido|A favor del cliente|32.75
+43|36645|2025-09-10|No reconoce la compra|A favor del cliente|160.72
+44|37419|2025-09-21|No reconoce la compra|A favor del comercio|10.85
+45|52395|2025-09-21|Producto defectuoso o distinto al ofrecido|A favor del cliente|21.17
+46|45175|2025-09-28|Producto defectuoso o distinto al ofrecido|A favor del comercio|10.54
+47|54017|2025-09-28|Producto defectuoso o distinto al ofrecido|A favor del cliente|50.80
+48|46727|2025-10-01|Fraude con tarjeta|A favor del cliente|136.39
+49|53107|2025-10-02|No reconoce la compra|A favor del cliente|131.54
+50|40421|2025-10-03|No reconoce la compra|A favor del cliente|42.92
+51|56856|2025-10-03|Fraude con tarjeta|A favor del comercio|300.72
+52|39981|2025-10-05|No reconoce la compra|A favor del comercio|179.64
+53|67647|2025-10-06|No reconoce la compra|A favor del cliente|2262.37
+54|55676|2025-10-07|Producto o servicio no recibido|A favor del cliente|796.81
+55|58872|2025-10-07|Fraude con tarjeta|A favor del cliente|233.32
+56|54906|2025-10-16|Producto defectuoso o distinto al ofrecido|A favor del cliente|152.40
+57|62385|2025-10-19|Producto defectuoso o distinto al ofrecido|A favor del comercio|48.75
+58|72515|2025-10-19|No reconoce la compra|A favor del cliente|201.91
+59|75161|2025-10-25|Fraude con tarjeta|A favor del cliente|414.42
+60|51551|2025-10-30|Fraude con tarjeta|A favor del cliente|76.17
+61|56736|2025-10-30|No reconoce la compra|A favor del comercio|11.95
+62|74617|2025-10-30|No reconoce la compra|A favor del comercio|70.36
+63|80829|2025-11-01|No reconoce la compra|A favor del comercio|49.57
+64|67244|2025-11-02|No reconoce la compra|A favor del comercio|26.62
+65|69455|2025-11-03|No reconoce la compra|A favor del comercio|96.68
+66|80936|2025-11-03|No reconoce la compra|A favor del comercio|66.11
+67|51781|2025-11-04|Producto o servicio no recibido|A favor del cliente|378.88
+68|58442|2025-11-05|Producto o servicio no recibido|A favor del cliente|188.62
+69|61587|2025-11-05|Producto defectuoso o distinto al ofrecido|A favor del cliente|240.16
+70|80635|2025-11-07|Producto o servicio no recibido|A favor del cliente|231.87
+71|59739|2025-11-10|No reconoce la compra|A favor del cliente|2286.41
+72|78678|2025-11-16|Producto o servicio no recibido|A favor del comercio|157.50
+73|58314|2025-11-20|No reconoce la compra|A favor del comercio|35.09
+74|83340|2025-11-20|Fraude con tarjeta|A favor del comercio|33.36
+75|86743|2025-11-22|No reconoce la compra|A favor del comercio|28.40
+76|97640|2025-11-24|Producto o servicio no recibido|A favor del cliente|319.61
+77|98033|2025-11-24|Producto o servicio no recibido|A favor del cliente|5.70
+78|81344|2025-11-25|Fraude con tarjeta|A favor del cliente|3032.68
+79|83424|2025-11-26|Producto defectuoso o distinto al ofrecido|A favor del cliente|25.90
+80|77835|2025-11-30|Cobro duplicado|A favor del comercio|90.13
+81|63807|2025-12-02|No reconoce la compra|A favor del cliente|39.01
+82|78751|2025-12-02|Producto o servicio no recibido|A favor del comercio|54.87
+83|85566|2025-12-02|Producto o servicio no recibido|A favor del cliente|45.18
+84|104072|2025-12-03|No reconoce la compra|A favor del comercio|63.79
+85|71312|2025-12-06|Fraude con tarjeta|A favor del comercio|456.70
+86|94286|2025-12-07|Producto o servicio no recibido|A favor del cliente|1279.92
+87|93672|2025-12-09|Fraude con tarjeta|A favor del cliente|60.33
+88|98575|2025-12-11|Fraude con tarjeta|A favor del cliente|467.31
+89|106903|2025-12-14|No reconoce la compra|A favor del comercio|161.55
+90|112667|2025-12-16|No reconoce la compra|A favor del cliente|31.39
+91|76495|2025-12-17|Producto o servicio no recibido|A favor del comercio|170.43
+92|96196|2025-12-17|No reconoce la compra|A favor del comercio|47.10
+93|89099|2025-12-18|Producto o servicio no recibido|A favor del cliente|413.66
+94|74372|2025-12-19|Producto o servicio no recibido|A favor del cliente|140.46
+95|78114|2025-12-19|Producto o servicio no recibido|A favor del cliente|15.54
+96|87652|2025-12-24|No reconoce la compra|A favor del cliente|26.83
+97|90966|2025-12-29|Cobro duplicado|A favor del cliente|454.43
+98|106947|2025-12-30|No reconoce la compra|A favor del cliente|10.75
+99|109357|2025-12-30|Producto o servicio no recibido|A favor del cliente|103.92
+100|80155|2026-01-03|No reconoce la compra|A favor del cliente|119.06
+101|116595|2026-01-05|Fraude con tarjeta|A favor del comercio|45.88
+102|88011|2026-01-06|Fraude con tarjeta|A favor del cliente|1217.44
+103|84353|2026-01-07|Producto o servicio no recibido|A favor del cliente|434.57
+104|115748|2026-01-09|No reconoce la compra|A favor del cliente|112.37
+105|98212|2026-01-10|Producto o servicio no recibido|A favor del cliente|32.86
+106|110511|2026-01-10|Fraude con tarjeta|A favor del cliente|280.63
+107|116488|2026-01-10|Fraude con tarjeta|A favor del cliente|2789.27
+108|131641|2026-01-10|No reconoce la compra|A favor del cliente|326.76
+109|85413|2026-01-14|No reconoce la compra|A favor del comercio|78.83
+110|86890|2026-01-16|No reconoce la compra|A favor del cliente|71.02
+111|90819|2026-01-17|Fraude con tarjeta|A favor del cliente|82.49
+112|111442|2026-01-17|No reconoce la compra|A favor del cliente|2638.82
+113|87560|2026-01-18|Fraude con tarjeta|A favor del cliente|185.07
+114|93732|2026-01-20|Producto defectuoso o distinto al ofrecido|A favor del comercio|114.26
+115|96530|2026-01-20|No reconoce la compra|A favor del comercio|63.61
+116|117993|2026-01-20|Fraude con tarjeta|A favor del cliente|37.41
+117|122467|2026-01-21|Fraude con tarjeta|A favor del cliente|158.83
+118|122679|2026-01-21|No reconoce la compra|A favor del cliente|646.23
+119|135155|2026-01-23|Producto defectuoso o distinto al ofrecido|A favor del comercio|1305.19
+120|111252|2026-01-25|No reconoce la compra|A favor del cliente|186.97
+121|120524|2026-01-25|Fraude con tarjeta|A favor del cliente|1058.82
+122|149409|2026-01-30|Cobro duplicado|A favor del comercio|10.10
+123|138998|2026-01-31|No reconoce la compra|A favor del cliente|1526.55
+124|97468|2026-02-01|Producto o servicio no recibido|A favor del cliente|30.43
+125|135373|2026-02-03|Producto defectuoso o distinto al ofrecido|A favor del cliente|369.29
+126|104395|2026-02-05|No reconoce la compra|A favor del cliente|71.87
+127|110900|2026-02-05|Fraude con tarjeta|A favor del cliente|390.98
+128|141291|2026-02-08|Producto o servicio no recibido|A favor del comercio|105.59
+129|151500|2026-02-10|Producto defectuoso o distinto al ofrecido|A favor del cliente|180.41
+130|118865|2026-02-12|No reconoce la compra|A favor del cliente|3666.09
+131|105656|2026-02-13|Fraude con tarjeta|A favor del comercio|29.90
+132|152732|2026-02-13|Producto defectuoso o distinto al ofrecido|A favor del cliente|27.74
+133|159082|2026-02-18|Producto o servicio no recibido|A favor del cliente|79.31
+134|124358|2026-02-20|Producto defectuoso o distinto al ofrecido|A favor del comercio|174.82
+135|164340|2026-02-21|Producto defectuoso o distinto al ofrecido|A favor del cliente|151.24
+136|150330|2026-02-24|No reconoce la compra|A favor del cliente|601.78
+137|151298|2026-02-24|No reconoce la compra|A favor del comercio|75.89
+138|112135|2026-02-25|No reconoce la compra|A favor del cliente|95.30
+139|118557|2026-02-25|No reconoce la compra|A favor del comercio|2235.64
+140|159769|2026-02-25|No reconoce la compra|A favor del comercio|920.39
+141|161491|2026-02-25|No reconoce la compra|A favor del cliente|1170.40
+142|118754|2026-02-26|No reconoce la compra|A favor del cliente|136.58
+143|131095|2026-02-26|No reconoce la compra|A favor del comercio|152.13
+144|118918|2026-02-27|No reconoce la compra|A favor del cliente|117.36
+145|173466|2026-02-27|Cobro duplicado|A favor del cliente|682.40
+146|123053|2026-02-28|Producto o servicio no recibido|A favor del cliente|135.80
+147|135560|2026-03-01|No reconoce la compra|A favor del cliente|23.02
+148|145503|2026-03-01|Producto defectuoso o distinto al ofrecido|A favor del cliente|19.37
+149|121686|2026-03-02|No reconoce la compra|A favor del cliente|753.08
+150|157988|2026-03-03|Cobro duplicado|A favor del cliente|100.94
+151|163709|2026-03-03|Producto defectuoso o distinto al ofrecido|A favor del cliente|107.97
+152|173299|2026-03-03|No reconoce la compra|A favor del comercio|307.35
+153|126135|2026-03-04|Fraude con tarjeta|A favor del cliente|551.07
+154|156178|2026-03-04|Cobro duplicado|A favor del cliente|22.91
+155|167023|2026-03-04|Producto defectuoso o distinto al ofrecido|A favor del cliente|657.82
+156|136358|2026-03-06|No reconoce la compra|A favor del cliente|53.20
+157|166943|2026-03-06|Cobro duplicado|A favor del cliente|19.61
+158|176074|2026-03-06|Producto defectuoso o distinto al ofrecido|A favor del comercio|18.24
+159|178001|2026-03-06|Cobro duplicado|A favor del cliente|36.44
+160|152180|2026-03-07|Producto defectuoso o distinto al ofrecido|A favor del comercio|223.93
+161|166660|2026-03-09|Cobro duplicado|A favor del cliente|33.88
+162|139897|2026-03-10|Producto defectuoso o distinto al ofrecido|A favor del cliente|84.12
+163|170779|2026-03-10|Cobro duplicado|A favor del cliente|136.03
+164|180704|2026-03-11|Cobro duplicado|A favor del cliente|65.07
+165|166190|2026-03-12|Cobro duplicado|A favor del cliente|36.37
+166|162986|2026-03-13|Cobro duplicado|A favor del cliente|34.48
+167|178567|2026-03-13|Producto defectuoso o distinto al ofrecido|A favor del cliente|249.00
+168|181375|2026-03-13|Cobro duplicado|A favor del cliente|202.62
+169|171602|2026-03-16|Fraude con tarjeta|A favor del comercio|481.33
+170|129765|2026-03-18|Cobro duplicado|A favor del comercio|838.50
+171|163293|2026-03-19|No reconoce la compra|A favor del cliente|182.90
+172|172937|2026-03-19|No reconoce la compra|A favor del cliente|2171.07
+173|177251|2026-03-19|No reconoce la compra|A favor del cliente|418.58
+174|169433|2026-03-20|No reconoce la compra|A favor del comercio|50.67
+175|135593|2026-03-22|Producto o servicio no recibido|A favor del comercio|27.55
+176|181659|2026-03-22|Fraude con tarjeta|A favor del cliente|178.34
+177|196173|2026-03-24|No reconoce la compra|A favor del cliente|831.83
+178|149400|2026-03-25|No reconoce la compra|A favor del comercio|43.91
+179|159265|2026-03-25|Fraude con tarjeta|A favor del cliente|1642.60
+180|170862|2026-03-25|Producto o servicio no recibido|A favor del cliente|106.47
+181|191227|2026-03-26|Producto o servicio no recibido|A favor del cliente|63.30
+182|192267|2026-03-26|No reconoce la compra|A favor del cliente|67.51
+183|147333|2026-03-27|No reconoce la compra|A favor del cliente|182.60
+184|168763|2026-03-27|Cobro duplicado|A favor del cliente|82.14
+185|187713|2026-03-27|Producto o servicio no recibido|A favor del comercio|201.79
+186|156081|2026-03-28|No reconoce la compra|A favor del cliente|51.03
+187|166932|2026-03-28|Producto o servicio no recibido|A favor del cliente|3450.12
+188|162712|2026-03-29|Fraude con tarjeta|A favor del comercio|14.64
+189|194895|2026-03-29|Producto o servicio no recibido|A favor del cliente|118.17
+190|200727|2026-03-29|Producto defectuoso o distinto al ofrecido|A favor del cliente|55.69
+191|187189|2026-03-30|Fraude con tarjeta|A favor del cliente|39.40
+192|182408|2026-03-31|Cobro duplicado|A favor del cliente|231.47
+193|161554|2026-04-01|Fraude con tarjeta|A favor del comercio|206.04
+194|173999|2026-04-01|Cobro duplicado|A favor del comercio|86.07
+195|154451|2026-04-03|Producto defectuoso o distinto al ofrecido|A favor del comercio|670.73
+196|163251|2026-04-04|Producto o servicio no recibido|A favor del cliente|216.36
+197|161499|2026-04-05|Cobro duplicado|A favor del cliente|123.69
+198|201517|2026-04-06|Cobro duplicado|A favor del cliente|137.87
+199|204427|2026-04-07|Producto o servicio no recibido|A favor del cliente|9.74
+200|186179|2026-04-09|No reconoce la compra|A favor del comercio|53.50
+201|203455|2026-04-09|No reconoce la compra|A favor del cliente|37.40
+202|151961|2026-04-12|No reconoce la compra|A favor del cliente|175.15
+203|156721|2026-04-12|No reconoce la compra|A favor del cliente|68.31
+204|166145|2026-04-12|Producto o servicio no recibido|A favor del comercio|1142.08
+205|213088|2026-04-12|No reconoce la compra|A favor del cliente|604.58
+206|166797|2026-04-13|Cobro duplicado|A favor del comercio|203.68
+207|205034|2026-04-14|No reconoce la compra|A favor del cliente|92.29
+208|188333|2026-04-15|No reconoce la compra|A favor del comercio|27.20
+209|166494|2026-04-16|No reconoce la compra|A favor del cliente|114.45
+210|187511|2026-04-17|Producto o servicio no recibido|A favor del comercio|446.21
+211|197231|2026-04-17|No reconoce la compra|A favor del comercio|13.19
+212|192406|2026-04-18|No reconoce la compra|A favor del comercio|1771.10
+213|200145|2026-04-19|Producto o servicio no recibido|A favor del comercio|278.47
+214|201657|2026-04-20|No reconoce la compra|A favor del comercio|329.43
+215|166647|2026-04-21|Producto o servicio no recibido|A favor del cliente|792.21
+216|198567|2026-04-21|No reconoce la compra|A favor del cliente|533.53
+217|164803|2026-04-24|No reconoce la compra|A favor del cliente|488.54
+218|162859|2026-04-25|No reconoce la compra|A favor del cliente|17.44
+219|169253|2026-04-25|Producto o servicio no recibido|A favor del cliente|61.91
+220|184968|2026-04-27|Fraude con tarjeta|A favor del cliente|56.07
+221|228129|2026-04-27|Producto o servicio no recibido|A favor del cliente|34.42
+222|188203|2026-04-28|Fraude con tarjeta|A favor del cliente|195.25
+223|188428|2026-04-28|Producto o servicio no recibido|A favor del comercio|709.51
+224|175800|2026-04-29|Producto o servicio no recibido|A favor del comercio|47.44
+225|191485|2026-04-29|No reconoce la compra|A favor del comercio|662.77
+226|204062|2026-04-29|No reconoce la compra|A favor del comercio|2028.49
+227|167604|2026-05-02|No reconoce la compra|A favor del cliente|1671.82
+228|169775|2026-05-02|Producto defectuoso o distinto al ofrecido|A favor del cliente|39.28
+229|227666|2026-05-02|No reconoce la compra|A favor del cliente|2422.11
+230|187918|2026-05-03|No reconoce la compra|A favor del cliente|136.61
+231|170404|2026-05-04|Cobro duplicado|A favor del comercio|36.68
+232|186797|2026-05-04|Cobro duplicado|A favor del cliente|154.85
+233|186275|2026-05-06|No reconoce la compra|A favor del cliente|1854.34
+234|195804|2026-05-06|Cobro duplicado|A favor del cliente|36.69
+235|197253|2026-05-06|Producto defectuoso o distinto al ofrecido|A favor del cliente|79.33
+236|189478|2026-05-07|No reconoce la compra|A favor del cliente|56.33
+237|200357|2026-05-07|No reconoce la compra|A favor del cliente|65.93
+238|173462|2026-05-09|Producto defectuoso o distinto al ofrecido|A favor del comercio|8.35
+239|208172|2026-05-09|No reconoce la compra|A favor del cliente|68.75
+240|203802|2026-05-10|Producto defectuoso o distinto al ofrecido|A favor del cliente|14.30
+241|225907|2026-05-10|No reconoce la compra|A favor del cliente|250.78
+242|208415|2026-05-11|Cobro duplicado|A favor del cliente|75.10
+243|227179|2026-05-11|Producto o servicio no recibido|A favor del cliente|248.27
+244|176305|2026-05-12|No reconoce la compra|A favor del cliente|249.15
+245|180533|2026-05-12|Cobro duplicado|A favor del cliente|74.64
+246|179734|2026-05-13|No reconoce la compra|A favor del comercio|33.88
+247|245207|2026-05-13|No reconoce la compra|A favor del cliente|16.90
+248|193791|2026-05-14|Producto o servicio no recibido|A favor del cliente|20.58
+249|198969|2026-05-14|Producto defectuoso o distinto al ofrecido|A favor del comercio|137.79
+250|220762|2026-05-14|Producto defectuoso o distinto al ofrecido|A favor del cliente|72.03
+251|234591|2026-05-16|Fraude con tarjeta|A favor del cliente|200.00
+252|200126|2026-05-17|No reconoce la compra|En proceso|71.34
+253|250101|2026-05-17|Producto o servicio no recibido|En proceso|1071.89
+254|183674|2026-05-18|Fraude con tarjeta|En proceso|77.81
+255|188341|2026-05-18|Producto defectuoso o distinto al ofrecido|En proceso|581.67
+256|250568|2026-05-18|No reconoce la compra|En proceso|818.28
+257|221555|2026-05-21|No reconoce la compra|En proceso|8456.37
+258|238103|2026-05-24|Producto o servicio no recibido|En proceso|243.30
+259|216118|2026-05-25|Cobro duplicado|En proceso|45.53
+260|220275|2026-05-25|No reconoce la compra|En proceso|21.45
+261|220957|2026-05-25|Producto o servicio no recibido|En proceso|20.26
+262|205280|2026-05-26|Cobro duplicado|En proceso|93.17
+263|240402|2026-05-26|Producto o servicio no recibido|En proceso|233.07
+264|195005|2026-05-28|Fraude con tarjeta|En proceso|85.46
+265|193309|2026-05-29|Cobro duplicado|En proceso|24.04
+266|263677|2026-05-30|No reconoce la compra|En proceso|926.44
+267|196231|2026-05-31|Producto o servicio no recibido|En proceso|23.19
+268|243592|2026-05-31|Producto defectuoso o distinto al ofrecido|En proceso|60.83
+269|248082|2026-05-31|Producto o servicio no recibido|A favor del cliente|57.80
+270|197822|2026-06-01|Producto o servicio no recibido|En proceso|149.20
+271|237325|2026-06-01|Producto defectuoso o distinto al ofrecido|En proceso|2763.31
+272|222148|2026-06-02|Producto o servicio no recibido|En proceso|83.41
+273|203144|2026-06-04|Producto o servicio no recibido|A favor del cliente|8.70
+274|261582|2026-06-05|Producto defectuoso o distinto al ofrecido|En proceso|3.60
+275|201200|2026-06-06|Producto defectuoso o distinto al ofrecido|En proceso|357.12
+276|240206|2026-06-06|Producto o servicio no recibido|En proceso|516.46
+277|268153|2026-06-07|Fraude con tarjeta|En proceso|582.65
+278|200320|2026-06-08|Producto defectuoso o distinto al ofrecido|En proceso|164.05
+279|235980|2026-06-08|Producto o servicio no recibido|En proceso|1683.19
+280|253843|2026-06-08|No reconoce la compra|En proceso|85.69
+281|266299|2026-06-08|Producto o servicio no recibido|En proceso|324.24
+282|220306|2026-06-09|Cobro duplicado|En proceso|845.83
+283|225458|2026-06-10|Cobro duplicado|En proceso|33.55
+284|217614|2026-06-12|Producto o servicio no recibido|A favor del cliente|303.28
+285|266749|2026-06-12|Producto o servicio no recibido|A favor del cliente|70.06
+286|235602|2026-06-13|No reconoce la compra|En proceso|645.10
+287|265873|2026-06-13|Fraude con tarjeta|En proceso|63.60
+288|240772|2026-06-14|Producto defectuoso o distinto al ofrecido|A favor del cliente|72.95
+289|271311|2026-06-14|Producto o servicio no recibido|A favor del cliente|20.48
+290|283115|2026-06-15|Fraude con tarjeta|En proceso|931.03
+291|217067|2026-06-16|Cobro duplicado|A favor del cliente|33.38
+292|252926|2026-06-16|Fraude con tarjeta|En proceso|51.62
+293|261631|2026-06-16|Producto defectuoso o distinto al ofrecido|A favor del comercio|18.72
+294|282175|2026-06-16|No reconoce la compra|A favor del cliente|424.34
+295|222351|2026-06-17|No reconoce la compra|En proceso|67.70
+296|237338|2026-06-17|No reconoce la compra|En proceso|14.05
+297|239380|2026-06-17|Producto o servicio no recibido|En proceso|11124.96
+298|272033|2026-06-18|Fraude con tarjeta|En proceso|666.14
+299|222179|2026-06-19|No reconoce la compra|A favor del cliente|51.11
+300|237479|2026-06-19|Producto defectuoso o distinto al ofrecido|En proceso|16.67
+301|287124|2026-06-19|Producto o servicio no recibido|En proceso|116.31
+302|219771|2026-06-20|Fraude con tarjeta|En proceso|48.41
+303|222690|2026-06-20|No reconoce la compra|A favor del comercio|246.92
+304|220020|2026-06-21|Fraude con tarjeta|A favor del cliente|211.36
+305|235893|2026-06-21|No reconoce la compra|En proceso|4745.09
+306|240425|2026-06-21|No reconoce la compra|En proceso|11.48
+307|271570|2026-06-21|Producto defectuoso o distinto al ofrecido|En proceso|1030.62
+308|283321|2026-06-21|Producto defectuoso o distinto al ofrecido|En proceso|13.77
+309|247492|2026-06-22|Producto o servicio no recibido|A favor del cliente|114.92
+310|216437|2026-06-23|Cobro duplicado|En proceso|60.53
+311|278891|2026-06-23|Cobro duplicado|En proceso|881.78
+312|291139|2026-06-23|Producto o servicio no recibido|En proceso|141.63
+313|260955|2026-06-24|Producto defectuoso o distinto al ofrecido|En proceso|25.54
+314|270801|2026-06-26|Fraude con tarjeta|En proceso|941.86
+315|278709|2026-06-26|Producto o servicio no recibido|En proceso|169.56
+316|280358|2026-06-27|No reconoce la compra|En proceso|96.76
+317|281737|2026-06-27|No reconoce la compra|En proceso|432.64
+318|245270|2026-06-28|No reconoce la compra|A favor del cliente|3706.71
+319|247130|2026-06-30|Producto defectuoso o distinto al ofrecido|En proceso|16.90

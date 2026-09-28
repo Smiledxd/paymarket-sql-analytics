@@ -1,0 +1,43 @@
+mcc|descripcion|grupo
+0742|Veterinarias|Mascotas
+4111|Transporte urbano de pasajeros|Transporte
+4121|Taxis y movilidad por aplicativo|Transporte
+4131|Empresas de buses interprovinciales|Transporte
+4511|Aerolíneas|Viajes
+4722|Agencias de viaje|Viajes
+4814|Telecomunicaciones|Servicios
+4900|Pago de servicios (luz, agua, gas)|Servicios
+5200|Tiendas de mejoramiento del hogar|Hogar
+5251|Ferreterías|Hogar
+5311|Tiendas por departamento|Retail
+5411|Supermercados|Alimentos y bebidas
+5462|Panaderías y pastelerías|Alimentos y bebidas
+5499|Bodegas y minimarkets|Alimentos y bebidas
+5541|Grifos y estaciones de servicio|Transporte
+5651|Tiendas de ropa|Retail
+5661|Zapaterías|Retail
+5712|Mueblerías|Hogar
+5722|Electrodomésticos|Retail
+5732|Tiendas de electrónica|Retail
+5812|Restaurantes|Restaurantes
+5814|Comida rápida|Restaurantes
+5815|Contenido digital (música, video y libros)|Entretenimiento
+5816|Videojuegos digitales|Entretenimiento
+5912|Farmacias y boticas|Salud
+5921|Licorerías|Alimentos y bebidas
+5942|Librerías|Educación
+5945|Jugueterías|Retail
+5977|Tiendas de cosméticos|Cuidado personal
+5995|Tiendas de mascotas|Mascotas
+7011|Hoteles y hospedajes|Viajes
+7230|Salones de belleza y barberías|Cuidado personal
+7523|Estacionamientos|Transporte
+7832|Cines|Entretenimiento
+7922|Venta de entradas para espectáculos|Entretenimiento
+7997|Gimnasios y clubes deportivos|Entretenimiento
+8011|Consultorios médicos|Salud
+8021|Consultorios dentales|Salud
+8062|Clínicas y hospitales|Salud
+8211|Colegios|Educación
+8220|Universidades e institutos|Educación
+8299|Academias y cursos|Educación

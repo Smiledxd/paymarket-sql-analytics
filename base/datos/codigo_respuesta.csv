@@ -1,0 +1,16 @@
+codigo_respuesta|descripcion|tipo_respuesta
+00|Aprobada|Aprobada
+05|No autorizada por el emisor|Rechazo del cliente
+14|Número de tarjeta inválido|Rechazo del cliente
+41|Tarjeta reportada como perdida|Sospecha de fraude
+43|Tarjeta reportada como robada|Sospecha de fraude
+51|Fondos insuficientes|Rechazo del cliente
+54|Tarjeta vencida|Rechazo del cliente
+55|Clave incorrecta|Rechazo del cliente
+57|Operación no permitida al titular|Rechazo del cliente
+59|Sospecha de fraude|Sospecha de fraude
+61|Excede el límite de monto|Rechazo del cliente
+68|Respuesta tardía (tiempo agotado)|Rechazo técnico
+75|Excedió los intentos de clave|Rechazo del cliente
+91|Emisor no disponible|Rechazo técnico
+96|Falla del sistema|Rechazo técnico

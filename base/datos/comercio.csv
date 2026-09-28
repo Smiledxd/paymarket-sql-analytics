@@ -1,0 +1,601 @@
+comercio_id|ruc|razon_social|nombre_comercial|mcc|ubigeo_id|modalidad|fecha_afiliacion|tasa_mdr|estado
+1|20763256163|Pacha Electrodomésticos S.A.|Hogar Electro Pacha|5722|150103|Presencial|2024-10-01|0.0175|Activo
+2|20763696261|Transportes Ñan Wasi S.A.C.|Buses Ñan Wasi|4131|150115|Presencial|2024-10-05|0.0225|Activo
+3|20365165671|Hampi Farma S.A.C.|Boticas Hampi|5912|150131|Presencial|2024-10-06|0.0200|Activo
+4|20111084921|Killa Entretenimiento S.A.|Cines Killa|7832|150122|Presencial|2024-10-14|0.0225|Activo
+5|20689930183|Kallpa Mejoramiento del Hogar S.A.C.|Casa Kallpa|5200|150140|Presencial|2024-10-15|0.0200|Activo
+6|20785428804|Illari Tiendas por Departamento S.A.|Tiendas Illari|5311|150131|Presencial|2024-10-16|0.0200|Activo
+7|20144747420|Tika Warmi Belleza S.A.C.|Cosméticos Tika Warmi|5977|150131|Presencial|2024-10-27|0.0225|Activo
+8|20797562409|Qori Brasa Inversiones S.A.C.|Pollerías Qori Brasa|5812|150140|Presencial|2024-10-29|0.0200|Activo
+9|20423029111|Clínica Hampiq S.A.|Clínica Hampiq|8062|150131|Presencial|2024-10-31|0.0225|Activo
+10|20440587110|Negocios Shop El Huancaíno S.A.C.|Pet Shop El Huancaíno|5995|020101|Presencial|2024-11-02|0.0325|Suspendido
+11|20220053050|Inversiones El Manantial S.A.C.|Salchipapería El Manantial|5814|150103|Presencial|2024-11-04|0.0375|Activo
+12|20136180739|Servicios Superior La Esquina S.A.|Instituto Superior La Esquina|8220|150143|Presencial|2024-11-05|0.0375|Activo
+13|20327648404|Servicios La Popular S.A.C.|Policlínico La Popular|8011|150134|Presencial|2024-11-06|0.0325|Activo
+14|20990209490|Grupo El Rey E.I.R.L.|Botica El Rey|5912|040103|Presencial|2024-11-07|0.0325|Suspendido
+15|20901527360|Negocios Señor de los Milagros S.A.|Juguería Señor de los Milagros|5814|070101|Presencial|2024-11-07|0.0325|Activo
+16|20261515238|Corporación de Transportes La Casona S.A.C.|Empresa de Transportes La Casona|4111|130102|Presencial|2024-11-08|0.0350|Activo
+17|20142668247|Tawa Hipermercados S.A.|Hipermercados Tawa|5411|150131|Presencial|2024-11-11|0.0200|Activo
+18|20362186910|Samay Reservas S.A.C.|Hospedajes Samay|7011|080101|Online|2024-11-13|0.0275|Activo
+19|20209861985|Negocios El Progreso S.A.C.|Chifa El Progreso|5812|140105|Presencial|2024-11-14|0.0275|Activo
+20|20605966307|Corporación Sumaq Wasi S.A.|Supermercado Sumaq Wasi|5411|150103|Presencial|2024-11-14|0.0375|Activo
+21|20548082286|Grupo Shop Don Lucho S.R.L.|Pet Shop Don Lucho|5995|150136|Presencial|2024-11-15|0.0350|Activo
+22|20948099293|Allin Mercados del Perú S.A.C.|Mercados Allin|5411|150136|Presencial|2024-11-18|0.0200|Activo
+23|20214065755|Servicios La Colmena S.R.L.|Supermercado La Colmena|5411|150132|Presencial|2024-11-18|0.0300|Activo
+24|20239672052|Wayki Restaurantes S.A.C.|Comidas Rápidas Wayki|5814|150122|Presencial|2024-11-20|0.0250|Activo
+25|20938826600|Negocios Los Andes S.A.C.|Juguetería Los Andes|5945|021801|Presencial|2024-11-20|0.0275|Activo
+26|20911697506|Servicios de Belleza El Manantial S.A.C.|Salón de Belleza El Manantial|7230|040112|Presencial|2024-11-21|0.0275|Activo
+27|20554297421|Negocios La Popular S.A.C.|Picantería La Popular|5812|080106|Presencial|2024-11-22|0.0300|Activo
+28|20326894835|Grupo Mi Tierra S.R.L.|Colegio Mi Tierra|8211|150106|Presencial|2024-11-23|0.0350|Activo
+29|20156050459|Negocios Los Andes S.A.C.|Academia Los Andes|8299|150133|Presencial|2024-11-24|0.0350|Activo
+30|20964278718|Qatu Comercio Electrónico S.A.C.|Tienda Online Qatu|5311|150131|Online|2024-11-25|0.0350|Activo
+31|20193501061|Inversiones Las Hermanas S.A.C.|Juguería Las Hermanas|5814|150112|Presencial|2024-11-26|0.0325|Activo
+32|20115589301|Grupo La Popular S.A.|Muebles La Popular|5712|150137|Presencial|2024-11-26|0.0300|Activo
+33|20708319733|Inversiones Mi Cholita S.A.C.|Calzados Mi Cholita|5661|010701|Presencial|2024-11-27|0.0325|Activo
+34|20294090666|Inversiones Los Pinos S.A.C.|Estacionamiento Los Pinos|7523|150133|Presencial|2024-11-28|0.0275|Activo
+35|20913680716|Ñan Movilidad Digital S.A.C.|Ñan Taxi|4121|150131|Online|2024-11-29|0.0275|Activo
+36|20595588589|Corporación El Rosario S.A.|Clínica El Rosario|8062|240101|Presencial|2024-11-30|0.0350|Activo
+37|20550682487|Grupo La Chacra S.R.L.|Hamburguesas La Chacra|5814|160113|Presencial|2024-11-30|0.0275|Activo
+38|20469810349|Paqarina Almacenes S.A.C.|Almacenes Paqarina|5311|150101|Presencial|2024-12-01|0.0225|Activo
+39|20694173447|Corporación Las Palmeras S.A.C.|Confecciones Las Palmeras|5651|150601|Presencial|2024-12-01|0.0375|Activo
+40|20717628510|Corporación La Cabaña S.A.C.|Boutique La Cabaña|5651|150136|Presencial|2024-12-02|0.0375|Activo
+41|20409649875|Servicios El Huancaíno S.A.C.|Farmacia El Huancaíno|5912|120114|Presencial|2024-12-02|0.0350|Activo
+42|20999284672|Sinchi Fitness S.A.C.|Gimnasios Sinchi|7997|150130|Presencial|2024-12-02|0.0250|Activo
+43|20732813421|Nina Combustibles S.A.C.|Grifos Nina|5541|150130|Presencial|2024-12-03|0.0250|Activo
+44|20848012719|Pukllay Games S.A.C.|Pukllay Games|5816|150140|Online|2024-12-03|0.0350|Activo
+45|20276721217|Uyariy Digital S.A.C.|Uyariy Música|5815|150122|Online|2024-12-03|0.0275|Activo
+46|20763698638|Servicios El Puerto S.A.C.|Colegio El Puerto|8211|070101|Presencial|2024-12-06|0.0325|Activo
+47|20423043246|Muyu Panificadora S.A.C.|Panificadora Muyu|5462|150121|Presencial|2024-12-06|0.0175|Activo
+48|20810314673|Sumaq Retail S.A.C.|Supermercados Sumaq|5411|150140|Presencial|2024-12-07|0.0250|Activo
+49|20646615021|Inversiones Deportivo La Cusqueñita S.R.L.|Club Deportivo La Cusqueñita|7997|070101|Presencial|2024-12-09|0.0325|Activo
+50|20696978604|Grupo Dental Wasi S.R.L.|Clínica Dental Wasi|8021|150106|Presencial|2024-12-09|0.0325|Activo
+51|10444724591|ROJAS TORRES GLADYS|Hamburguesas Las Palmeras|5814|150135|Presencial|2024-12-09|0.0350|Activo
+52|20853090604|Grupo La Unión S.A.C.|Electrohogar La Unión|5722|211101|Presencial|2024-12-10|0.0325|Activo
+53|20423666162|Qhali Salud S.A.|Farmacias Qhali|5912|150122|Presencial|2024-12-10|0.0225|Activo
+54|20201780641|Servicios de Viajes El Sol S.R.L.|Agencia de Viajes El Sol|4722|040112|Presencial|2024-12-11|0.0275|Activo
+55|20987904527|Negocios Deportivo Los Andes S.A.|Club Deportivo Los Andes|7997|120101|Presencial|2024-12-11|0.0275|Activo
+56|20914883564|Ruphay Energía S.A.|Estaciones Ruphay|5541|150114|Presencial|2024-12-12|0.0225|Activo
+57|20516262371|Servicios San Pedro S.A.C.|Clínica San Pedro|8062|070101|Presencial|2024-12-13|0.0325|Activo
+58|20521571803|Grupo La Cusqueñita S.A.C.|Librería La Cusqueñita|5942|211101|Presencial|2024-12-14|0.0325|Activo
+59|20791766304|Chaska Electrónica S.A.C.|Electro Chaska|5732|150101|Presencial|2024-12-15|0.0200|Activo
+60|20299451675|Servicios Las Flores S.A.|Bodega Las Flores|5499|130101|Presencial|2024-12-19|0.0375|Activo
+61|20255972805|Servicios y Bazar El Encanto S.A.|Librería y Bazar El Encanto|5942|130105|Presencial|2024-12-19|0.0350|Activo
+62|20155676532|Servicios La Estrella S.R.L.|Electrohogar La Estrella|5722|150133|Presencial|2024-12-21|0.0375|Activo
+63|20975283837|Inversiones Don Lucho S.A.|Academia Don Lucho|8299|140101|Presencial|2024-12-22|0.0275|Activo
+64|20861146287|Negocios de Estacionamiento La Popular S.A.C.|Playa de Estacionamiento La Popular|7523|140106|Presencial|2024-12-23|0.0325|Activo
+65|20387962311|Negocios Los Andes S.R.L.|Mueblería Los Andes|5712|250101|Presencial|2024-12-24|0.0300|Suspendido
+66|20560669373|Servicios La Colmena S.A.C.|Panadería La Colmena|5462|070101|Presencial|2024-12-24|0.0350|Activo
+67|20539180691|Grupo de Estacionamiento Las Palmeras S.A.C.|Playa de Estacionamiento Las Palmeras|7523|010701|Presencial|2024-12-24|0.0350|Activo
+68|20761268938|Inversiones La Chacra S.A.C.|Farmacia La Chacra|5912|150132|Presencial|2024-12-26|0.0350|Activo
+69|20835546242|Inversiones Educativa Buen Precio S.A.C.|Institución Educativa Buen Precio|8211|070101|Presencial|2024-12-28|0.0350|Activo
+70|20103749256|Grupo La Chacra S.A.C.|Panadería La Chacra|5462|210101|Presencial|2024-12-28|0.0350|Activo
+71|20437812501|Corporación Virgen de la Candelaria E.I.R.L.|Confecciones Virgen de la Candelaria|5651|250101|Presencial|2024-12-30|0.0325|Activo
+72|20878962550|Servicios El Punto S.A.C.|Salchipapería El Punto|5814|040104|Presencial|2024-12-30|0.0325|Activo
+73|20868720108|Corporación San Pedro S.A.C.|Salchipapería San Pedro|5814|150103|Presencial|2024-12-31|0.0300|Activo
+74|20603330006|Servicios Tecnológico Doña Carmen S.A.C.|Instituto Tecnológico Doña Carmen|8220|130105|Presencial|2025-01-01|0.0375|Activo
+75|20650492561|Inversiones Educativa San Pablo S.A.C.|Institución Educativa San Pablo|8211|150135|Presencial|2025-01-04|0.0325|Activo
+76|20282907951|Corporación Don Pepe S.A.C.|Restaurante Don Pepe|5812|130102|Presencial|2025-01-06|0.0375|Activo
+77|10204889321|GUZMÁN GARCÍA FERNANDO|Librería y Bazar Buen Precio|5942|150117|Presencial|2025-01-07|0.0375|Suspendido
+78|20556349429|Servicios de Estacionamiento Sumaq Wasi S.A.C.|Playa de Estacionamiento Sumaq Wasi|7523|200104|Presencial|2025-01-07|0.0275|Activo
+79|20989266579|Grupo Mi Barrio S.R.L.|Cevichería Mi Barrio|5812|150110|Presencial|2025-01-08|0.0300|Activo
+80|20460724237|Corporación Tecnológico El Tumbesino S.R.L.|Instituto Tecnológico El Tumbesino|8220|100101|Presencial|2025-01-08|0.0300|Activo
+81|20909091692|Negocios El Paisano S.A.C.|Minimarket El Paisano|5499|160113|Presencial|2025-01-08|0.0000|Activo
+82|20468551854|Corporación La Arequipeña S.R.L.|Pollería La Arequipeña|5812|230101|Presencial|2025-01-08|0.0300|Activo
+83|20325054264|Servicios Doña Juana S.A.C.|Grifo Doña Juana|5541|150118|Presencial|2025-01-10|0.0375|Activo
+84|20222216428|Negocios Los Andes S.A.C.|Estacionamiento Los Andes|7523|150135|Presencial|2025-01-11|0.0325|Activo
+85|20791717605|Corporación Las Flores S.R.L.|Cafetería Las Flores|5812|060101|Presencial|2025-01-15|0.0350|Activo
+86|10112597048|LUNA VELÁSQUEZ CARMEN|Bodega y Licorería San Pedro|5499|150137|Presencial|2025-01-16|0.0375|Activo
+87|20479453544|Negocios La Norteñita E.I.R.L.|Confecciones La Norteñita|5651|150108|Presencial|2025-01-16|0.0300|Activo
+88|20291243887|Negocios Los Andes S.A.C.|Cafetería Los Andes|5812|150125|Presencial|2025-01-17|0.0325|Activo
+89|20706199625|Inversiones El Chasqui S.A.C.|Estación de Servicios El Chasqui|5541|150132|Presencial|2025-01-20|0.0300|Activo
+90|10713376553|GUZMÁN GUTIÉRREZ LUZ|Hamburguesas El Rey|5814|120301|Presencial|2025-01-20|0.0400|Activo
+91|20803490750|Grupo Dental El Encanto S.A.C.|Consultorio Dental El Encanto|8021|150110|Presencial|2025-01-22|0.0325|Activo
+92|20591281837|Corporación Doña Rosa S.A.|Zapatería Doña Rosa|5661|150132|Presencial|2025-01-22|0.0375|Activo
+93|20823896230|Grupo La Cabaña S.A.C.|Autoservicio La Cabaña|5411|150108|Presencial|2025-01-24|0.0350|Activo
+94|20820412461|Servicios El Económico S.A.|Bodega El Económico|5499|120601|Presencial|2025-01-24|0.0450|Activo
+95|20300747150|Inversiones San Pablo S.A.|Minimarket San Pablo|5499|150133|Presencial|2025-01-24|0.0450|Activo
+96|20596665439|Inversiones de Viajes El Molino E.I.R.L.|Agencia de Viajes El Molino|4722|150110|Presencial|2025-01-26|0.0300|Activo
+97|20623034632|Corporación El Triunfo S.A.|Ferretería El Triunfo|5251|150140|Presencial|2025-01-26|0.0275|Activo
+98|20940065098|Servicios Deportivo La Pradera S.A.C.|Club Deportivo La Pradera|7997|150130|Presencial|2025-01-27|0.0275|Activo
+99|20723545537|Grupo El Sol S.A.|Sanguchería El Sol|5814|160101|Presencial|2025-01-27|0.0375|Activo
+100|20319774549|Negocios El Rey S.R.L.|Veterinaria El Rey|0742|150104|Presencial|2025-01-29|0.0350|Activo
+101|20782381688|Negocios La Arequipeña S.A.|Spa La Arequipeña|7230|200104|Presencial|2025-01-30|0.0400|Activo
+102|20743265646|Inversiones Shop Mi Cholita S.A.C.|Pet Shop Mi Cholita|5995|080101|Presencial|2025-02-01|0.0275|Suspendido
+103|20209443512|Corporación Los Olivares S.A.C.|Autoservicio Los Olivares|5411|150801|Presencial|2025-02-02|0.0325|Activo
+104|20531538481|Negocios El Progreso S.A.C.|Cafetería El Progreso|5812|150141|Presencial|2025-02-02|0.0350|Activo
+105|20342000615|Conecta Andina Telecomunicaciones S.A.|Conecta Andina Telecom|4814|150131|Online|2025-02-02|0.0275|Activo
+106|20665251960|Servicios El Rincón S.R.L.|Cevichería El Rincón|5812|160112|Presencial|2025-02-03|0.0375|Activo
+107|10251065697|ESPINOZA SALAZAR JAZMÍN|Licorería Mi Barrio|5921|021801|Presencial|2025-02-03|0.0400|Activo
+108|20363525262|Corporación de Viajes El Chalán E.I.R.L.|Agencia de Viajes El Chalán|4722|150106|Presencial|2025-02-05|0.0375|Activo
+109|20411632238|Servicios de Bebidas Ayni E.I.R.L.|Distribuidora de Bebidas Ayni|5921|200101|Presencial|2025-02-05|0.0300|Activo
+110|20373999378|Servicios de Construcción La Cusqueñita S.A.C.|Materiales de Construcción La Cusqueñita|5251|080105|Presencial|2025-02-05|0.0350|Activo
+111|10759337757|VEGA MENDOZA LUCÍA|Restaurante Las Palmeras|5812|060101|Presencial|2025-02-05|0.0450|Activo
+112|20148263885|Negocios Doña Carmen S.A.C.|Farmacia Doña Carmen|5912|070101|Presencial|2025-02-06|0.0275|Activo
+113|20435436847|Corporación Tecnológico Sumaq Wasi S.A.C.|Instituto Tecnológico Sumaq Wasi|8220|211101|Presencial|2025-02-06|0.0325|Activo
+114|20460083231|Rutas del Inti Agencia de Viajes S.A.C.|Rutas del Inti Viajes|4722|150122|Online|2025-02-06|0.0300|Activo
+115|20825785346|Servicios de Viajes Inti S.R.L.|Agencia de Viajes Inti|4722|150119|Presencial|2025-02-09|0.0325|Suspendido
+116|20557009648|Servicios Santa Ana S.R.L.|Chifa Santa Ana|5812|150142|Presencial|2025-02-10|0.0450|Activo
+117|20950698773|Servicios La Cusqueñita S.A.C.|Confecciones La Cusqueñita|5651|200601|Presencial|2025-02-10|0.0375|Activo
+118|20855635985|Inversiones y Licorería Mi Cholita E.I.R.L.|Bodega y Licorería Mi Cholita|5499|150130|Presencial|2025-02-11|0.0350|Activo
+119|20425514181|Corporación Dental El Tumbesino S.R.L.|Consultorio Dental El Tumbesino|8021|150132|Presencial|2025-02-13|0.0375|Activo
+120|20275245659|Grupo La Chacra S.A.C.|Moda La Chacra|5651|230110|Presencial|2025-02-13|0.0275|Activo
+121|20284695241|Wiñay Tecnología S.A.C.|Tecno Wiñay Store|5732|150140|Online|2025-02-13|0.0300|Activo
+122|20966610221|Yupana Recaudos S.A.C.|Recaudadora Yupana|4900|150101|Online|2025-02-14|0.0300|Activo
+123|20342180222|Inversiones Buen Precio S.A.C.|Sanguchería Buen Precio|5814|220901|Presencial|2025-02-15|0.0375|Activo
+124|20895607763|Grupo Buen Precio S.A.C.|Zapatería Buen Precio|5661|150143|Presencial|2025-02-16|0.0350|Activo
+125|20238664358|Inversiones y Bazar San Pedro E.I.R.L.|Librería y Bazar San Pedro|5942|160113|Presencial|2025-02-18|0.0425|Activo
+126|20298276578|Grupo Dental Doña Carmen S.A.C.|Consultorio Dental Doña Carmen|8021|150120|Presencial|2025-02-20|0.0375|Activo
+127|20692638167|Negocios La Perla del Sur S.A.C.|Boutique La Perla del Sur|5651|150103|Presencial|2025-02-21|0.0300|Suspendido
+128|20607694916|Inversiones de Transportes Ayni S.A.C.|Empresa de Transportes Ayni|4111|211101|Presencial|2025-02-23|0.0375|Activo
+129|20691300804|Corporación Doña Carmen S.A.C.|Pastelería Doña Carmen|5462|250105|Presencial|2025-02-23|0.0375|Suspendido
+130|10703306417|MAMANI HUAMÁN MARÍA|Abarrotes La Perla del Sur|5499|150132|Presencial|2025-02-25|0.0400|Activo
+131|20178116810|Inversiones La Unión E.I.R.L.|Hotel La Unión|7011|150135|Presencial|2025-02-25|0.0275|Activo
+132|20167183086|Negocios de Construcción La Colmena S.A.C.|Materiales de Construcción La Colmena|5251|021801|Presencial|2025-02-25|0.0375|Activo
+133|20817492577|Negocios Mi Tierra S.A.|Clínica Mi Tierra|8062|080108|Presencial|2025-02-26|0.0300|Activo
+134|20353276353|Negocios Center Los Primos S.A.C.|Home Center Los Primos|5200|080105|Presencial|2025-02-26|0.0325|Activo
+135|20488421884|Servicios El Rosario S.A.C.|Hotel El Rosario|7011|150101|Presencial|2025-02-26|0.0325|Activo
+136|20842044091|Negocios La Fortuna S.R.L.|Panificadora La Fortuna|5462|230110|Presencial|2025-02-26|0.0375|Activo
+137|20968159888|Servicios y Bazar Don Lucho S.A.C.|Librería y Bazar Don Lucho|5942|150134|Presencial|2025-02-27|0.0400|Activo
+138|20206545322|Grupo La Colmena S.A.C.|Restaurante La Colmena|5812|150103|Presencial|2025-02-27|0.0300|Activo
+139|20129056232|Negocios de Transportes El Encanto S.R.L.|Empresa de Transportes El Encanto|4111|130105|Presencial|2025-02-28|0.0450|Activo
+140|20137128455|Negocios La Norteñita S.A.|Estacionamiento La Norteñita|7523|200104|Presencial|2025-03-01|0.0325|Activo
+141|10393836569|VALERA ORTIZ MARIBEL|Clínica Veterinaria La Sazón de Mamá|0742|070101|Presencial|2025-03-02|0.0450|Activo
+142|20894455285|Negocios El Paisano S.R.L.|Farmacia El Paisano|5912|150108|Presencial|2025-03-02|0.0275|Activo
+143|20416321664|Inversiones La Unión S.A.C.|Calzados La Unión|5661|150101|Presencial|2025-03-06|0.0325|Activo
+144|20973345231|Corporación Doña Rosa S.A.C.|Farmacia Doña Rosa|5912|220101|Presencial|2025-03-06|0.0275|Activo
+145|20966679426|Awana Moda S.A.C.|Moda Online Awana|5651|150140|Online|2025-03-09|0.0300|Activo
+146|20898700195|Inversiones Doña Juana S.A.|Clínica Doña Juana|8062|150110|Presencial|2025-03-10|0.0350|Activo
+147|20766273590|Pukllana Juguetes S.A.C.|Juguetes Pukllana|5945|150136|Online|2025-03-12|0.0325|Activo
+148|10653735672|CHÁVEZ GARCÍA MARÍA|Bodega y Licorería La Cabaña|5499|250101|Presencial|2025-03-13|0.0400|Activo
+149|20900504013|Inversiones El Puerto E.I.R.L.|Minimarket El Puerto|5499|150133|Presencial|2025-03-14|0.0450|Activo
+150|10435349205|FLORES CÁRDENAS ALBERTO|Bodega y Licorería Doña Rosa|5499|150142|Presencial|2025-03-15|0.0350|Activo
+151|20799797675|Inversiones San Pablo S.A.C.|Pollería San Pablo|5812|150132|Presencial|2025-03-15|0.0300|Activo
+152|20598896365|Servicios La Unión S.A.|Boutique La Unión|5651|150110|Presencial|2025-03-16|0.0300|Activo
+153|20242959648|Inversiones Doña Juana S.A.C.|Bodega Doña Juana|5499|170101|Presencial|2025-03-17|0.0400|Activo
+154|20861031595|Kuska Móvil S.A.C.|Red Kuska Móvil|4814|150140|Online|2025-03-18|0.0350|Activo
+155|20529881542|Grupo Señor de los Milagros S.A.C.|Hostal Señor de los Milagros|7011|070106|Presencial|2025-03-19|0.0325|Activo
+156|10364222845|LOAYZA CARRASCO JUAN|Minimarket El Rey|5499|150121|Presencial|2025-03-25|0.0400|Activo
+157|20848856275|Negocios Inti S.A.C.|Salchipapería Inti|5814|120301|Presencial|2025-03-31|0.0350|Activo
+158|10490439663|SOTO MEDINA RAÚL|Farmacia La Unión|5912|070106|Presencial|2025-04-04|0.0350|Activo
+159|20984775246|Negocios Doña Carmen E.I.R.L.|Hamburguesas Doña Carmen|5814|150132|Presencial|2025-04-05|0.0400|Activo
+160|20906390079|Negocios El Puerto S.A.C.|Ferretería El Puerto|5251|130101|Presencial|2025-04-11|0.0350|Activo
+161|20633334855|Servicios El Ahorro S.R.L.|Barbería El Ahorro|7230|150130|Presencial|2025-04-13|0.0450|Activo
+162|20792472029|Servicios El Tumbesino S.A.|Bodega El Tumbesino|5499|150122|Presencial|2025-04-14|0.0400|Activo
+163|20244586814|Corporación La Cabaña S.R.L.|Colegio La Cabaña|8211|140101|Presencial|2025-04-15|0.0300|Activo
+164|20929334397|Yachaq Educación Virtual S.A.C.|Academia Virtual Yachaq|8299|150131|Online|2025-04-18|0.0325|Activo
+165|10275134428|CAMPOS FLORES EDUARDO|Librería y Bazar La Chacra|5942|070106|Presencial|2025-04-18|0.0450|Activo
+166|20926600932|Inversiones El Triunfo S.A.C.|Licorería El Triunfo|5921|150122|Presencial|2025-04-18|0.0450|Activo
+167|20321740139|Servicios El Progreso S.A.C.|Sanguchería El Progreso|5814|211101|Presencial|2025-04-20|0.0350|Activo
+168|20716991114|Negocios y Licorería La Perla del Sur S.A.C.|Bodega y Licorería La Perla del Sur|5499|150108|Presencial|2025-04-21|0.0400|Activo
+169|20901322709|Negocios Los Primos S.A.C.|Ferretería Los Primos|5251|150103|Presencial|2025-04-21|0.0350|Activo
+170|20167734198|Negocios Don Pepe S.A.|Juguería Don Pepe|5814|160113|Presencial|2025-04-21|0.0375|Activo
+171|10127285638|CRUZ QUISPE RENZO|Abarrotes Sumaq Wasi|5499|220909|Presencial|2025-04-22|0.0350|Activo
+172|10513179214|SALAZAR TORRES MARISOL|Salón de Belleza La Unión|7230|150136|Presencial|2025-04-22|0.0450|Activo
+173|20143036538|Inversiones Los Andes S.A.|Abarrotes Los Andes|5499|070106|Presencial|2025-04-27|0.0375|Activo
+174|20668447555|Corporación Los Primos S.A.|Minimarket Los Primos|5411|150135|Presencial|2025-04-27|0.0350|Activo
+175|20797636747|Inversiones y Licorería Las Palmeras S.A.C.|Bodega y Licorería Las Palmeras|5499|150118|Presencial|2025-04-28|0.0425|Activo
+176|10788552632|QUISPE CAHUANA SEBASTIÁN|Spa El Mirador|7230|150130|Presencial|2025-04-29|0.0375|Activo
+177|20659204160|Tunki Airlines S.A.|Aerolíneas Tunki|4511|070101|Online|2025-05-01|0.0325|Activo
+178|20351957698|Servicios Los Pinos S.A.C.|Pastelería Los Pinos|5462|150135|Presencial|2025-05-04|0.0375|Activo
+179|20509369985|Inversiones Médico La Perla del Sur S.A.C.|Consultorio Médico La Perla del Sur|8011|130101|Presencial|2025-05-05|0.0275|Activo
+180|20423401924|Inversiones Buen Precio S.A.C.|Calzados Buen Precio|5661|150132|Presencial|2025-05-06|0.0425|Activo
+181|20779422900|Servicios Virgen de la Candelaria S.A.C.|Minimarket Virgen de la Candelaria|5499|150137|Presencial|2025-05-08|0.0400|Activo
+182|20218562478|Negocios y Bazar La Esquina S.A.C.|Librería y Bazar La Esquina|5942|150106|Presencial|2025-05-11|0.0400|Activo
+183|20671819854|Negocios El Manantial S.A.C.|Pollería El Manantial|5812|070104|Presencial|2025-05-12|0.0450|Activo
+184|20172210199|Hatun Import Tecnología E.I.R.L.|Tecno Hatun Import|5732|150115|Online|2025-05-12|0.0375|Activo
+185|10337104644|CONDORI CHÁVEZ LUIS|Zapatería El Rincón|5661|040129|Presencial|2025-05-12|0.0425|Activo
+186|10114103875|RODRÍGUEZ DÍAZ PAOLA|Abarrotes El Ahorro|5499|150132|Presencial|2025-05-13|0.0375|Activo
+187|10395698805|QUISPE MAMANI ANA|Spa El Chalán|7230|130105|Presencial|2025-05-13|0.0375|Activo
+188|20278330568|Inversiones Los Andes S.A.|Panificadora Los Andes|5462|130111|Presencial|2025-05-14|0.0350|Activo
+189|20612985953|Negocios La Arequipeña S.A.C.|Minimarket La Arequipeña|5499|021801|Presencial|2025-05-15|0.0400|Activo
+190|10662240414|MUÑOZ CASTRO ISABEL|Bodega y Licorería El Huancaíno|5499|150110|Presencial|2025-05-17|0.0450|Activo
+191|20610348468|Grupo Superior Mi Cholita S.A.C.|Instituto Superior Mi Cholita|8220|150137|Presencial|2025-05-19|0.0300|Activo
+192|20600579828|Servicios Tika S.A.C.|Bodega Tika|5499|130101|Presencial|2025-05-22|0.0350|Activo
+193|20882246923|Inversiones Los Pinos S.A.|Farmacia Los Pinos|5912|200104|Presencial|2025-05-28|0.0400|Activo
+194|20204978230|Negocios La Colmena S.R.L.|Policlínico La Colmena|8011|150112|Presencial|2025-05-30|0.0450|Activo
+195|20255188535|Inversiones Nueva Esperanza S.A.C.|Confecciones Nueva Esperanza|5651|150132|Presencial|2025-05-31|0.0275|Activo
+196|10324280079|MUÑOZ CARRASCO RUBÉN|Abarrotes El Punto|5499|120107|Presencial|2025-06-02|0.0400|Activo
+197|20898754881|Inversiones y Licorería El Carmen S.A.C.|Bodega y Licorería El Carmen|5499|150140|Presencial|2025-06-05|0.0425|Activo
+198|20133935038|Rikuy Streaming S.A.C.|Rikuy Play|5815|150131|Online|2025-06-05|0.0350|Activo
+199|10307315527|CRUZ TORRES XIMENA|Hotel La Chacra|7011|150501|Presencial|2025-06-10|0.0375|Activo
+200|20172635874|Inversiones La Fortuna S.R.L.|Librería La Fortuna|5942|130111|Presencial|2025-06-11|0.0300|Activo
+201|10759842974|VILLANUEVA GONZALES DANIEL|Salón de Belleza Los Olivares|7230|060101|Presencial|2025-06-15|0.0400|Activo
+202|10260494665|MAMANI LÓPEZ SILVIA|Cevichería Doña Carmen|5812|070106|Presencial|2025-06-16|0.0350|Activo
+203|10207667469|TORRES GARCÍA LIZBETH|Juguetería El Chalán|5945|150112|Presencial|2025-06-16|0.0400|Activo
+204|10551720514|MORALES RAMÍREZ GABRIELA|Bodega y Licorería La Unión|5499|160112|Presencial|2025-06-17|0.0375|Activo
+205|10498137399|ROJAS QUISPE DANIEL|Calzados La Popular|5661|150132|Presencial|2025-06-17|0.0425|Activo
+206|20427530389|Negocios Doña Juana S.A.C.|Restaurante Doña Juana|5812|150101|Presencial|2025-06-17|0.0425|Activo
+207|10513790592|RODRÍGUEZ CASTILLO ISABEL|Chifa La Arequipeña|5812|150132|Presencial|2025-06-21|0.0425|Activo
+208|20598301817|Servicios El Huancaíno E.I.R.L.|Chifa El Huancaíno|5812|150114|Presencial|2025-06-22|0.0275|Activo
+209|20660701584|Tinkuy Eventos S.A.C.|Entradas Tinkuy|7922|150122|Online|2025-06-22|0.0350|Activo
+210|10608152399|TELLO PALOMINO JULIO|Minimarket El Sol|5499|150140|Presencial|2025-06-22|0.0400|Activo
+211|20782246756|Negocios Los Primos S.A.C.|Juguería Los Primos|5814|150135|Presencial|2025-06-23|0.0425|Activo
+212|20381466419|Servicios El Encanto S.A.C.|Abarrotes El Encanto|5499|150123|Presencial|2025-06-24|0.0000|Activo
+213|10646889869|ROJAS HERRERA PATRICIA|Sanguchería La Fortuna|5814|150132|Presencial|2025-06-24|0.0400|Activo
+214|10679324719|RAMOS VALERA MARCO|Chifa Don Pepe|5812|070106|Presencial|2025-06-26|0.0350|Activo
+215|20381999069|Negocios Wasi S.A.C.|Minimarket Wasi|5499|150123|Presencial|2025-06-26|0.0375|Suspendido
+216|10298220763|RODRÍGUEZ REYES TERESA|Panificadora San Pedro|5462|150132|Presencial|2025-06-26|0.0350|Activo
+217|20433466668|Negocios El Encanto E.I.R.L.|Bodega El Encanto|5499|150501|Presencial|2025-06-27|0.0450|Activo
+218|10413661566|CRUZ HUAMÁN MILAGROS|Bodega Kusi|5499|021801|Presencial|2025-06-29|0.0375|Activo
+219|20437040061|Inversiones La Norteñita S.A.C.|Farmacia La Norteñita|5912|120107|Presencial|2025-06-30|0.0400|Activo
+220|10164853654|TORRES CÁRDENAS MILAGROS|Bodega La Popular|5499|070101|Presencial|2025-07-04|0.0425|Activo
+221|20913526521|Inversiones Los Olivares E.I.R.L.|Boutique Los Olivares|5651|150132|Presencial|2025-07-04|0.0275|Activo
+222|20894599201|Inversiones de Bebidas El Faro S.A.C.|Distribuidora de Bebidas El Faro|5921|150123|Presencial|2025-07-04|0.0425|Activo
+223|10666385328|CHÁVEZ FLORES PERCY|Sanguchería Nueva Esperanza|5814|150117|Presencial|2025-07-06|0.0400|Activo
+224|20134500990|Servicios Santa Rosa S.A.C.|Bodega Santa Rosa|5499|150108|Presencial|2025-07-07|0.0425|Activo
+225|10205043875|VARGAS CASTILLO RAÚL|Materiales de Construcción El Mirador|5251|110101|Presencial|2025-07-08|0.0375|Activo
+226|20233449815|Inversiones Dental Santa Rosa S.A.C.|Consultorio Dental Santa Rosa|8021|070106|Presencial|2025-07-09|0.0300|Activo
+227|20723155721|Servicios Inti S.A.C.|Confecciones Inti|5651|040104|Presencial|2025-07-14|0.0375|Activo
+228|20279640714|Corporación La Perla del Sur S.R.L.|Farmacia La Perla del Sur|5912|220901|Presencial|2025-07-14|0.0275|Activo
+229|20433144962|Negocios Los Primos S.R.L.|Barbería Los Primos|7230|150133|Presencial|2025-07-16|0.0425|Activo
+230|20288750549|Servicios El Sol S.R.L.|Librería El Sol|5942|150111|Presencial|2025-07-18|0.0375|Activo
+231|20600191412|Grupo El Triunfo S.A.C.|Hotel El Triunfo|7011|070101|Presencial|2025-07-19|0.0375|Activo
+232|20362879656|Negocios El Triunfo S.A.C.|Bodega El Triunfo|5499|150142|Presencial|2025-07-20|0.0375|Activo
+233|10186514641|VÁSQUEZ CÓRDOVA WALTER|Distribuidora de Bebidas El Buen Gusto|5921|150117|Presencial|2025-07-20|0.0425|Activo
+234|10693696611|VARGAS VÁSQUEZ XIMENA|Bodega Doña Carmen|5499|150101|Presencial|2025-07-23|0.0400|Activo
+235|10219134318|ZEGARRA GUTIÉRREZ NILTON|Botica El Progreso|5912|150110|Presencial|2025-07-23|0.0400|Activo
+236|10212572671|SÁNCHEZ QUISPE LUCÍA|Cevichería San Judas Tadeo|5812|160101|Presencial|2025-07-25|0.0400|Activo
+237|20783641241|Inversiones Nueva Esperanza S.A.C.|Pastelería Nueva Esperanza|5462|120114|Presencial|2025-07-25|0.0450|Activo
+238|20519716896|Servicios San Judas Tadeo E.I.R.L.|Abarrotes San Judas Tadeo|5499|150135|Presencial|2025-07-27|0.0400|Activo
+239|10137550607|SALAS VALDIVIA PAOLA|Minimarket San Judas Tadeo|5499|150140|Presencial|2025-07-29|0.0000|Activo
+240|20803754188|Inversiones de Bebidas Nueva Esperanza S.A.C.|Distribuidora de Bebidas Nueva Esperanza|5921|100101|Presencial|2025-08-01|0.0400|Activo
+241|10674621618|CHAMBI RODRÍGUEZ EDWIN|Barbería La Popular|7230|150112|Presencial|2025-08-02|0.0375|Activo
+242|20719656782|Negocios de Bebidas El Encanto E.I.R.L.|Distribuidora de Bebidas El Encanto|5921|150110|Presencial|2025-08-02|0.0450|Activo
+243|20803476595|Grupo La Esquina S.A.C.|Electrónica La Esquina|5732|150110|Presencial|2025-08-04|0.0350|Activo
+244|10131711480|CONDORI MORALES KEVIN|Clínica Dental Los Primos|8021|200115|Presencial|2025-08-06|0.0425|Activo
+245|10580159953|CASTILLO GUTIÉRREZ ANA|Chifa El Chalán|5812|140105|Presencial|2025-08-07|0.0425|Activo
+246|20405785006|Corporación Veterinaria La Colmena S.A.C.|Clínica Veterinaria La Colmena|0742|150132|Presencial|2025-08-07|0.0375|Activo
+247|20234451929|Inversiones Dental Las Palmeras S.A.|Consultorio Dental Las Palmeras|8021|150128|Presencial|2025-08-07|0.0425|Activo
+248|20319000594|Servicios El Rosario S.A.C.|Ferretería El Rosario|5251|150101|Presencial|2025-08-07|0.0450|Activo
+249|10470515193|TICONA CHÁVEZ ANA|Ferretería Los Pinos|5251|150142|Presencial|2025-08-07|0.0400|Activo
+250|20133005634|Servicios La Colmena S.A.C.|Hotel La Colmena|7011|200104|Presencial|2025-08-09|0.0375|Activo
+251|10216709280|GONZALES ROMERO KAREN|Librería San Pedro|5942|150133|Presencial|2025-08-10|0.0450|Activo
+252|10795618410|CUSI MORALES BRAYAN|Bodega La Fortuna|5499|080105|Presencial|2025-08-11|0.0450|Activo
+253|20338419636|Grupo Santa Ana E.I.R.L.|Confecciones Santa Ana|5651|110101|Presencial|2025-08-11|0.0375|Activo
+254|20997479778|Corporación Tecnológico La Estrella E.I.R.L.|Instituto Tecnológico La Estrella|8220|150133|Presencial|2025-08-14|0.0375|Activo
+255|10732236746|CHÁVEZ FERNÁNDEZ SEBASTIÁN|Calzados La Chacra|5661|150114|Presencial|2025-08-15|0.0350|Activo
+256|10563543651|SÁNCHEZ TICONA PATRICIA|Ferretería Nueva Esperanza|5251|150110|Presencial|2025-08-15|0.0450|Activo
+257|20149519409|Negocios Santa Ana E.I.R.L.|Hamburguesas Santa Ana|5814|160113|Presencial|2025-08-15|0.0400|Activo
+258|20732110349|Inversiones El Económico S.R.L.|Abarrotes El Económico|5499|150101|Presencial|2025-08-16|0.0000|Activo
+259|10574878794|CAHUANA POMA DIANA|Minimarket El Chalán|5499|050101|Presencial|2025-08-16|0.0425|Activo
+260|10258283584|GUTIÉRREZ PALOMINO ALBERTO|Picantería Ayni|5812|150123|Presencial|2025-08-16|0.0425|Suspendido
+261|20705467839|Negocios Santa Ana S.A.C.|Boutique Santa Ana|5651|140101|Presencial|2025-08-17|0.0450|Activo
+262|20396467462|Servicios La Colmena E.I.R.L.|Abarrotes La Colmena|5499|021801|Presencial|2025-08-18|0.0400|Activo
+263|10208155186|ROMERO ROMERO VALERIA|Picantería San Judas Tadeo|5812|080106|Presencial|2025-08-18|0.0425|Activo
+264|20939771892|Negocios El Encanto E.I.R.L.|Electrónica El Encanto|5732|210101|Presencial|2025-08-19|0.0350|Activo
+265|10772650359|GUTIÉRREZ PÉREZ IVÁN|Cevichería El Molino|5812|220101|Presencial|2025-08-20|0.0425|Activo
+266|20150909237|Inversiones de Construcción Los Andes S.A.C.|Materiales de Construcción Los Andes|5251|120114|Presencial|2025-08-20|0.0350|Activo
+267|20367382130|Negocios de Construcción Santa Cruz S.A.|Materiales de Construcción Santa Cruz|5251|130101|Presencial|2025-08-21|0.0425|Activo
+268|10425189901|AYALA CHÁVEZ MARTÍN|Ferretería Santa Ana|5251|120101|Presencial|2025-08-22|0.0450|Activo
+269|10767450414|LÓPEZ HUAMÁN IVÁN|Pollería El Progreso|5812|200101|Presencial|2025-08-23|0.0425|Activo
+270|20913684886|Inversiones Killa S.R.L.|Moda Killa|5651|050101|Presencial|2025-08-25|0.0375|Activo
+271|10189913139|GARCÍA MEDINA MANUEL|Playa de Estacionamiento El Rincón|7523|210101|Presencial|2025-08-25|0.0350|Activo
+272|10721929081|FLORES INGA SOFÍA|Cafetería El Sol|5812|150117|Presencial|2025-08-27|0.0375|Activo
+273|10231318572|FERNÁNDEZ MAMANI SILVIA|Minimarket El Rosario|5499|150132|Presencial|2025-08-27|0.0375|Activo
+274|20306880145|Inversiones Shop El Rey S.A.C.|Pet Shop El Rey|5995|150110|Presencial|2025-08-29|0.0450|Activo
+275|20697507257|Negocios Santa Lucía S.A.C.|Hostal Santa Lucía|7011|150108|Presencial|2025-08-30|0.0425|Activo
+276|10678860935|QUISPE DÍAZ LUIS|Bodega y Licorería Santa Rosa|5499|200101|Presencial|2025-09-01|0.0350|Activo
+277|10546714573|QUISPE HUAMÁN NANCY|Restaurante La Popular|5812|150136|Presencial|2025-09-05|0.0400|Activo
+278|10262688921|MENDOZA CONDORI WILMER|Sanguchería El Rincón|5814|150125|Presencial|2025-09-06|0.0425|Activo
+279|20629391666|Grupo Las Palmeras S.A.|Supermercado Las Palmeras|5411|040122|Presencial|2025-09-10|0.0375|Activo
+280|10135607881|GONZALES GONZALES ROBERTO|Boutique Las Palmeras|5651|150122|Presencial|2025-09-11|0.0375|Activo
+281|20929785003|Negocios El Puerto Bus E.I.R.L.|Turismo El Puerto Bus|4131|150103|Presencial|2025-09-11|0.0350|Activo
+282|10476750895|GUTIÉRREZ GUTIÉRREZ CHRISTIAN|Farmacia El Buen Gusto|5912|150133|Presencial|2025-09-13|0.0425|Activo
+283|20646765294|Inversiones Santa Cruz E.I.R.L.|Panificadora Santa Cruz|5462|150103|Presencial|2025-09-13|0.0350|Activo
+284|20278681182|Servicios La Perla del Sur S.R.L.|Panificadora La Perla del Sur|5462|150501|Presencial|2025-09-15|0.0425|Activo
+285|20417614193|Negocios La Casona S.R.L.|Policlínico La Casona|8011|070107|Presencial|2025-09-17|0.0400|Activo
+286|20453437486|Inversiones Dental La Sazón de Mamá S.R.L.|Consultorio Dental La Sazón de Mamá|8021|150132|Presencial|2025-09-22|0.0275|Activo
+287|10766150166|FLORES GUTIÉRREZ JAVIER|Ferretería Los Andes|5251|140105|Presencial|2025-09-23|0.0400|Activo
+288|10796080693|QUISPE HUAMÁN YESSICA|Librería y Bazar Nueva Esperanza|5942|150115|Presencial|2025-09-24|0.0450|Activo
+289|10701667463|DÍAZ GARCÍA LUIS|Abarrotes Inti|5499|150130|Presencial|2025-09-26|0.0450|Activo
+290|20999499296|Servicios El Paisano S.A.C.|Librería El Paisano|5942|150142|Presencial|2025-09-26|0.0375|Activo
+291|10271589773|SALAZAR DÍAZ DANIELA|Empresa de Transportes Killa|4111|140105|Presencial|2025-09-29|0.0350|Activo
+292|10308207736|LUNA CRUZ PATRICIA|Boutique El Progreso|5651|150117|Presencial|2025-09-30|0.0350|Activo
+293|20480275005|Inversiones Médico La Norteñita S.A.C.|Consultorio Médico La Norteñita|8011|150114|Presencial|2025-10-01|0.0375|Activo
+294|20864348743|Servicios Las Palmeras S.R.L.|Librería Las Palmeras|5942|080101|Presencial|2025-10-02|0.0350|Activo
+295|10574312383|FLORES GARCÍA ROSA|Sanguchería La Popular|5814|150103|Presencial|2025-10-04|0.0450|Activo
+296|10351637639|MAMANI HERRERA ELENA|Bodega y Licorería Los Andes|5499|080104|Presencial|2025-10-05|0.0450|Activo
+297|20439133351|Inversiones El Paisano S.A.C.|Restaurante El Paisano|5812|150101|Presencial|2025-10-06|0.0375|Activo
+298|10132061713|QUISPE RAMOS CÉSAR|Spa La Chacra|7230|250101|Presencial|2025-10-07|0.0350|Activo
+299|20880776631|Negocios La Perla del Sur S.R.L.|Juguería La Perla del Sur|5814|130105|Presencial|2025-10-09|0.0425|Activo
+300|10709442037|FERNÁNDEZ CRUZ FERNANDO|Barbería El Rincón|7230|160113|Presencial|2025-10-11|0.0450|Activo
+301|20669251191|Negocios La Norteñita S.A.C.|Botica La Norteñita|5912|150142|Presencial|2025-10-13|0.0350|Activo
+302|20740282108|Servicios de Construcción La Norteñita S.A.C.|Materiales de Construcción La Norteñita|5251|120303|Presencial|2025-10-13|0.0275|Activo
+303|20119500037|Inversiones Don Víctor S.A.|Abarrotes Don Víctor|5499|150118|Presencial|2025-10-14|0.0350|Activo
+304|20252435302|Inversiones Mi Tierra S.A.|Botica Mi Tierra|5912|070104|Presencial|2025-10-15|0.0350|Activo
+305|10584903843|SILVA MENDOZA MERCEDES|Farmacia Wasi|5912|150142|Presencial|2025-10-15|0.0400|Activo
+306|20115977891|Servicios Don Pepe S.A.|Moda Don Pepe|5651|130102|Presencial|2025-10-16|0.0375|Activo
+307|10751220451|VÁSQUEZ GUERRERO VALERIA|Hostal Ayni|7011|060101|Presencial|2025-10-18|0.0350|Activo
+308|20759041250|Servicios Sumaq Wasi S.A.C.|Mueblería Sumaq Wasi|5712|140101|Presencial|2025-10-19|0.0325|Suspendido
+309|10363455021|VÁSQUEZ QUISPE JULIA|Sanguchería San Judas Tadeo|5814|150143|Presencial|2025-10-19|0.0450|Activo
+310|10538725221|RAMOS RÍOS PAMELA|Bodega El Punto|5499|150106|Presencial|2025-10-20|0.0400|Activo
+311|10346791271|CHÁVEZ QUISPE EDUARDO|Bodega San Pablo|5499|070106|Presencial|2025-10-22|0.0375|Activo
+312|10189448835|TORRES CASTILLO ROSA|Barbería La Pradera|7230|150110|Presencial|2025-10-23|0.0375|Activo
+313|20623485618|Negocios La Casona S.A.|Hostal La Casona|7011|150132|Presencial|2025-10-23|0.0375|Activo
+314|10493245240|CRUZ HERRERA ÓSCAR|Abarrotes La Popular|5499|200601|Presencial|2025-10-24|0.0425|Activo
+315|10656292496|VÁSQUEZ ROJAS MARIELA|Librería y Bazar El Rincón|5942|150114|Presencial|2025-10-24|0.0425|Activo
+316|20153761788|Negocios La Colmena S.A.|Bodega La Colmena|5499|150113|Presencial|2025-10-25|0.0400|Activo
+317|20429172382|Negocios Santa Rosa S.A.C.|Licorería Santa Rosa|5921|040104|Presencial|2025-10-25|0.0350|Activo
+318|10312810862|RAMOS DELGADO CINTHIA|Spa La Norteñita|7230|150142|Presencial|2025-10-26|0.0400|Activo
+319|10724264749|DÍAZ RODRÍGUEZ JOSÉ|Bodega y Licorería Doña Juana|5499|130102|Presencial|2025-10-27|0.0350|Suspendido
+320|10491304532|MEDINA ROJAS RODRIGO|Transportes Urbanos El Rosario|4111|040104|Presencial|2025-10-28|0.0450|Activo
+321|20246365041|Negocios Dental Wasi S.A.C.|Consultorio Dental Wasi|8021|150133|Presencial|2025-10-30|0.0400|Activo
+322|20150098654|Servicios La Fortuna S.R.L.|Farmacia La Fortuna|5912|150132|Presencial|2025-10-30|0.0350|Activo
+323|20181326141|Servicios Kusi S.A.|Hamburguesas Kusi|5814|150143|Presencial|2025-10-31|0.0375|Activo
+324|10594506893|CHÁVEZ QUISPE SILVIA|Cafetería Don Lucho|5812|250105|Presencial|2025-11-02|0.0400|Activo
+325|20297382871|Negocios Kusi E.I.R.L.|Restaurante Kusi|5812|150120|Presencial|2025-11-02|0.0425|Activo
+326|10332259381|POMA HUAMÁN MERCEDES|Bodega San Pedro|5499|040122|Presencial|2025-11-03|0.0000|Activo
+327|10607985427|CASTRO PALOMINO PEDRO|Clínica Veterinaria El Encanto|0742|160113|Presencial|2025-11-03|0.0425|Activo
+328|10194819841|CONDORI QUISPE ANA|Policlínico La Perla del Sur|8011|150143|Presencial|2025-11-05|0.0375|Activo
+329|10313292547|POMA SILVA TERESA|Chifa La Norteñita|5812|240101|Presencial|2025-11-07|0.0400|Activo
+330|10427216280|ROJAS RAMÍREZ MARÍA|Salón de Belleza Virgen de la Candelaria|7230|150103|Presencial|2025-11-07|0.0375|Activo
+331|10490228000|MENDOZA CHAMBI EDUARDO|Boutique Tika|5651|040122|Presencial|2025-11-08|0.0375|Activo
+332|10254046511|SALAS ROJAS CINTHIA|Panificadora Nueva Esperanza|5462|150132|Presencial|2025-11-08|0.0375|Activo
+333|10349689133|CRUZ GUERRERO NANCY|Bodega Sumaq Wasi|5499|150135|Presencial|2025-11-10|0.0000|Activo
+334|20647348191|Servicios Sumaq Wasi E.I.R.L.|Cevichería Sumaq Wasi|5812|150133|Presencial|2025-11-10|0.0375|Activo
+335|20887587125|Negocios La Pradera S.A.C.|Pastelería La Pradera|5462|200115|Presencial|2025-11-10|0.0400|Activo
+336|10165325031|GARCÍA RODRÍGUEZ CARLA|Farmacia Mi Barrio|5912|150143|Presencial|2025-11-14|0.0375|Activo
+337|10715005293|CRUZ MAMANI MILAGROS|Abarrotes Wasi|5499|120101|Presencial|2025-11-15|0.0350|Activo
+338|20268291629|Servicios y Licorería El Paisano E.I.R.L.|Bodega y Licorería El Paisano|5499|211101|Presencial|2025-11-15|0.0375|Activo
+339|20545242983|Servicios Mi Barrio S.R.L.|Calzados Mi Barrio|5661|150140|Presencial|2025-11-15|0.0375|Activo
+340|10269664172|QUISPE HUAMÁN PERCY|Botica El Ahorro|5912|200601|Presencial|2025-11-16|0.0450|Activo
+341|20478548941|Servicios El Puerto E.I.R.L.|Autoservicio El Puerto|5411|250101|Presencial|2025-11-19|0.0300|Activo
+342|20372401878|Corporación Inti S.A.C.|Juguetería Inti|5945|150501|Presencial|2025-11-23|0.0350|Suspendido
+343|20871725820|Negocios La Casona S.A.C.|Minimarket La Casona|5499|130101|Presencial|2025-11-23|0.0375|Activo
+344|10554715899|VELÁSQUEZ PINEDO FRANK|Pastelería El Paisano|5462|130105|Presencial|2025-11-23|0.0350|Activo
+345|10186486787|MUÑOZ MEDINA BRENDA|Consultorio Médico El Paisano|8011|150132|Presencial|2025-11-24|0.0350|Activo
+346|10661529844|FLORES LOAYZA FIORELLA|Panificadora Santa Rosa|5462|130105|Presencial|2025-11-24|0.0400|Activo
+347|10573676624|SALAZAR HUAMÁN VANESSA|Farmacia El Manantial|5912|120101|Presencial|2025-11-25|0.0375|Activo
+348|10477631296|FLORES VÁSQUEZ ANGÉLICA|Spa La Cabaña|7230|150135|Presencial|2025-11-26|0.0350|Activo
+349|20362943826|Inversiones de Construcción San Pablo E.I.R.L.|Materiales de Construcción San Pablo|5251|170101|Presencial|2025-11-27|0.0300|Activo
+350|20215177794|Inversiones Sumaq Wasi S.A.C.|Botica Sumaq Wasi|5912|140101|Presencial|2025-11-28|0.0450|Activo
+351|10344312864|HUAMÁN DÍAZ RAQUEL|Pollería Virgen de la Candelaria|5812|120303|Presencial|2025-11-29|0.0350|Activo
+352|20374638182|Inversiones Ayni S.A.|Tecno Ayni|5732|230110|Presencial|2025-12-01|0.0350|Suspendido
+353|20438602021|Negocios Santa Ana S.R.L.|Hostal Santa Ana|7011|150112|Presencial|2025-12-04|0.0375|Activo
+354|20501003698|Corporación Santa Cruz S.R.L.|Policlínico Santa Cruz|8011|070106|Presencial|2025-12-04|0.0350|Activo
+355|10552935654|ALVARADO RIVERA XIMENA|Spa La Cusqueñita|7230|140101|Presencial|2025-12-04|0.0400|Activo
+356|10797465343|MENDOZA HERRERA ESTHER|Bodega y Licorería Don Pepe|5499|150132|Presencial|2025-12-05|0.0000|Activo
+357|10788298493|CHÁVEZ CASTILLO MERCEDES|Abarrotes Las Palmeras|5499|040104|Presencial|2025-12-06|0.0375|Activo
+358|20571844967|Inversiones La Norteñita S.R.L.|Pollería La Norteñita|5812|150137|Presencial|2025-12-06|0.0425|Activo
+359|20146275762|Corporación Doña Rosa S.A.C.|Boutique Doña Rosa|5651|080101|Presencial|2025-12-07|0.0300|Activo
+360|10368016191|QUISPE TELLO SILVIA|Bodega El Rosario|5499|150135|Presencial|2025-12-08|0.0350|Activo
+361|20844796448|Inversiones El Rincón E.I.R.L.|Farmacia El Rincón|5912|150105|Presencial|2025-12-10|0.0325|Activo
+362|10508336085|FERNÁNDEZ GONZALES MIGUEL|Zapatería Inti|5661|150135|Presencial|2025-12-11|0.0375|Activo
+363|20678513351|Negocios y Licorería El Chalán S.R.L.|Bodega y Licorería El Chalán|5499|120114|Presencial|2025-12-14|0.0350|Activo
+364|20423367751|Negocios de Idiomas El Manantial S.A.|Centro de Idiomas El Manantial|8299|040104|Presencial|2025-12-14|0.0275|Activo
+365|10683141548|CÁRDENAS TORRES IVÁN|Panificadora El Rosario|5462|120301|Presencial|2025-12-14|0.0425|Activo
+366|10456356082|FLORES CHÁVEZ PAOLA|Abarrotes Tika|5499|150140|Presencial|2025-12-16|0.0000|Activo
+367|10556560680|MAMANI RUIZ MARTÍN|Estacionamiento La Cusqueñita|7523|070101|Presencial|2025-12-16|0.0450|Activo
+368|10441804119|MUÑOZ RODRÍGUEZ MARIBEL|Juguería El Ahorro|5814|070101|Presencial|2025-12-16|0.0400|Activo
+369|20393882621|Servicios Virgen de la Candelaria E.I.R.L.|Salchipapería Virgen de la Candelaria|5814|150108|Presencial|2025-12-16|0.0425|Activo
+370|20757537347|Negocios Dental El Huancaíno S.A.|Clínica Dental El Huancaíno|8021|150133|Presencial|2025-12-17|0.0400|Activo
+371|20792097414|Negocios El Progreso S.R.L.|Confecciones El Progreso|5651|150132|Presencial|2025-12-17|0.0425|Activo
+372|10399909878|DELGADO CASTILLO RICARDO|Materiales de Construcción Doña Juana|5251|040103|Presencial|2025-12-17|0.0375|Activo
+373|20243485003|Servicios Educativa El Tumbesino S.R.L.|Institución Educativa El Tumbesino|8211|230101|Presencial|2025-12-18|0.0275|Activo
+374|20582465160|Grupo La Estrella E.I.R.L.|Policlínico La Estrella|8011|130105|Presencial|2025-12-18|0.0350|Activo
+375|10165302813|CONDORI RODRÍGUEZ PAOLA|Bodega y Licorería Santa Lucía|5499|040112|Presencial|2025-12-20|0.0400|Activo
+376|10450764481|MAMANI BENITES ANA|Picantería Killa|5812|150101|Presencial|2025-12-20|0.0400|Activo
+377|10168287645|ROJAS GONZALES MERCEDES|Distribuidora de Bebidas El Tumbesino|5921|150132|Presencial|2025-12-21|0.0450|Activo
+378|20440478060|Servicios Santa Cruz S.A.C.|Pastelería Santa Cruz|5462|080104|Presencial|2025-12-23|0.0450|Activo
+379|20255925505|Inversiones La Cabaña S.A.C.|Sanguchería La Cabaña|5814|150135|Presencial|2025-12-23|0.0350|Activo
+380|10640086578|QUISPE MENDOZA FRANK|Sanguchería La Sazón de Mamá|5814|240101|Presencial|2025-12-23|0.0400|Activo
+381|20306775481|Inversiones El Económico S.A.|Sanguchería El Económico|5814|180301|Presencial|2025-12-27|0.0300|Activo
+382|20456314296|Inversiones Mi Tierra S.R.L.|Panadería Mi Tierra|5462|130102|Presencial|2025-12-28|0.0375|Activo
+383|20943549983|Inversiones La Cabaña S.R.L.|Bodega La Cabaña|5499|150140|Presencial|2026-01-01|0.0350|Activo
+384|20100810809|Servicios El Triunfo S.A.C.|Minimarket El Triunfo|5499|110101|Presencial|2026-01-01|0.0350|Activo
+385|10504470241|FLORES ZEGARRA ÓSCAR|Bodega y Licorería Doña Carmen|5499|150108|Presencial|2026-01-02|0.0425|Suspendido
+386|20340573197|Inversiones Killa E.I.R.L.|Cafetería Killa|5812|150112|Presencial|2026-01-02|0.0450|Activo
+387|10311506558|RODRÍGUEZ FERNÁNDEZ JESÚS|Restaurante El Manantial|5812|130102|Presencial|2026-01-02|0.0450|Activo
+388|10135999321|PINEDO GONZALES HENRY|Bodega y Licorería Tika|5499|150131|Presencial|2026-01-03|0.0425|Activo
+389|10488230641|VARGAS CHÁVEZ VANESSA|Panificadora El Faro|5462|250101|Presencial|2026-01-03|0.0350|Activo
+390|20467960661|Inversiones y Licorería El Rosario S.A.|Bodega y Licorería El Rosario|5499|070101|Presencial|2026-01-05|0.0450|Activo
+391|20437626538|Servicios Don Víctor S.A.C.|Farmacia Don Víctor|5912|150119|Presencial|2026-01-05|0.0425|Activo
+392|20572429386|Negocios El Paisano S.A.|Muebles El Paisano|5712|021801|Presencial|2026-01-06|0.0300|Activo
+393|20460078939|Servicios El Chalán S.A.C.|Abarrotes El Chalán|5499|040129|Presencial|2026-01-08|0.0400|Suspendido
+394|20643553351|Negocios Los Primos S.R.L.|Bodega Los Primos|5499|150115|Presencial|2026-01-08|0.0450|Activo
+395|20584450488|Inversiones La Unión S.A.C.|Ferretería La Unión|5251|150111|Presencial|2026-01-08|0.0450|Activo
+396|20630767661|Inversiones El Puerto S.R.L.|Panificadora El Puerto|5462|070107|Presencial|2026-01-08|0.0450|Activo
+397|20746021764|Servicios El Triunfo S.A.C.|Abarrotes El Triunfo|5499|150143|Presencial|2026-01-09|0.0375|Activo
+398|20786578290|Inversiones de Bebidas La Colmena S.A.C.|Distribuidora de Bebidas La Colmena|5921|150137|Presencial|2026-01-09|0.0350|Suspendido
+399|10197775268|FLORES CHÁVEZ ÓSCAR|Hamburguesas El Progreso|5814|150125|Presencial|2026-01-09|0.0400|Activo
+400|20121169291|Servicios y Licorería Killa S.A.C.|Bodega y Licorería Killa|5499|130105|Presencial|2026-01-10|0.0425|Activo
+401|10758803274|SILVA CAMPOS LIZBETH|Pastelería San Pablo|5462|120101|Presencial|2026-01-10|0.0375|Activo
+402|10700569000|ROJAS ZEGARRA RICARDO|Veterinaria Virgen de la Candelaria|0742|150132|Presencial|2026-01-15|0.0425|Activo
+403|20821060550|Corporación Kusi S.A.C.|Clínica Kusi|8062|170101|Presencial|2026-01-16|0.0375|Activo
+404|10287132340|AGUILAR SALAZAR JULIA|Barbería La Arequipeña|7230|150101|Presencial|2026-01-17|0.0425|Activo
+405|20961719268|Negocios La Unión E.I.R.L.|Barbería La Unión|7230|150132|Presencial|2026-01-17|0.0350|Activo
+406|20283967442|Negocios El Manantial S.A.C.|Hamburguesas El Manantial|5814|150115|Presencial|2026-01-19|0.0400|Activo
+407|20911065801|Negocios La Popular S.A.C.|Cafetería La Popular|5812|080105|Presencial|2026-01-20|0.0450|Activo
+408|20902918206|Servicios de Bebidas El Sol S.A.C.|Distribuidora de Bebidas El Sol|5921|080101|Presencial|2026-01-20|0.0375|Activo
+409|10744936441|HUAMÁN PÉREZ JULIO|Clínica Dental Doña Rosa|8021|150117|Presencial|2026-01-21|0.0350|Activo
+410|20169872997|Inversiones La Colmena S.A.C.|Gimnasio La Colmena|7997|070106|Presencial|2026-01-21|0.0350|Activo
+411|10358302900|MUÑOZ TORRES EDUARDO|Empresa de Transportes Don Pepe|4111|150108|Presencial|2026-01-25|0.0350|Suspendido
+412|10636786913|GONZALES ESPINOZA CÉSAR|Materiales de Construcción Santa Lucía|5251|140105|Presencial|2026-01-26|0.0425|Activo
+413|10177295570|GARCÍA SÁNCHEZ JAVIER|Minimarket Santa Lucía|5499|200101|Presencial|2026-01-26|0.0000|Activo
+414|20381654860|Inversiones El Mirador S.A.C.|Pastelería El Mirador|5462|150108|Presencial|2026-01-26|0.0350|Activo
+415|20674413522|Inversiones El Ahorro S.A.C.|Boutique El Ahorro|5651|150125|Presencial|2026-01-27|0.0325|Activo
+416|10323278071|DELGADO FLORES ELENA|Hostal El Carmen|7011|200601|Presencial|2026-01-27|0.0450|Activo
+417|10264455834|ORTIZ CASTILLO RAQUEL|Minimarket La Pradera|5499|150132|Presencial|2026-01-27|0.0450|Activo
+418|10770654543|VÁSQUEZ ESPINOZA ÁNGEL|Bodega y Licorería San Pablo|5499|140105|Presencial|2026-01-28|0.0425|Activo
+419|20842877459|Grupo Don Víctor S.R.L.|Minimarket Don Víctor|5411|150119|Presencial|2026-01-28|0.0325|Suspendido
+420|20423516748|Servicios El Chalán S.R.L.|Panificadora El Chalán|5462|130101|Presencial|2026-01-28|0.0400|Activo
+421|10549685868|VELÁSQUEZ MORALES RUBÉN|Restaurante La Cabaña|5812|021801|Presencial|2026-01-29|0.0425|Activo
+422|20147548053|Inversiones El Progreso S.A.C.|Veterinaria El Progreso|0742|150106|Presencial|2026-01-29|0.0375|Activo
+423|10598959957|MUÑOZ GUERRERO JHON|Botica La Popular|5912|150143|Presencial|2026-01-30|0.0350|Activo
+424|10424702990|RAMÍREZ VEGA SILVIA|Zapatería Don Lucho|5661|050101|Presencial|2026-01-31|0.0375|Activo
+425|20585652394|Grupo Mi Cholita S.R.L.|Farmacia Mi Cholita|5912|040104|Presencial|2026-02-01|0.0300|Activo
+426|20238695482|Negocios El Mirador S.A.|Celulares El Mirador|5732|200101|Presencial|2026-02-02|0.0300|Activo
+427|10368741758|QUISPE GARCÍA MATEO|Spa Sumaq Wasi|7230|130101|Presencial|2026-02-04|0.0450|Activo
+428|20742837891|Inversiones La Sazón de Mamá S.A.|Bodega La Sazón de Mamá|5499|220901|Presencial|2026-02-05|0.0000|Activo
+429|10586411115|SALAZAR GONZALES RUBÉN|Abarrotes San Pablo|5499|150114|Presencial|2026-02-06|0.0400|Activo
+430|20437823520|Servicios El Tumbesino S.A.C.|Abarrotes El Tumbesino|5499|150140|Presencial|2026-02-07|0.0425|Activo
+431|20946545041|Servicios El Molino S.A.C.|Boutique El Molino|5651|040104|Presencial|2026-02-08|0.0400|Activo
+432|10242914932|INGA CRUZ PAOLA|Licorería Doña Carmen|5921|230110|Presencial|2026-02-09|0.0350|Activo
+433|20383477337|Negocios de Construcción Wasi S.A.C.|Materiales de Construcción Wasi|5251|150801|Presencial|2026-02-09|0.0400|Activo
+434|10620288808|MORALES LOAYZA RODRIGO|Pastelería El Rey|5462|150132|Presencial|2026-02-10|0.0450|Activo
+435|10485920001|RUIZ RAMÍREZ NICOLE|Bodega y Licorería Buen Precio|5499|110101|Presencial|2026-02-12|0.0450|Activo
+436|10413542664|RAMOS RAMOS LUCÍA|Pollería El Faro|5812|080105|Presencial|2026-02-12|0.0375|Activo
+437|20218781986|Inversiones La Casona S.A.C.|Juguetería La Casona|5945|070101|Presencial|2026-02-13|0.0425|Activo
+438|10309555304|SOTO VALDIVIA MATEO|Ferretería Sumaq Wasi|5251|150106|Presencial|2026-02-14|0.0425|Activo
+439|10631172585|MORALES SÁNCHEZ SILVIA|Juguería Sumaq Wasi|5814|200104|Presencial|2026-02-14|0.0450|Activo
+440|20248580616|Servicios La Norteñita S.A.|Pastelería La Norteñita|5462|021801|Presencial|2026-02-14|0.0450|Activo
+441|20696023914|Corporación Santa Rosa S.A.C.|Colegio Santa Rosa|8211|150105|Presencial|2026-02-15|0.0375|Activo
+442|10569793811|VÁSQUEZ FERNÁNDEZ CARLOS|Juguería La Unión|5814|211101|Presencial|2026-02-15|0.0400|Activo
+443|10666001732|QUISPE ALVARADO CARLOS|Moda Santa Ana|5651|230110|Presencial|2026-02-15|0.0450|Activo
+444|10666009890|CASTILLO PÉREZ MARCO|Salchipapería El Encanto|5814|130101|Presencial|2026-02-17|0.0375|Activo
+445|20282880327|Servicios y Licorería El Rincón E.I.R.L.|Bodega y Licorería El Rincón|5499|130101|Presencial|2026-02-19|0.0400|Activo
+446|10598230965|VÁSQUEZ HUAMÁN SOFÍA|Cevichería La Pradera|5812|150132|Presencial|2026-02-21|0.0450|Activo
+447|10494147918|RODRÍGUEZ GUTIÉRREZ LUZ|Hostal El Ahorro|7011|150108|Presencial|2026-02-21|0.0400|Activo
+448|20218508481|Negocios Dental Mi Tierra S.A.C.|Consultorio Dental Mi Tierra|8021|150113|Presencial|2026-02-22|0.0350|Activo
+449|10718527771|CHÁVEZ GUTIÉRREZ ISABEL|Chifa La Cusqueñita|5812|150106|Presencial|2026-02-23|0.0375|Activo
+450|20340119160|Servicios La Arequipeña E.I.R.L.|Confecciones La Arequipeña|5651|070101|Presencial|2026-02-23|0.0450|Activo
+451|10466649746|LOAYZA CÓRDOVA SOFÍA|Empresa de Transportes Señor de los Milagros|4111|150123|Presencial|2026-02-25|0.0425|Activo
+452|10139378895|GUERRERO CARRASCO NILTON|Botica San Judas Tadeo|5912|150114|Presencial|2026-02-26|0.0400|Activo
+453|20523581512|Negocios La Esquina S.A.C.|Estacionamiento La Esquina|7523|150112|Presencial|2026-02-26|0.0400|Activo
+454|20171385289|Inversiones El Punto S.A.C.|Eventos El Punto|7922|070106|Presencial|2026-02-26|0.0300|Activo
+455|10217023721|ESPINOZA VELÁSQUEZ JAZMÍN|Hamburguesas La Cusqueñita|5814|080101|Presencial|2026-02-26|0.0350|Activo
+456|10381884932|CONDORI LÓPEZ RUBÉN|Juguería La Casona|5814|130102|Presencial|2026-02-27|0.0450|Activo
+457|10525780410|ESPINOZA ROMERO PAOLA|Materiales de Construcción El Paisano|5251|150101|Presencial|2026-02-28|0.0400|Activo
+458|10296221665|CONDORI GARCÍA DANIELA|Panificadora La Pradera|5462|200104|Presencial|2026-02-28|0.0375|Activo
+459|20967750485|Grupo El Ahorro E.I.R.L.|Sanguchería El Ahorro|5814|130102|Presencial|2026-02-28|0.0275|Activo
+460|10180674069|INGA TORRES RUBÉN|Botica El Económico|5912|080105|Presencial|2026-03-01|0.0450|Activo
+461|10661448704|QUISPE ROJAS CARLA|Bodega Virgen de la Candelaria|5499|211101|Presencial|2026-03-02|0.0450|Activo
+462|10389380763|DELGADO GONZALES JULIA|Cafetería El Encanto|5812|150118|Presencial|2026-03-02|0.0400|Activo
+463|20761453981|Inversiones Doña Juana S.A.C.|Boutique Doña Juana|5651|210101|Presencial|2026-03-03|0.0400|Activo
+464|20592063957|Servicios Santa Cruz S.A.C.|Licorería Santa Cruz|5921|070101|Presencial|2026-03-03|0.0350|Activo
+465|10525491400|CASTILLO MEDINA ROCÍO|Empresa de Transportes La Fortuna|4111|211101|Presencial|2026-03-05|0.0400|Activo
+466|10115046069|MAMANI RÍOS KAREN|Abarrotes Mi Barrio|5499|150142|Presencial|2026-03-06|0.0350|Activo
+467|10444181848|NÚÑEZ MORALES ÁNGEL|Calzados La Esquina|5661|150135|Presencial|2026-03-07|0.0400|Activo
+468|10239270790|RODRÍGUEZ VÁSQUEZ JOSÉ|Abarrotes El Sol|5499|150103|Presencial|2026-03-08|0.0000|Activo
+469|10413784218|CÁRDENAS HUAMÁN JULIA|Chifa La Sazón de Mamá|5812|140101|Presencial|2026-03-11|0.0350|Activo
+470|10392344387|APAZA ALVARADO JULIO|Bodega Señor de los Milagros|5499|150105|Presencial|2026-03-12|0.0350|Activo
+471|10689422301|FLORES FLORES WILMER|Hotel El Buen Gusto|7011|130105|Presencial|2026-03-12|0.0400|Activo
+472|10345189373|CABRERA PAREDES MARIBEL|Spa La Estrella|7230|020101|Presencial|2026-03-12|0.0450|Activo
+473|10501895801|CASTRO ROMERO KAREN|Ferretería El Encanto|5251|150106|Presencial|2026-03-13|0.0400|Activo
+474|10243580540|PAREDES CASTRO LUZ|Bodega Don Lucho|5499|080106|Presencial|2026-03-15|0.0000|Suspendido
+475|10280689012|CHAMBI QUISPE ANA|Cafetería El Buen Gusto|5812|211101|Presencial|2026-03-15|0.0425|Activo
+476|20660638301|Servicios El Paisano S.R.L.|Cafetería El Paisano|5812|140105|Presencial|2026-03-16|0.0450|Suspendido
+477|20169568091|Negocios de Bebidas El Chalán S.A.C.|Distribuidora de Bebidas El Chalán|5921|070106|Presencial|2026-03-16|0.0400|Activo
+478|10349127429|QUISPE PÉREZ SILVIA|Bodega El Rey|5499|150110|Presencial|2026-03-17|0.0000|Activo
+479|10747861884|QUISPE ROMERO KATHERINE|Cevichería Doña Rosa|5812|150136|Presencial|2026-03-17|0.0375|Activo
+480|20181576406|Servicios Don Víctor E.I.R.L.|Panificadora Don Víctor|5462|120601|Presencial|2026-03-17|0.0450|Activo
+481|10515792771|QUISPE CAHUANA FRANK|Salón de Belleza Las Hermanas|7230|080106|Presencial|2026-03-17|0.0375|Activo
+482|10564943776|RUIZ TELLO TERESA|Minimarket Buen Precio|5499|150135|Presencial|2026-03-18|0.0000|Activo
+483|10280942648|GARCÍA INGA KEVIN|Panadería El Buen Gusto|5462|160113|Presencial|2026-03-18|0.0375|Activo
+484|20600101421|Servicios La Esquina S.A.|Salchipapería La Esquina|5814|160201|Presencial|2026-03-18|0.0375|Activo
+485|20896058224|Negocios Killa S.A.C.|Abarrotes Killa|5499|160108|Presencial|2026-03-19|0.0350|Activo
+486|20583477170|Corporación San Judas Tadeo E.I.R.L.|Eventos San Judas Tadeo|7922|150141|Presencial|2026-03-19|0.0300|Activo
+487|20776170292|Negocios y Bazar La Sazón de Mamá E.I.R.L.|Librería y Bazar La Sazón de Mamá|5942|170101|Presencial|2026-03-19|0.0350|Activo
+488|20438982907|Negocios Santa Ana S.R.L.|Veterinaria Santa Ana|0742|150104|Presencial|2026-03-20|0.0375|Activo
+489|10453785527|HERRERA PÉREZ DIANA|Minimarket Don Pepe|5499|120107|Presencial|2026-03-21|0.0425|Activo
+490|10125263203|ROJAS CABRERA GUSTAVO|Panadería El Chalán|5462|150801|Presencial|2026-03-22|0.0350|Activo
+491|20580111000|Negocios El Progreso S.A.C.|Juguería El Progreso|5814|230110|Presencial|2026-03-23|0.0375|Activo
+492|20170552131|Servicios El Tumbesino E.I.R.L.|Juguetería El Tumbesino|5945|070107|Presencial|2026-03-23|0.0425|Activo
+493|10451647364|FLORES MUÑOZ VÍCTOR|Minimarket Inti|5499|150133|Presencial|2026-03-23|0.0450|Activo
+494|10383627082|ESPINOZA MENDOZA JAZMÍN|Consultorio Médico La Fortuna|8011|140101|Presencial|2026-03-24|0.0400|Activo
+495|10750608308|GUERRERO PÉREZ MERCEDES|Sanguchería La Estrella|5814|150133|Presencial|2026-03-24|0.0425|Activo
+496|10341809113|CONDORI RODRÍGUEZ YESSICA|Clínica Dental La Cusqueñita|8021|200104|Presencial|2026-03-25|0.0425|Activo
+497|20352419819|Negocios Mi Barrio S.R.L.|Pollería Mi Barrio|5812|150115|Presencial|2026-03-27|0.0425|Suspendido
+498|10428483249|GARCÍA VEGA LUCÍA|Mundo Mascotas La Unión|5995|160113|Presencial|2026-03-29|0.0350|Activo
+499|10206898823|DÍAZ GUTIÉRREZ MIGUEL|Botica Santa Ana|5912|070101|Presencial|2026-03-31|0.0350|Activo
+500|10676844053|LUNA DÍAZ NORMA|Playa de Estacionamiento Los Primos|7523|200115|Presencial|2026-04-01|0.0400|Activo
+501|20673822411|Inversiones Las Flores S.A.C.|Pastelería Las Flores|5462|040122|Presencial|2026-04-02|0.0375|Suspendido
+502|10320266721|GARCÍA TICONA ROSA|Pollería Santa Cruz|5812|220910|Presencial|2026-04-03|0.0350|Activo
+503|10193220563|HUAMÁN SÁNCHEZ JORGE|Confecciones Mi Tierra|5651|140106|Presencial|2026-04-04|0.0450|Activo
+504|10388160930|GONZALES GUTIÉRREZ PEDRO|Mundo Mascotas San Pedro|5995|150123|Presencial|2026-04-06|0.0400|Activo
+505|10344350855|RIVERA SILVA ANA|Veterinaria La Chacra|0742|150143|Presencial|2026-04-06|0.0375|Activo
+506|10477126800|CASTRO CONDORI ISABEL|Bodega y Licorería El Encanto|5499|140101|Presencial|2026-04-08|0.0350|Activo
+507|10681197732|CONDORI ROJAS RAÚL|Cevichería Don Víctor|5812|021801|Presencial|2026-04-08|0.0375|Activo
+508|10741674101|RAMÍREZ ROMERO DIANA|Minimarket Señor de los Milagros|5499|150135|Presencial|2026-04-08|0.0450|Activo
+509|10285948733|VARGAS SALAZAR VANESSA|Abarrotes La Casona|5499|230110|Presencial|2026-04-11|0.0350|Activo
+510|20213775694|Negocios La Fortuna S.R.L.|Cafetería La Fortuna|5812|150110|Presencial|2026-04-11|0.0375|Activo
+511|20595079501|Inversiones El Rosario S.A.C.|Juguería El Rosario|5814|150136|Presencial|2026-04-13|0.0400|Activo
+512|20462229187|Inversiones y Licorería El Sol S.A.C.|Bodega y Licorería El Sol|5499|150103|Presencial|2026-04-14|0.0425|Activo
+513|10304682791|MEDINA CHÁVEZ ALEX|Botica Inti|5912|110201|Presencial|2026-04-15|0.0400|Activo
+514|20541151011|Servicios El Huancaíno E.I.R.L.|Minimarket El Huancaíno|5499|150125|Presencial|2026-04-17|0.0400|Activo
+515|10482143577|ROJAS APAZA FLOR|Chifa Mi Cholita|5812|200601|Presencial|2026-04-18|0.0400|Activo
+516|10659878564|HUAMÁN FERNÁNDEZ KATHERINE|Juguería La Sazón de Mamá|5814|220901|Presencial|2026-04-18|0.0350|Activo
+517|20692472617|Negocios Las Hermanas S.A.C.|Picantería Las Hermanas|5812|200115|Presencial|2026-04-18|0.0425|Activo
+518|10552385646|ROMERO ROJAS MILAGROS|Hamburguesas El Paisano|5814|110501|Presencial|2026-04-21|0.0450|Activo
+519|20706651901|Inversiones La Perla del Sur S.A.C.|Minimarket La Perla del Sur|5499|150130|Presencial|2026-04-21|0.0000|Activo
+520|10650347116|MAMANI BENITES ELENA|Salón de Belleza La Cabaña|7230|150121|Presencial|2026-04-21|0.0375|Activo
+521|20897840031|Servicios El Chalán E.I.R.L.|Sanguchería El Chalán|5814|150110|Presencial|2026-04-21|0.0400|Activo
+522|20110231777|Negocios El Ahorro S.A.C.|Panadería El Ahorro|5462|020101|Presencial|2026-04-22|0.0375|Activo
+523|10262868848|QUISPE SOTO ALBERTO|Salchipapería La Cusqueñita|5814|200101|Presencial|2026-04-22|0.0375|Activo
+524|10298862358|QUISPE AGUILAR MARIBEL|Distribuidora de Bebidas La Cabaña|5921|020101|Presencial|2026-04-23|0.0450|Activo
+525|20306350057|Negocios Santa Cruz S.A.C.|Farmacia Santa Cruz|5912|120114|Presencial|2026-04-23|0.0450|Activo
+526|20105208261|Inversiones San Pablo S.R.L.|Juguería San Pablo|5814|211101|Presencial|2026-04-23|0.0450|Suspendido
+527|10252959543|PÉREZ SÁNCHEZ JUANA|Botica San Pablo|5912|150125|Presencial|2026-04-24|0.0425|Activo
+528|10303238668|HUAMÁN QUISPE JUANA|Librería y Bazar La Colmena|5942|200115|Presencial|2026-04-24|0.0350|Activo
+529|20601287014|Negocios y Licorería Los Olivares S.A.|Bodega y Licorería Los Olivares|5499|150120|Presencial|2026-04-25|0.0450|Activo
+530|20708846130|Negocios Dental El Sol E.I.R.L.|Clínica Dental El Sol|8021|200101|Presencial|2026-04-25|0.0450|Activo
+531|20777873521|Negocios Nueva Esperanza S.A.C.|Minimarket Nueva Esperanza|5499|130105|Presencial|2026-04-25|0.0400|Activo
+532|20949068111|Servicios El Huancaíno S.A.C.|Panificadora El Huancaíno|5462|080104|Presencial|2026-04-26|0.0425|Activo
+533|10379651815|QUISPE SÁNCHEZ PEDRO|Barbería El Rosario|7230|150134|Presencial|2026-04-27|0.0375|Suspendido
+534|20535312631|Inversiones Nueva Esperanza S.R.L.|Botica Nueva Esperanza|5912|140101|Presencial|2026-04-27|0.0350|Activo
+535|20594884648|Inversiones El Carmen E.I.R.L.|Cafetería El Carmen|5812|150135|Presencial|2026-04-27|0.0400|Activo
+536|20655519557|Inversiones Kusi S.A.C.|Minimarket Kusi|5499|150103|Presencial|2026-04-27|0.0425|Activo
+537|10536356121|MAMANI GONZALES RENZO|Hotel El Económico|7011|150801|Presencial|2026-04-28|0.0400|Activo
+538|10715110844|VÁSQUEZ BENITES NICOLE|Juguería La Arequipeña|5814|150135|Presencial|2026-04-28|0.0400|Activo
+539|10775276156|VÁSQUEZ PÉREZ FRANK|Restaurante Los Olivares|5812|150106|Presencial|2026-04-29|0.0375|Activo
+540|10107395259|MEDINA HUAMÁN ALEX|Salchipapería La Chacra|5814|150103|Presencial|2026-04-29|0.0350|Activo
+541|20943156761|Inversiones La Colmena E.I.R.L.|Librería La Colmena|5942|080104|Presencial|2026-04-30|0.0425|Activo
+542|10402779794|VEGA CASTILLO MARISOL|Minimarket El Tumbesino|5499|050101|Presencial|2026-04-30|0.0375|Activo
+543|20218105701|Servicios Los Pinos E.I.R.L.|Picantería Los Pinos|5812|170101|Presencial|2026-05-02|0.0450|Activo
+544|20709312741|Inversiones y Licorería El Mirador S.A.C.|Bodega y Licorería El Mirador|5499|110101|Presencial|2026-05-03|0.0350|Activo
+545|10304306799|RODRÍGUEZ GUERRERO XIMENA|Chifa Las Hermanas|5812|200601|Presencial|2026-05-05|0.0400|Activo
+546|20335631570|Inversiones Las Flores S.A.C.|Farmacia Las Flores|5912|080106|Presencial|2026-05-05|0.0375|Activo
+547|10499629902|CÁRDENAS RODRÍGUEZ MARTÍN|Hamburguesas La Perla del Sur|5814|150111|Presencial|2026-05-06|0.0400|Activo
+548|20310547523|Inversiones La Esquina S.A.C.|Abarrotes La Esquina|5499|150132|Presencial|2026-05-08|0.0425|Activo
+549|10379395045|TICONA DELGADO SOFÍA|Ferretería El Chalán|5251|070101|Presencial|2026-05-08|0.0425|Activo
+550|10660558361|CRUZ TICONA PERCY|Hotel Las Hermanas|7011|150123|Presencial|2026-05-08|0.0400|Activo
+551|10172262622|ZAPATA ESPINOZA SOFÍA|Picantería Don Pepe|5812|110101|Presencial|2026-05-08|0.0425|Activo
+552|10650403211|ALVARADO QUISPE KATHERINE|Pollería Doña Juana|5812|150133|Presencial|2026-05-09|0.0450|Activo
+553|10717210196|QUISPE GUTIÉRREZ JOEL|Spa Nueva Esperanza|7230|130101|Presencial|2026-05-10|0.0450|Activo
+554|10755392711|VELÁSQUEZ ROJAS CINTHIA|Botica El Molino|5912|150601|Presencial|2026-05-11|0.0375|Activo
+555|10664012818|GARCÍA GONZALES TERESA|Moda El Faro|5651|150118|Presencial|2026-05-11|0.0425|Activo
+556|10557299314|ALVARADO RIVERA ISABEL|Minimarket Mi Barrio|5499|211101|Presencial|2026-05-13|0.0350|Activo
+557|10496663468|MORALES MAMANI RICARDO|Spa La Pradera|7230|130101|Presencial|2026-05-13|0.0425|Activo
+558|20262615309|Negocios Virgen de la Candelaria S.A.|Spa Virgen de la Candelaria|7230|070106|Presencial|2026-05-13|0.0350|Activo
+559|20303556142|Inversiones Mi Tierra E.I.R.L.|Cafetería Mi Tierra|5812|150135|Presencial|2026-05-14|0.0375|Activo
+560|20345387561|Servicios de Belleza La Fortuna S.A.C.|Salón de Belleza La Fortuna|7230|211101|Presencial|2026-05-14|0.0450|Activo
+561|20564448118|Inversiones La Esquina S.A.|Ferretería La Esquina|5251|120101|Presencial|2026-05-15|0.0350|Suspendido
+562|20808227585|Negocios Virgen de la Candelaria S.R.L.|Juguería Virgen de la Candelaria|5814|020101|Presencial|2026-05-15|0.0350|Activo
+563|20203751177|Negocios El Encanto S.A.|Barbería El Encanto|7230|040112|Presencial|2026-05-16|0.0400|Activo
+564|10772804186|FLORES ROMERO MARÍA|Boutique El Rosario|5651|130101|Presencial|2026-05-16|0.0400|Activo
+565|20348989635|Servicios Los Primos S.A.C.|Policlínico Los Primos|8011|250101|Presencial|2026-05-16|0.0375|Activo
+566|10692042188|RÍOS CÁRDENAS SILVIA|Cafetería Santa Ana|5812|150103|Presencial|2026-05-17|0.0375|Activo
+567|20843254595|Negocios Don Víctor S.A.C.|Ferretería Don Víctor|5251|150123|Presencial|2026-05-18|0.0400|Activo
+568|10693252046|QUISPE CÓRDOVA FLOR|Pollería El Paisano|5812|150132|Presencial|2026-05-18|0.0375|Suspendido
+569|10534991067|FERNÁNDEZ QUISPE ROBERTO|Panificadora Killa|5462|130101|Presencial|2026-05-20|0.0375|Activo
+570|20812868595|Inversiones Kusi S.A.|Abarrotes Kusi|5499|150115|Presencial|2026-05-22|0.0375|Activo
+571|10694906651|VEGA GARCÍA MATEO|Abarrotes El Mirador|5499|150105|Presencial|2026-05-23|0.0375|Activo
+572|10492986696|HERRERA PÉREZ WALTER|Minimarket El Buen Gusto|5499|150801|Presencial|2026-05-25|0.0375|Activo
+573|10160596631|VEGA REYES JORGE|Restaurante El Ahorro|5812|150125|Presencial|2026-05-25|0.0350|Activo
+574|10326894171|PALOMINO ARÉVALO DANIELA|Bodega y Licorería El Tumbesino|5499|110501|Presencial|2026-05-26|0.0350|Activo
+575|10536659051|VÁSQUEZ VEGA RODRIGO|Chifa Señor de los Milagros|5812|110201|Presencial|2026-05-27|0.0375|Activo
+576|10229234761|SÁNCHEZ INGA SILVIA|Panadería El Carmen|5462|230101|Presencial|2026-05-27|0.0350|Activo
+577|10716324163|PINEDO AYALA YESSICA|Abarrotes La Pradera|5499|150141|Presencial|2026-05-30|0.0425|Activo
+578|20210705563|Negocios y Licorería La Fortuna S.A.C.|Bodega y Licorería La Fortuna|5499|021801|Presencial|2026-05-30|0.0400|Activo
+579|10162476420|LÓPEZ CASTILLO ALEJANDRA|Salchipapería El Buen Gusto|5814|080106|Presencial|2026-05-31|0.0350|Activo
+580|10463072227|ORTIZ RAMOS RENZO|Abarrotes El Faro|5499|150121|Presencial|2026-06-01|0.0425|Activo
+581|10591061432|VILLANUEVA GONZALES BRENDA|Pollería Doña Carmen|5812|220909|Presencial|2026-06-01|0.0450|Activo
+582|20974950015|Negocios El Mirador S.A.C.|Academia El Mirador|8299|050101|Presencial|2026-06-04|0.0425|Activo
+583|10595997076|HUANCA ZEGARRA ALEX|Salchipapería El Rosario|5814|150140|Presencial|2026-06-04|0.0350|Activo
+584|10318204883|FLORES ROJAS FIORELLA|Abarrotes Los Pinos|5499|150125|Presencial|2026-06-09|0.0425|Activo
+585|20780142783|Servicios San Pablo S.A.|Calzados San Pablo|5661|220101|Presencial|2026-06-09|0.0375|Activo
+586|10154918154|RODRÍGUEZ MENDOZA CARLOS|Abarrotes El Puerto|5499|230110|Presencial|2026-06-10|0.0350|Activo
+587|20105033827|Inversiones y Bazar El Tumbesino E.I.R.L.|Librería y Bazar El Tumbesino|5942|200104|Presencial|2026-06-10|0.0375|Activo
+588|20586887999|Servicios y Licorería Virgen de la Candelaria S.A.|Bodega y Licorería Virgen de la Candelaria|5499|040104|Presencial|2026-06-11|0.0450|Activo
+589|20358435506|Inversiones El Sol S.A.C.|Spa El Sol|7230|200101|Presencial|2026-06-11|0.0425|Activo
+590|10352439644|CÓRDOVA CASTILLO ÁNGEL|Policlínico Doña Rosa|8011|250105|Presencial|2026-06-13|0.0350|Activo
+591|10691246260|VELÁSQUEZ ESPINOZA SOFÍA|Salchipapería El Huancaíno|5814|040126|Presencial|2026-06-13|0.0450|Activo
+592|10773197208|VEGA PAREDES VALERIA|Boutique La Estrella|5651|130102|Presencial|2026-06-14|0.0350|Activo
+593|20611069503|Inversiones Don Pepe S.A.C.|Panadería Don Pepe|5462|040104|Presencial|2026-06-15|0.0350|Activo
+594|20573099207|Servicios El Rey S.A.|Sanguchería El Rey|5814|140106|Presencial|2026-06-15|0.0450|Activo
+595|10572315288|VARGAS QUISPE MARIBEL|Bodega Killa|5499|150108|Presencial|2026-06-16|0.0375|Activo
+596|20580851828|Servicios de Construcción Las Hermanas E.I.R.L.|Materiales de Construcción Las Hermanas|5251|150125|Presencial|2026-06-16|0.0450|Activo
+597|20746186721|Servicios Las Palmeras E.I.R.L.|Minimarket Las Palmeras|5499|120107|Presencial|2026-06-16|0.0350|Activo
+598|10374967776|MAMANI CHÁVEZ DANIELA|Farmacia Santa Ana|5912|070101|Presencial|2026-06-17|0.0375|Activo
+599|10799247033|SALAZAR CHÁVEZ DIANA|Consultorio Médico Buen Precio|8011|150132|Presencial|2026-06-18|0.0375|Activo
+600|20909800120|Negocios El Rey S.R.L.|Farmacia El Rey|5912|150128|Presencial|2026-06-19|0.0400|Activo

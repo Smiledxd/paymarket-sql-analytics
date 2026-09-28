@@ -1,0 +1,10 @@
+promocion_id|nombre|tipo_beneficio|porcentaje_beneficio|tope_beneficio|fecha_inicio|fecha_fin
+1|Verano sabroso 2025|Cashback|10.00|15.00|2025-02-01|2025-02-28
+2|Día de la Madre 2025|Descuento|15.00|40.00|2025-05-02|2025-05-11
+3|Cashback CyberWow Julio 2025|Cashback|12.00|60.00|2025-07-14|2025-07-18
+4|Fiestas Patrias 2025|Descuento|10.00|25.00|2025-07-21|2025-07-31
+5|Cashback CyberWow Noviembre 2025|Cashback|15.00|80.00|2025-11-03|2025-11-09
+6|Navidad PayMarket 2025|Cashback|8.00|50.00|2025-12-10|2025-12-24
+7|Vuelta al cole 2026|Descuento|10.00|60.00|2026-02-16|2026-03-15
+8|Cashback CyberWow Abril 2026|Cashback|12.00|60.00|2026-04-13|2026-04-17
+9|Día del Padre 2026|Descuento|12.00|50.00|2026-06-08|2026-06-21
