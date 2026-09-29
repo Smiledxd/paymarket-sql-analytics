@@ -307,8 +307,8 @@ INSERT INTO chk.ejercicio (ejercicio_id, sesion, titulo, num_filas, pista_filas,
     ('s08_e2', 'S08', N'¿Quiénes se registraron y nunca pagaron?', 3, N'Debe salir una fila por canal de adquisición.', 0x8F4B2CF66DC4DEE979AE6395EF5AA20BBBE92CFF8A4C47EFEF0DCB59FB91FF7E);
 INSERT INTO chk.ejercicio_columna (ejercicio_id, orden, nombre, familia, hash_columna, pista) VALUES
     ('s08_e2', 1, N'canal_adquisicion', 'texto', 0x81A0996FE36A78BB74B5898FE790210E3A754B8A9994D6A65280BE5F3154D1C2, NULL),
-    ('s08_e2', 2, N'clientes', 'numero', 0x82BA0F8752730AC7ED0700CBEAEC3B5012256021674DF1BE03A4F090B1A3541C, N'Al unir con las operaciones, cada cliente aparece muchas veces. ¿Estás contando clientes distintos?'),
-    ('s08_e2', 3, N'clientes_sin_pago', 'numero', 0x3F6FBFB0ACBE6C1C3F873AD16940455E40F7012EEAEEBBC8525CD4B8B41C740C, N'Si la condición sobre el estado de la operación va en el WHERE, el LEFT JOIN se comporta como un INNER JOIN y los clientes sin pagos desaparecen. ¿Dónde debe ir esa condición?'),
+    ('s08_e2', 2, N'clientes', 'numero', 0x82BA0F8752730AC7ED0700CBEAEC3B5012256021674DF1BE03A4F090B1A3541C, N'Son TODOS los clientes del canal, hayan pagado o no. Si te salen menos, alguna condición en el WHERE está eliminando a los que no pagaron; si te salen más, estás contando filas en vez de clientes distintos.'),
+    ('s08_e2', 3, N'clientes_sin_pago', 'numero', 0x3F6FBFB0ACBE6C1C3F873AD16940455E40F7012EEAEEBBC8525CD4B8B41C740C, N'Solo cuenta como ''con pago'' quien tiene al menos una operación APROBADA. Esa condición va en el ON del LEFT JOIN: en el WHERE, el LEFT JOIN se comporta como un INNER JOIN y los clientes sin pagos desaparecen.'),
     ('s08_e2', 4, N'pct_sin_pago', 'numero', 0xA026F310374CDF154BA3C7B247E10297BD5DCD0832E967A2C24E3C77A9B738D9, N'Es clientes sin pago entre clientes, por 100, con decimales.');
 
 INSERT INTO chk.ejercicio (ejercicio_id, sesion, titulo, num_filas, pista_filas, hash_total) VALUES
@@ -335,7 +335,7 @@ INSERT INTO chk.ejercicio_columna (ejercicio_id, orden, nombre, familia, hash_co
     ('s08_reto', 4, N'tasa_contracargo', 'numero', 0x578E9254FDBD03FE3FF59F583BE82C6AA640F5F82329502764A8F9889AFED0E0, N'Es contracargos entre aprobadas, por 100, con decimales.');
 
 INSERT INTO chk.ejercicio (ejercicio_id, sesion, titulo, num_filas, pista_filas, hash_total) VALUES
-    ('s09_e1', 'S09', N'La línea de tiempo de un cliente', 12, N'Son todos los pagos aprobados con la billetera más todos los pagos de cuotas del cliente 222 en junio de 2026. Si faltan filas, revisa si estás usando UNION (que borra filas repetidas) en lugar de UNION ALL.', 0x23A987947EDE1E9A89D62F2694CCEAA1C43CF140AD79843261F10C2843953D4C);
+    ('s09_e1', 'S09', N'La línea de tiempo de un cliente', 12, N'Son los pagos APROBADOS con la billetera más los pagos de cuotas del cliente 222 en junio de 2026. Si te sobran filas, revisa el estado; si te faltan, revisa cómo ubicas los créditos del cliente y si usaste UNION (que borra filas repetidas) en lugar de UNION ALL.', 0x23A987947EDE1E9A89D62F2694CCEAA1C43CF140AD79843261F10C2843953D4C);
 INSERT INTO chk.ejercicio_columna (ejercicio_id, orden, nombre, familia, hash_columna, pista) VALUES
     ('s09_e1', 1, N'fecha', 'fecha', 0xE6A8EF860597A1FAA14605875C333D73323586C16909B2231E435A2233BA5FD8, N'La fecha va sin hora (tipo DATE).'),
     ('s09_e1', 2, N'tipo_movimiento', 'texto', 0x8785FF13807B6D738B87DFA1A43BB1D7CBA805BCF04B2BB5B4AE126BA4FBBE87, N'Los textos son exactamente ''billetera'' y ''cuota'', en minúsculas.'),

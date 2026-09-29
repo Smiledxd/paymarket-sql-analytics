@@ -58,7 +58,7 @@
 | 9. Cierre | S24 | Simulacro | Prueba técnica de 60 minutos con preguntas nuevas, sobre 20 puntos, calificada por `chk.simulacro_resultado` | — |
 | | S25 | Publicación | README final, hallazgos, capturas, repositorio público, **Post 3** | — |
 
-**Estado de construcción del curso:** las sesiones S00 a S04 están listas (fase A). Las siguientes se agregan por fases; al recibir sesiones nuevas ejecuta `.\base\instalar.ps1 -ActualizarVerificadores` (no borra lo que creaste).
+**Estado de construcción del curso:** las sesiones S00 a S09 están listas (fases A y B). Las siguientes se agregan por fases; al recibir sesiones nuevas ejecuta `.\base\instalar.ps1 -ActualizarVerificadores` (no borra lo que creaste).
 
 ---
 
