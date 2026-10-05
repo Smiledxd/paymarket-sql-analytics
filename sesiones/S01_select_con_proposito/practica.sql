@@ -69,7 +69,13 @@ GO
 ============================================================ */
 DROP TABLE IF EXISTS #respuesta;
 -- Tu código aquí (termina tu SELECT con INTO #respuesta antes del FROM)
+SELECT DISTINCT
+    estado,
+    codigo_respuesta
+INTO #respuesta
+FROM core.transaccion
 
+ORDER BY estado ASC, codigo_respuesta DESC
 
 EXEC chk.s01_e1;
 GO
@@ -97,7 +103,14 @@ GO
 ============================================================ */
 DROP TABLE IF EXISTS #respuesta;
 -- Tu código aquí
-
+SELECT
+    TOP 10
+    comercio_id,
+    nombre_comercial,
+    tasa_mdr * 100 AS tasa_pct
+--INTO #respuesta
+FROM core.comercio
+ORDER BY tasa_pct DESC, nombre_comercial ASC
 
 EXEC chk.s01_e2;
 GO
@@ -125,8 +138,18 @@ GO
 ============================================================ */
 DROP TABLE IF EXISTS #respuesta;
 -- Tu código aquí
-
-
+SELECT
+    TOP 20
+    transaccion_id,
+    monto,
+    comision,
+    comision * 0.18 AS igv_comision,
+    comision + (comision * 0.18) AS comision_con_igv
+--INTO #respuesta
+FROM core.transaccion
+WHERE
+    moneda = 'PEN' AND estado = 'Aprobada'
+ORDER BY monto DESC, transaccion_id ASC
 EXEC chk.s01_e3;
 GO
 /* Para pensar: dos operaciones de casi el mismo monto pueden dejar
@@ -152,8 +175,17 @@ GO
 ============================================================ */
 DROP TABLE IF EXISTS #respuesta;
 -- Tu código aquí
-
-
+SELECT TOP 15
+    credito_id,
+    monto,
+    plazo_meses,
+    tea * 100 AS tea_pct,
+    monto / plazo_meses AS capital_por_mes
+--INTO #respuesta
+FROM core.credito
+ORDER BY
+    monto DESC,
+    credito_id ASC
 EXEC chk.s01_e4;
 GO
 /* Para pensar: capital_por_mes no es la cuota que paga el cliente.
@@ -170,15 +202,28 @@ GO
      pct_comision  (la comisión como porcentaje del monto: 3.25, no 0.0325)
 
    FICHA DE TRADUCCIÓN (esta vez con más huecos)
-   -- 1. ¿Qué me piden? ______
-   -- 2. ¿Dónde está? ______
+   -- 1. ¿Qué me piden? las 10 filas operaciones APROBADAS EN DOLARES, de mayor monto
+   -- 2. ¿Dónde está? core.transaccion
    -- 3. ¿Qué filas? ______
    -- 4. ¿Resumir? No.
    -- 5. ¿Qué muestro y en qué orden? ______
 ============================================================ */
 DROP TABLE IF EXISTS #respuesta;
 -- Tu código aquí
-
+SELECT TOP 10
+    transaccion_id,
+    comercio_id,
+    monto,
+    comision,
+    comision * 0.18 AS igv_comision,
+    (comision/ monto) *100 AS pct_comision
+--INTO #respuesta
+FROM core.transaccion
+WHERE
+    moneda != 'PEN' AND estado = 'Aprobada'
+ORDER BY
+    monto DESC,
+    transaccion_id ASC
 
 EXEC chk.s01_reto;
 GO
@@ -190,14 +235,17 @@ GO
    1. En el reto, ¿pct_comision es igual en las 10 operaciones?
       ¿Qué te dice eso sobre dónde gana más PayMarket?
       Respuesta:
+      No son iguales, el pct_comision es una parte del monto.
+      gana más dependiendo del pct_comision que en ves de ver el numero de comision
 
    2. Las operaciones más grandes, ¿son las que más comisión dejan?
       ¿Qué otra lista le mostrarías a finanzas?
       Respuesta:
-
+      si al parecer, la lista de soles
    3. Esos montos están en dólares. ¿Qué te faltaría para sumarlos
       con los de soles en un solo reporte?
       Respuesta:
-
-   Tu avance: EXEC chk.ver_progreso 'S01';
+      una conversion de dolares a soles o viceversa
+   Tu avance: ;
    ============================================================ */
+   EXEC chk.ver_progreso 'S01'

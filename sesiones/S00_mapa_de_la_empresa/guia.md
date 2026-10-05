@@ -268,12 +268,12 @@ Abre [proyecto/hallazgos.md](../../proyecto/hallazgos.md) y lee las 7 preguntas 
 
 Marca lo que puedes hacer sin mirar la guía:
 
-- [ ] Puedo decir qué representa una fila en `cliente`, `cuenta`, `transaccion` y `comercio`.
-- [ ] Puedo explicar para qué sirven `stg`, `core` y `lab`, y cómo se parecen a bronze/silver/gold.
-- [ ] Puedo explicar por qué el dinero va en `DECIMAL` y el DNI en `VARCHAR`.
-- [ ] Puedo explicar qué es una llave foránea y en qué lado de una relación uno a muchos vive.
+- [x] Puedo decir qué representa una fila en `cliente`, `cuenta`, `transaccion` y `comercio`.
+- [x] Puedo explicar para qué sirven `stg`, `core` y `lab`, y cómo se parecen a bronze/silver/gold.
+- [x] Puedo explicar por qué el dinero va en `DECIMAL` y el DNI en `VARCHAR`.
+- [x] Puedo explicar qué es una llave foránea y en qué lado de una relación uno a muchos vive.
 - [ ] Puedo recitar la receta de 5 pasos y el orden lógico `FROM → WHERE → GROUP BY → HAVING → SELECT → ORDER BY`.
-- [ ] Superé los verificadores de la sesión (`EXEC chk.ver_progreso 'S00';`).
+- [x] Superé los verificadores de la sesión (`EXEC chk.ver_progreso 'S00';`).
 
 Marca la sesión en [CURRICULA.md](../../CURRICULA.md) y haz tu commit:
 

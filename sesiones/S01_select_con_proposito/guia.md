@@ -216,12 +216,12 @@ En [proyecto/hallazgos.md](../../proyecto/hallazgos.md), bajo la misma pregunta,
 
 ## ✅ Cierre
 
-- [ ] Puedo explicar por qué no uso `SELECT *` en una respuesta final.
-- [ ] Puedo calcular un porcentaje y el IGV de una comisión sin confundir `18` con `0.18`.
-- [ ] Puedo explicar qué hace `DISTINCT` cuando hay dos columnas en el `SELECT`.
-- [ ] Puedo explicar por qué un `TOP` sin desempate puede dar resultados distintos.
-- [ ] Puedo ordenar por dos columnas con direcciones distintas.
-- [ ] Superé los verificadores de la sesión (`EXEC chk.ver_progreso 'S01';`).
+- [x] Puedo explicar por qué no uso `SELECT *` en una respuesta final.
+- [x] Puedo calcular un porcentaje y el IGV de una comisión sin confundir `18` con `0.18`.
+- [x] Puedo explicar qué hace `DISTINCT` cuando hay dos columnas en el `SELECT`.
+- [x] Puedo explicar por qué un `TOP` sin desempate puede dar resultados distintos.
+- [x] Puedo ordenar por dos columnas con direcciones distintas.
+- [x] Superé los verificadores de la sesión (`EXEC chk.ver_progreso 'S01';`).
 
 ```bash
 git add .

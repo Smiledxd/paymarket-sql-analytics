@@ -23,7 +23,17 @@ GO
 /* ------------------------------------------------------------
    2. ¿Qué comercios y rubros concentran los ingresos por comisión?
    ------------------------------------------------------------ */
-
+SELECT TOP 10 --primero voy a ver quienes dejan poco o nada y por qué
+    comercio_id,
+    nombre_comercial,
+    modalidad,
+    fecha_afiliacion,
+    mcc,
+    tasa_mdr * 100 tasa_pct
+FROM core.comercio
+ORDER BY
+    tasa_mdr ASC, nombre_comercial ASC --todos tienen una tasa_pct de 0 y son minimarkets o bodegas
+    -- y Paymarket maneja esta estrategia por el volumen que manejan las transacciones diarias.
 
 
 /* ------------------------------------------------------------

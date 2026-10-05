@@ -73,9 +73,9 @@ ORDER BY precio_docena DESC;
 
 -- Descomenta y ejecuta: falla con "Invalid column name 'precio_docena'",
 -- porque WHERE se procesa ANTES del SELECT y el alias todavía no existe.
--- SELECT nombre, precio * 12 AS precio_docena
--- FROM lab.bodega_producto
--- WHERE precio_docena > 10;
+SELECT nombre, precio * 12 AS precio_docena
+FROM lab.bodega_producto
+WHERE precio_docena > 10;
 GO
 
 
@@ -96,7 +96,9 @@ GO
 ============================================================ */
 DROP TABLE IF EXISTS #respuesta;
 -- Tu código aquí (termina tu SELECT con INTO #respuesta antes del FROM)
-
+SELECT top 10 *
+--INTO #respuesta
+FROM core.cliente
 
 EXEC chk.s00_e1;   -- ✅ o ❌ con el motivo
 GO
@@ -122,7 +124,17 @@ GO
 ============================================================ */
 DROP TABLE IF EXISTS #respuesta;
 -- Tu código aquí (termina tu SELECT con INTO #respuesta antes del FROM)
-
+SELECT 
+    cuenta_id,
+    moneda,
+    fecha_apertura,
+    estado
+--INTO #respuesta
+FROM
+    core.cuenta
+WHERE
+    cliente_id = 876
+    
 
 EXEC chk.s00_e2;
 GO
@@ -141,16 +153,30 @@ GO
    FICHA DE TRADUCCIÓN
    -- 1. ¿Qué me piden? Los datos de una persona. 1 fila = el titular.
    -- 2. ¿Dónde está? Primero core.cuenta (para saber quién es) y luego ______
-   -- 3. ¿Qué filas? ______
+   -- 3. ¿Qué filas? si
    -- 4. ¿Resumir? No.
    -- 5. ¿Qué muestro? cliente_id, nombres, apellido_paterno, ubigeo_id.
 ============================================================ */
 -- Paso A: consulta para averiguar quién es el dueño (no necesita INTO)
-
+SELECT
+    *
+FROM
+    core.cuenta
+WHERE
+    cuenta_id = 12345
 
 DROP TABLE IF EXISTS #respuesta;
 -- Paso B: tu respuesta (termina tu SELECT con INTO #respuesta antes del FROM)
-
+SELECT
+    cliente_id,
+    nombres,
+    apellido_paterno,
+    ubigeo_id
+--INTO #respuesta
+FROM
+    core.cliente
+WHERE
+    cliente_id = 11645
 
 EXEC chk.s00_e3;
 GO
@@ -178,11 +204,22 @@ GO
    -- 5. ¿Qué muestro? Los 5 valores, con los alias pedidos.
 ============================================================ */
 -- Consultas de exploración (una por salto, sin INTO):
-
-
+SELECT
+      top 1 *
+FROM
+    core.ubigeo
+WHERE
+    ubigeo_id = 220910
+-- comercio_id = 502 | canal_id = 4** | cuenta_id = 2863 | mcc = 5812 | cliente = 2760 | ubigeo_id = 220901
 DROP TABLE IF EXISTS #respuesta;
 -- Tu respuesta final (INTO #respuesta)
-
+SELECT
+      237390 AS transaccion_id,
+      'Pago con QR' AS nombre_canal,
+      'Pollería Santa Cruz' AS nombre_comercial,
+      'Restaurantes' AS descripcion_rubro,
+      'Tarapoto' AS distrito_cliente
+INTO #respuesta
 
 EXEC chk.s00_reto;
 GO
@@ -195,15 +232,19 @@ GO
       distrito. Si quisieras saber "en qué departamento se vende más",
       ¿usarías el distrito del cliente o el del comercio? ¿Por qué?
       Respuesta:
+        del comercio, por la misma pregunta, donde se vende más, además allí compran
 
    2. La tabla transaccion guarda intentos de pago, no solo pagos
       exitosos. ¿Qué error cometería alguien que cuente todas sus
       filas para reportar "ventas del mes"?
       Respuesta:
+        cometeria el error de contar transacciones no concretadas, rechazadas o devueltas
 
    3. ¿Qué pregunta del negocio NO podrías responder con las tablas
       de core? (piensa en algo que no se guarda)
       Respuesta:
+        no lo se
 
    Tu avance: EXEC chk.ver_progreso 'S00';
    ============================================================ */
+   EXEC chk.ver_progreso 'S00'

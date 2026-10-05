@@ -11,7 +11,7 @@ Cómo llenar cada pregunta (lo irás completando sesión a sesión; la sección 
 
 ## 1. ¿Cómo evolucionan el volumen y la facturación, y qué estacionalidad tiene el negocio?
 
-**Tablas que necesito:**
+**Tablas que necesito:** `core.cliente`, `core.transaccion`, `core.pago_cuota` 
 
 **Qué encontré:**
 
@@ -21,9 +21,9 @@ Cómo llenar cada pregunta (lo irás completando sesión a sesión; la sección 
 
 ## 2. ¿Qué comercios y rubros concentran los ingresos por comisión?
 
-**Tablas que necesito:**
+**Tablas que necesito:** `core.comercio`, `core.rubro_mcc`, `core.transaccion`
 
-**Qué encontré:**
+**Qué encontré:** Seleccioné 10, y todas son de la modalidad presencial, con una tasa_pct de 0% y Paymarket maneja esta estrategia por el volumen que manejan las transacciones diarias.
 
 **Qué recomendaría:**
 
@@ -31,7 +31,7 @@ Cómo llenar cada pregunta (lo irás completando sesión a sesión; la sección 
 
 ## 3. ¿Dónde y por qué se rechazan pagos, y cuánto ingreso se pierde?
 
-**Tablas que necesito:**
+**Tablas que necesito:** `core.ubigeo`, `contracargo`
 
 **Qué encontré:**
 
@@ -41,7 +41,7 @@ Cómo llenar cada pregunta (lo irás completando sesión a sesión; la sección 
 
 ## 4. ¿Qué clientes se registran y no usan la billetera? ¿Cómo retiene cada cohorte?
 
-**Tablas que necesito:**
+**Tablas que necesito:** `core.canal`, `core.cliente`
 
 **Qué encontré:**
 
@@ -51,7 +51,7 @@ Cómo llenar cada pregunta (lo irás completando sesión a sesión; la sección 
 
 ## 5. ¿Qué comercios muestran un nivel de contracargos anormal?
 
-**Tablas que necesito:**
+**Tablas que necesito:** `core.contracargo`, `core.comercio`
 
 **Qué encontré:**
 
@@ -61,7 +61,7 @@ Cómo llenar cada pregunta (lo irás completando sesión a sesión; la sección 
 
 ## 6. ¿Cómo se comporta la mora de los microcréditos por cosecha y categoría SBS?
 
-**Tablas que necesito:**
+**Tablas que necesito:** `core.credito`, `core.cuota`, `pago.cuota`
 
 **Qué encontré:**
 
@@ -74,7 +74,7 @@ Cómo llenar cada pregunta (lo irás completando sesión a sesión; la sección 
 Escribe los supuestos de forma explícita (por ejemplo: "si se recupera la mitad de los rechazos técnicos…").
 
 **Supuestos:**
-
+Si se recuperan o salvan las compras que no se logran con éxito por fallas de conexión o por la plataforma al menos la mitad de ellas, cada una compra que salvemos son 50 soles en promedio
 **Qué haría primero y por qué:**
 
 **Impacto estimado:**
