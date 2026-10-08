@@ -23,7 +23,7 @@ Cómo llenar cada pregunta (lo irás completando sesión a sesión; la sección 
 
 **Tablas que necesito:** `core.comercio`, `core.rubro_mcc`, `core.transaccion`
 
-**Qué encontré:** Seleccioné 10, y todas son de la modalidad presencial, con una tasa_pct de 0% y Paymarket maneja esta estrategia por el volumen que manejan las transacciones diarias.
+**Qué encontré:** Seleccioné 10, y todas son de la modalidad presencial, con una tasa_pct de 0% y probablemente Paymarket maneja esta estrategia por el volumen que manejan las transacciones diarias.
 
 **Qué recomendaría:**
 
@@ -31,10 +31,13 @@ Cómo llenar cada pregunta (lo irás completando sesión a sesión; la sección 
 
 ## 3. ¿Dónde y por qué se rechazan pagos, y cuánto ingreso se pierde?
 
-**Tablas que necesito:** `core.ubigeo`, `contracargo`
+**Tablas que necesito:** `core.transacciones`, `core.canal`, `core.codigo_respuesta`
 
 **Qué encontré:**
-
+En el año 2025 hubo un total de 129122 transacciones `nro_transacciones`.
+Asimismo,  hubo un total de 9156 transacciones rechazadas `nro_transacciones_rechazadas`.
+De las cuales, 4482 fueron por fondos insuficientes `fondos_insuficientes`.
+De modo que, el porcentajes de rechazos por fondos insuficientes seria de 48.95%
 **Qué recomendaría:**
 
 ---

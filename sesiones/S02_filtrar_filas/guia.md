@@ -242,11 +242,11 @@ En [proyecto/hallazgos.md](../../proyecto/hallazgos.md) anota los tres números 
 
 ## ✅ Cierre
 
-- [ ] Puedo explicar por qué `AND` y `OR` juntos necesitan paréntesis.
-- [ ] Sé cuándo usar `IN`, `BETWEEN` y `LIKE`, y qué significa la posición del `%`.
-- [ ] Puedo filtrar un día o un mes completo en una columna con hora usando `>=` y `<`.
-- [ ] Consulto los catálogos (`codigo_respuesta`, `canal`) en vez de adivinar códigos.
-- [ ] Superé los verificadores de la sesión (`EXEC chk.ver_progreso 'S02';`).
+- [x] Puedo explicar por qué `AND` y `OR` juntos necesitan paréntesis.
+- [x] Sé cuándo usar `IN`, `BETWEEN` y `LIKE`, y qué significa la posición del `%`.
+- [x] Puedo filtrar un día o un mes completo en una columna con hora usando `>=` y `<`.
+- [x] Consulto los catálogos (`codigo_respuesta`, `canal`) en vez de adivinar códigos.
+- [x] Superé los verificadores de la sesión (`EXEC chk.ver_progreso 'S02';`).
 
 ```bash
 git add .

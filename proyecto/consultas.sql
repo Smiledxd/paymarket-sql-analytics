@@ -29,18 +29,39 @@ SELECT TOP 10 --primero voy a ver quienes dejan poco o nada y por qué
     modalidad,
     fecha_afiliacion,
     mcc,
-    tasa_mdr * 100 tasa_pct
+    tasa_mdr * 100 AS tasa_pct
 FROM core.comercio
+WHERE estado = 'Activo'
 ORDER BY
-    tasa_mdr ASC, nombre_comercial ASC --todos tienen una tasa_pct de 0 y son minimarkets o bodegas
+    tasa_mdr ASC, fecha_afiliacion ASC --todos tienen una tasa_pct de 0 y son minimarkets o bodegas
     -- y Paymarket maneja esta estrategia por el volumen que manejan las transacciones diarias.
-
 
 /* ------------------------------------------------------------
    3. ¿Dónde y por qué se rechazan pagos, y cuánto ingreso se pierde?
    ------------------------------------------------------------ */
+-- total de transacciones 2025
+SELECT 
+    COUNT(*) AS nro_transacciones
+FROM core.transaccion
+WHERE
+    fecha_hora >= '2025-01-01' AND fecha_hora < '2026-01-01'
 
+-- total transacciones rechazadas
+SELECT 
+    COUNT(*) AS nro_transacciones_rechazadas
+FROM core.transaccion
+WHERE
+    (fecha_hora >= '2025-01-01' AND fecha_hora < '2026-01-01')
+    AND estado = 'Rechazada'
 
+-- rechazos por fondo insuficientes:
+SELECT 
+    COUNT(*) AS fondos_insuficientes
+FROM core.transaccion
+WHERE
+    (fecha_hora >= '2025-01-01' AND fecha_hora < '2026-01-01')
+    AND estado = 'Rechazada'
+    AND codigo_respuesta = '51'
 
 /* ------------------------------------------------------------
    4. ¿Qué clientes se registran y no usan la billetera?
