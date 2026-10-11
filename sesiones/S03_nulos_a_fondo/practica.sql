@@ -1,4 +1,6 @@
-﻿/* ============================================================
+﻿
+
+/* ============================================================
    S03 · Los nulos a fondo
    Guía: sesiones/S03_nulos_a_fondo/guia.md
    Pregunta del día: ¿Cuántos clientes no tienen datos de contacto?
@@ -39,7 +41,7 @@ SELECT COUNT(*)                  AS alumnos,
        COUNT(nota)               AS con_nota,
        AVG(nota * 1.0)           AS promedio_de_los_que_rindieron,
        AVG(COALESCE(nota, 0) * 1.0) AS promedio_contando_ceros   -- ¿cuál es el correcto? depende de la pregunta
-FROM #alumnos;
+FROM #alumnos;  
 
 -- 5) COALESCE con respaldo y NULLIF para dividir sin error
 SELECT alumno,
@@ -48,7 +50,7 @@ SELECT alumno,
 FROM #alumnos;
 
 -- Descomenta y ejecuta: sin NULLIF la consulta completa falla (error 8134)
--- SELECT alumno, puntos / intentos AS puntos_por_intento FROM #alumnos;
+SELECT alumno, puntos / intentos AS puntos_por_intento FROM #alumnos;
 GO
 
 
@@ -68,14 +70,18 @@ GO
 ============================================================ */
 DROP TABLE IF EXISTS #respuesta;
 -- Tu código aquí (termina tu SELECT con INTO #respuesta antes del FROM)
-
-
+SELECT
+    COUNT(*) - COUNT(correo) AS clientes_sin_correo
+INTO #respuesta
+FROM core.cliente 
 EXEC chk.s03_e1;
 GO
 /* Para pensar: ¿qué porcentaje de los clientes es? Calcúlalo a mano
-   con el total de S00. ¿Es un problema para marketing? */
-
-
+   con el total de S00. ¿Es un problema para marketing? 
+   Comparado con los 20000 clientes resulta ser un 10.47%. Además, sí esto presenta
+   un problema. Ya que, los costos en comunicación con estás personas son mayores, asimismo,
+   para la seguridad de los canales.
+   */
 /* ============================================================
    ✍️ EJERCICIO 2 — Clientes sin ningún dato de contacto
    Si un cliente no tiene correo pero sí celular, todavía se le
@@ -93,13 +99,19 @@ GO
 ============================================================ */
 DROP TABLE IF EXISTS #respuesta;
 -- Tu código aquí
-
-
+SELECT
+    COUNT(*) AS clientes_sin_contacto
+INTO #respuesta
+FROM core.cliente
+WHERE
+    correo IS NULL AND  celular IS NULL
+    
 EXEC chk.s03_e2;
 GO
 /* Para pensar: ¿cómo podría PayMarket evitar que se registren clientes
-   sin ningún dato de contacto? ¿Qué costo tendría esa regla? */
-
+   sin ningún dato de contacto? ¿Qué costo tendría esa regla? 
+   La solución ideal es que al menos 1 de los datos sean validados con el correo y número.
+   Asimismo, se evite la fricción,abandono y posibles datos falsos*/
 
 /* ============================================================
    ✍️ EJERCICIO 3 — Lista de contacto para la bienvenida
@@ -121,14 +133,21 @@ GO
 ============================================================ */
 DROP TABLE IF EXISTS #respuesta;
 -- Tu código aquí
-
+SELECT
+    cliente_id,
+    COALESCE( correo, celular, 'SIN CONTACTO')AS contacto
+into #respuesta
+FROM core.cliente
+WHERE
+    fecha_alta >= '20260601' AND fecha_alta < '20260608'
 
 EXEC chk.s03_e3;
 GO
 /* Para pensar: en la columna contacto se mezclan correos y celulares.
    ¿Qué problema tendría el equipo al usar esa lista? ¿Qué columna
-   le agregarías? */
-
+   le agregarías? 
+   Se agregaría la columna de estado. Para validar si en verdad el cliente está disponible*/
+   
 
 /* ============================================================
    ✍️ EJERCICIO 4 — Beneficio para quienes no vinieron de los embajadores
@@ -150,13 +169,22 @@ GO
 ============================================================ */
 DROP TABLE IF EXISTS #respuesta;
 -- Tu código aquí
+SELECT COUNT(*) AS total_clientes
+INTO #respuesta
+FROM core.cliente
+WHERE
+    (cliente_referidor_id <> '1815'
+    AND cliente_referidor_id <> '1535')
+    OR cliente_referidor_id IS NULL
 
 
 EXEC chk.s03_e4;
 GO
 /* Para pensar: si hubieras entregado el número equivocado, ¿cuántos
-   clientes se habrían quedado sin beneficio? ¿Cómo se enteraría la empresa? */
-
+   clientes se habrían quedado sin beneficio? ¿Cómo se enteraría la empresa? 
+   Muchas personas no tendrían el beneficio. Ya que la mayoría de personas en un banco son orgánicas.
+   Por otro lado, la empresa se enteraría facilmente por redes sociales por la misma campaña, donde hay clientes que si cumplian
+   con los requisitos*/
 
 /* ============================================================
    🏋️ RETO FINAL — ¿Cuánto venden los comercios por cada sol de comisión?
@@ -175,14 +203,26 @@ GO
 
    FICHA DE TRADUCCIÓN
    -- 1. ¿Qué me piden? ______ Una fila = ______
-   -- 2. ¿Dónde está? ______
+   -- 2. ¿Dónde está? core.transacciones
    -- 3. ¿Qué filas? ______
    -- 4. ¿Resumir? Sí, por ______
    -- 5. ¿Qué muestro? ______ (¡cuidado con el denominador!)
 ============================================================ */
 DROP TABLE IF EXISTS #respuesta;
 -- Tu código aquí
+SELECT
+    comercio_id,
+    SUM(monto) AS facturacion,
+    SUM(comision) AS comision_total,
+    SUM(monto) / NULLIF(SUM(comision),0) AS soles_por_sol_comision
+INTO #respuesta
+FROM core.transaccion
+WHERE
+    estado = 'Aprobada' AND moneda = 'PEN' AND comision = 0
+GROUP BY
+    comercio_id
 
+SELECT TOP 100 * FROM core.cliente
 
 EXEC chk.s03_reto;
 GO
@@ -194,14 +234,18 @@ GO
    1. En el reto, ¿quiénes son los comercios con NULL? Búscalos en
       core.comercio. ¿Por qué PayMarket aceptaría no cobrarles?
       Respuesta:
+        El código mcc 5499 corresponde a pequeños comercios como minimarkets.
+        De modo que, PayMarket no les cobraría comisión para incentivar el uso de pagos digitales.
 
    2. Si un gerente te pide "pon 0 donde sale NULL para que el reporte
       se vea limpio", ¿qué le responderías?
       Respuesta:
-
+        Proponga poner un " - ". Ya que altera los valores del reporte.
    3. ¿Qué otras columnas de core.cliente pueden ser NULL y qué
       análisis se verían afectados por eso?
       Respuesta:
-
-   Tu avance: EXEC chk.ver_progreso 'S03';
+        fecha_nacimiento puede ser NULL y afectaría en el análisis de edad del cliente.
+        Por otra parte cliente_referidor_id donde afecta las campañas de recomendación.
+ 
    ============================================================ */
+    avance: EXEC chk.ver_progreso 'S03';

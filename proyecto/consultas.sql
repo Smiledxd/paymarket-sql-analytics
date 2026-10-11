@@ -67,6 +67,14 @@ WHERE
    4. ¿Qué clientes se registran y no usan la billetera?
       ¿Cómo retiene cada cohorte?
    ------------------------------------------------------------ */
+-- clientes que tienen correo,celular y cuántos no tienen ninguno de los dos.
+SELECT
+    COUNT(correo) AS total_clientes_ccorreo,
+    COUNT(celular) AS total_clientes_ccelular,
+    COUNT(*) - COUNT(COALESCE(correo,celular)) AS total_clientes_scontacto
+FROM core.cliente
+
+    
 
 
 

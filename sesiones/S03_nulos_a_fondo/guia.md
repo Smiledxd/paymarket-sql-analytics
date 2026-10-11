@@ -226,12 +226,12 @@ En [proyecto/hallazgos.md](../../proyecto/hallazgos.md) anota los números y una
 
 ## ✅ Cierre
 
-- [ ] Puedo explicar por qué `WHERE correo = NULL` no devuelve filas.
-- [ ] Puedo predecir qué pasa con las filas nulas en un `NOT IN` y cómo incluirlas.
-- [ ] Sé la diferencia entre `COUNT(*)` y `COUNT(columna)`.
-- [ ] Puedo usar `COALESCE` con un orden de preferencia y justificar cuándo reemplazar un nulo.
-- [ ] Puedo dividir sin errores con `NULLIF` y explicar por qué el resultado es `NULL` y no 0.
-- [ ] Superé los verificadores de la sesión (`EXEC chk.ver_progreso 'S03';`).
+- [x] Puedo explicar por qué `WHERE correo = NULL` no devuelve filas.
+- [x] Puedo predecir qué pasa con las filas nulas en un `NOT IN` y cómo incluirlas.
+- [x] Sé la diferencia entre `COUNT(*)` y `COUNT(columna)`.
+- [x] Puedo usar `COALESCE` con un orden de preferencia y justificar cuándo reemplazar un nulo.
+- [x] Puedo dividir sin errores con `NULLIF` y explicar por qué el resultado es `NULL` y no 0.
+- [x] Superé los verificadores de la sesión (`EXEC chk.ver_progreso 'S03';`).
 
 ```bash
 git add .

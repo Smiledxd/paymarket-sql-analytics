@@ -44,9 +44,18 @@ De modo que, el porcentajes de rechazos por fondos insuficientes seria de 48.95%
 
 ## 4. ¿Qué clientes se registran y no usan la billetera? ¿Cómo retiene cada cohorte?
 
-**Tablas que necesito:** `core.canal`, `core.cliente`
+**Tablas que necesito:** `core.canal`, `core.cliente`, `core.transacciones`
 
 **Qué encontré:**
+
+`total_clientes_ccorreo :` 17907
+
+`total_clientes_ccelular :` 18747
+
+`total_clientes_scontacto :` 129
+
+PayMarket podría usar su correo o celular; sin embargo,
+no lograría contactar a los clientes sin ningún registro.
 
 **Qué recomendaría:**
 
