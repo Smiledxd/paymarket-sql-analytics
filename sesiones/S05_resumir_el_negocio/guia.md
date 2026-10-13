@@ -222,11 +222,11 @@ En [proyecto/hallazgos.md](../../proyecto/hallazgos.md) anota el primer y el úl
 
 ## ✅ Cierre
 
-- [ ] Puedo explicar con un ejemplo la diferencia entre `COUNT(*)`, `COUNT(columna)` y `COUNT(DISTINCT columna)`.
-- [ ] Sé por qué la facturación se calcula solo con operaciones aprobadas y en una moneda.
-- [ ] Puedo evitar el promedio entero y explicar por qué convertir después no sirve.
-- [ ] Sé la regla del `GROUP BY` y puedo leer el error 8120.
-- [ ] Superé los verificadores de la sesión (`EXEC chk.ver_progreso 'S05';`).
+- [x] Puedo explicar con un ejemplo la diferencia entre `COUNT(*)`, `COUNT(columna)` y `COUNT(DISTINCT columna)`.
+- [x] Sé por qué la facturación se calcula solo con operaciones aprobadas y en una moneda.
+- [x] Puedo evitar el promedio entero y explicar por qué convertir después no sirve.
+- [x] Sé la regla del `GROUP BY` y puedo leer el error 8120.
+- [x] Superé los verificadores de la sesión (`EXEC chk.ver_progreso 'S05';`).
 
 ```bash
 git add .

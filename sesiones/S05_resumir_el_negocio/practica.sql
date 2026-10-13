@@ -6,7 +6,6 @@
 USE PayMarket_Analitica;
 GO
 
-
 /* ============================================================
    📘 EJEMPLO DE JUGUETE — la juguería "Frutos del Valle"
    Una fila = un producto vendido en una boleta.
@@ -52,7 +51,7 @@ GROUP BY vendedor, producto
 ORDER BY vendedor, producto;
 
 -- Descomenta y ejecuta: error 8120, producto no está en el GROUP BY
--- SELECT vendedor, producto, SUM(cantidad) FROM #ventas GROUP BY vendedor;
+SELECT vendedor, producto, SUM(cantidad) FROM #ventas GROUP BY vendedor;
 GO
 
 
@@ -73,13 +72,26 @@ GO
 ============================================================ */
 DROP TABLE IF EXISTS #respuesta;
 -- Tu código aquí (termina tu SELECT con INTO #respuesta antes del FROM)
-
-
+SELECT
+    COUNT(*) AS operaciones,
+    SUM(monto) AS facturacion,
+    SUM(monto) / COUNT(*) AS ticket_promedio,
+    MIN(monto) AS ticket_minimo,
+    MAX(monto) AS ticket_maximo
+INTO #respuesta
+FROM core.transaccion
+WHERE
+    estado = 'Aprobada'
+    AND moneda = 'PEN'
+    AND (fecha_hora >= '20250101'
+    AND fecha_hora < '20260101')
 EXEC chk.s05_e1;
 GO
 /* Para pensar: el ticket máximo está muy lejos del promedio. ¿Qué tipo
-   de comercio crees que explica esas operaciones tan grandes? */
-
+   de comercio crees que explica esas operaciones tan grandes?
+   Es un comercio mayorista o bien sus productos como tal cuestan mucho por ende
+   sus tickets son altos*/
+   
 
 /* ============================================================
    ✍️ EJERCICIO 2 — Junio 2026 en números
@@ -102,13 +114,23 @@ GO
 ============================================================ */
 DROP TABLE IF EXISTS #respuesta;
 -- Tu código aquí
-
-
+SELECT
+    COUNT(*) AS operaciones_aprobadas,
+    COUNT(DISTINCT cuenta_id) cuentas_distintas,
+    COUNT(DISTINCT comercio_id) comercios_distintos,
+    COUNT(promocion_id) AS operaciones_con_promocion
+INTO #respuesta
+FROM core.transaccion
+WHERE
+    estado = 'Aprobada'
+    AND (fecha_hora >= '20260601'
+    AND fecha_hora < '20260701')
 EXEC chk.s05_e2;
 GO
 /* Para pensar: divide operaciones entre cuentas distintas. ¿Qué te dice
-   ese número sobre cómo usan la billetera los clientes? */
-
+   ese número sobre cómo usan la billetera los clientes? 
+   4.25 es el promedio de operaciones por cuenta*/
+   SELECT 31865 / 7496.0 AS promedio_operaciones_xcuenta
 
 /* ============================================================
    ✍️ EJERCICIO 3 — Facturación y ticket promedio por canal
@@ -128,15 +150,29 @@ GO
 ============================================================ */
 DROP TABLE IF EXISTS #respuesta;
 -- Tu código aquí
-
-
+SELECT
+    canal_id,
+    COUNT(*) AS operaciones,
+    SUM(monto) AS facturacion,
+    AVG(monto) AS ticket_promedio
+INTO #respuesta
+FROM core.transaccion
+WHERE
+    estado = 'Aprobada'
+    AND moneda = 'PEN'
+    AND (fecha_hora >= '20260101'
+    AND fecha_hora < '20260701')
+GROUP BY
+    canal_id
 EXEC chk.s05_e3;
 GO
 /* Para pensar: ¿qué canal tiene más operaciones y cuál el ticket más
    alto? ¿Son el mismo? ¿Qué te dice eso sobre para qué usa la gente
-   cada canal? */
-
-
+   cada canal?
+   El canal con más operaciones es el 3(pos fisico), y el ticket promedio más alto corresponde al 2(web).
+   Indica que el canal 3 es el de más flujo y movimientos al día a día, por otro lado el web se maneja
+   por la planificación y seguridad que este puede traer*/
+   
 /* ============================================================
    ✍️ EJERCICIO 4 — Tiempo de respuesta del servidor por canal
    Tecnología revisa cuánto tarda el servidor en responder cada pago
@@ -157,14 +193,26 @@ GO
 ============================================================ */
 DROP TABLE IF EXISTS #respuesta;
 -- Tu código aquí
-
+SELECT
+    canal_id,
+    AVG(CAST(latencia_ms AS DECIMAL (7,2))) AS latencia_promedio_ms,
+    MAX(latencia_ms) AS latencia_maxima_ms
+INTO #respuesta
+FROM core.transaccion
+WHERE
+    estado = 'Aprobada'
+    AND (fecha_hora >= '20260501'
+    AND fecha_hora < '20260601')
+GROUP BY
+    canal_id
 
 EXEC chk.s05_e4;
 GO
 /* Para pensar: la latencia es tiempo del servidor, no de la persona.
    Si un canal responde más lento, ¿qué efecto podría tener en las
-   ventas? ¿Con qué datos lo comprobarías? */
-
+   ventas? ¿Con qué datos lo comprobarías?
+   Si un canal responde más lento genera desconecto en el servicio por parte de cliente.
+   Con los codigos de respuesta, para validar si cierran sesión o hay otros problemas*/
 
 /* ============================================================
    🏋️ RETO FINAL — Los 10 comercios que más facturaron en el segundo trimestre
@@ -186,7 +234,23 @@ GO
 ============================================================ */
 DROP TABLE IF EXISTS #respuesta;
 -- Tu código aquí
-
+SELECT TOP 10
+     comercio_id,
+     COUNT(*) AS operaciones,
+     COUNT(DISTINCT cuenta_id) AS cuentas_distintas,
+     SUM(monto) AS facturacion,
+     AVG(CAST((monto*1.0) AS DECIMAL (10,2))) AS ticket_promedio,
+     SUM(comision) AS comision_total
+FROM core.transaccion
+WHERE
+    estado = 'Aprobada'
+    AND moneda = 'PEN'
+    AND (fecha_hora >= '20260401'
+    AND fecha_hora < '20260701')
+GROUP BY
+    comercio_id
+ORDER BY
+    facturacion DESC
 
 EXEC chk.s05_reto;
 GO
@@ -198,14 +262,21 @@ GO
    1. En el reto, ¿el comercio que más factura es el que más comisión
       deja? ¿Por qué podrían no coincidir?
       Respuesta:
-
+      En el primer lugar sí es el caso. Pero en lo demás no tanto esto se puede deber al rubro
+      o al mismo contrato distinto.
    2. Un comercio con muchas operaciones pero pocas cuentas distintas,
       ¿qué te sugiere? ¿Es bueno o riesgoso para PayMarket?
       Respuesta:
-
+      Indica que pocos usuario hacen compras repetitivas. Aunque para el negocio puede ser fieles,
+      para PayMarket como tal es muy riesgoso. Ya que, puede indicar autofinanciamiento o si esos pocos
+      clientes se van, las ventas caen de golpe.
    3. Si la gerencia te pide "la facturación total de PayMarket",
       ¿qué le preguntarías antes de calcularla?
       Respuesta:
-
-   Tu avance: EXEC chk.ver_progreso 'S05';
+      1. Se refieren al monto total vendido por los comerciantes a la ganancia en comisiones?
+      2. En que rango de fechas?
+      3. En que moneda ?
+      4. montos brutos o netos con igv ?
+   Tu avance: ;
    ============================================================ */
+   EXEC chk.ver_progreso 'S05'

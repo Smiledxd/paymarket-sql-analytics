@@ -15,14 +15,22 @@ Cómo llenar cada pregunta (lo irás completando sesión a sesión; la sección 
 
 **Qué encontré:**
 
-Los días que destacan más son:
-- El día 1	con 10165 operaciones
-- El día 15 con 10832 operaciones
-- El día 16 con 11148 operaciones
-Una hipótesis seria que en esas fechas es cuando depositán y se cobran los sueldos a gastar.
-Cabe mencionar que no tomamos el día 31,30, ya que no todos los meses cuentan que estos días.
-Sin embargo, posteriormente se puede analizar el último día de cada mes
+- **Días del mes (del 1 al 31) con más operaciones aprobadas**
+  - **El día 1:**	10,165 operaciones
+  - **El día 15:** 10,832 operaciones
+  - **El día 16:** 11,148 operaciones
 
+    Una hipótesis seria que en esas fechas es cuando depositán y se cobran los sueldos a gastar.
+    Cabe mencionar que no tomamos el día 30 y 31. Ya que, no todos los meses cuentan que estos días.
+    Sin embargo, posteriormente se puede analizar el último día de cada mes
+
+- **Evolución mensual (aprobadas en soles)**
+  - **El primer mes (2025-01):** hubó un total de 602 operaciones con una facturación de S/. 88,952.21, además el ticket promedio era de: S/. 174.76
+  - **El último mes (2026-06):** hubó un total de 31654 operaciones con una facturación de S/. 4,135,223.37, además el ticket promedio era de: S/. 130.64
+  - **Que se ve en la tendencia:** Se observa un crecimiento exponencial y acelerado por parte de PayMarket en
+    estos 18 meses. Asimismo, el ticket promedio bajo y se estabilizó ya en el año 2026 
+  - **mes fuera del patrón y pregunta para investigar:** Si bien la tendencia de Paymarket era creciente en diciembre del 2025 hubo un salto fuerte (23,070 operaciones y S/ 3,357,671.43 con ticket promedio de S/ 145.54) y en enero del 2026 ocurrió una caída (bajó a 22,446 operaciones, S/ 2,881,181.58 de facturación y el ticket cayó a S/ 128.36).
+    - Pregunta: El pico de diciembre 2025 y la caída de enero 2026 se deben  a la estacionalidad de las fiestas de fin de año, o hubo algún problema operativo en enero?
 
 
 **Qué recomendaría:**
@@ -44,9 +52,9 @@ Sin embargo, posteriormente se puede analizar el último día de cada mes
 **Tablas que necesito:** `core.transacciones`, `core.canal`, `core.codigo_respuesta`
 
 **Qué encontré:**
-En el año 2025 hubo un total de 129122 transacciones `nro_transacciones`.
-Asimismo,  hubo un total de 9156 transacciones rechazadas `nro_transacciones_rechazadas`.
-De las cuales, 4482 fueron por fondos insuficientes `fondos_insuficientes`.
+En el año 2025 hubo un total de 129,122 transacciones `nro_transacciones`.
+Asimismo,  hubo un total de 9,156 transacciones rechazadas `nro_transacciones_rechazadas`.
+De las cuales, 4,482 fueron por fondos insuficientes `fondos_insuficientes`.
 De modo que, el porcentajes de rechazos por fondos insuficientes seria de 48.95%
 **Qué recomendaría:**
 
@@ -58,9 +66,9 @@ De modo que, el porcentajes de rechazos por fondos insuficientes seria de 48.95%
 
 **Qué encontré:**
 
-`total_clientes_ccorreo :` 17907
+`total_clientes_ccorreo :` 17,907
 
-`total_clientes_ccelular :` 18747
+`total_clientes_ccelular :` 18,747
 
 `total_clientes_scontacto :` 129
 

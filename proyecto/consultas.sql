@@ -17,7 +17,35 @@ GO
    1. ¿Cómo evolucionan el volumen y la facturación, y qué
       estacionalidad tiene el negocio?
    ------------------------------------------------------------ */
+--Días del mes (del 1 al 31) con más operaciones aprobadas
+SELECT
+    DAY(fecha_hora) AS fecha_mes,
+    COUNT(*) AS nro_operaciones_aprobadas
+FROM core.transaccion
+WHERE
+    estado = 'Aprobada'
+GROUP BY
+    DAY(fecha_hora)
+ORDER BY
+    nro_operaciones_aprobadas DESC
 
+--Evolución mensual operaciones aprobadas en soles
+SELECT
+    YEAR(fecha_hora) AS año,
+    MONTH(fecha_hora) AS mes,
+    COUNT(*) AS total_operaciones,
+    SUM(monto) AS facturacion,
+    CAST(AVG(monto) AS DECIMAL (10,2))AS ticket_promedio
+FROM core.transaccion
+WHERE
+    estado = 'Aprobada'
+    AND moneda = 'PEN'
+GROUP BY
+    YEAR(fecha_hora),
+    MONTH(fecha_hora)
+ORDER BY
+    YEAR(fecha_hora) ASC,
+    MONTH(fecha_hora) ASC
 
 
 /* ------------------------------------------------------------
