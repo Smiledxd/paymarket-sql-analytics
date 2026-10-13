@@ -266,13 +266,13 @@ En [proyecto/hallazgos.md](../../proyecto/hallazgos.md) anota qué días destaca
 
 ## ✅ Cierre
 
-- [ ] Puedo armar un texto con `CONCAT` y explicar en qué se diferencia de `+` con nulos.
-- [ ] Puedo cortar un texto desde un caracter con `CHARINDEX` y `SUBSTRING`.
-- [ ] Sé cuándo usar `TRY_CAST` en lugar de `CAST`.
-- [ ] Puedo construir "los últimos 7 días" y "el mes pasado" como rangos semiabiertos a partir de `@hoy`.
-- [ ] Puedo explicar por qué `DATEADD(month, 1, ...)` no es lo mismo que sumar 30 días.
-- [ ] Puedo explicar por qué no uso `FORMAT` para agrupar.
-- [ ] Superé los verificadores de la sesión (`EXEC chk.ver_progreso 'S04';`).
+- [x] Puedo armar un texto con `CONCAT` y explicar en qué se diferencia de `+` con nulos.
+- [x] Puedo cortar un texto desde un caracter con `CHARINDEX` y `SUBSTRING`.
+- [x] Sé cuándo usar `TRY_CAST` en lugar de `CAST`.
+- [x] Puedo construir "los últimos 7 días" y "el mes pasado" como rangos semiabiertos a partir de `@hoy`.
+- [x] Puedo explicar por qué `DATEADD(month, 1, ...)` no es lo mismo que sumar 30 días.
+- [x] Puedo explicar por qué no uso `FORMAT` para agrupar.
+- [x] Superé los verificadores de la sesión (`EXEC chk.ver_progreso 'S04';`).
 
 Terminaste el módulo de filtros y transformaciones. Marca las sesiones en [CURRICULA.md](../../CURRICULA.md) y haz tu commit:
 

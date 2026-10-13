@@ -43,7 +43,7 @@ SELECT pedido_id,
        TRY_CAST(REPLACE(total_txt, ',', '.') AS DECIMAL(8,2)) AS total
 FROM #pedidos;
 -- Descomenta: CAST sí se cae (error 8114) porque 'sin dato' no es un número
--- SELECT CAST(REPLACE(total_txt, ',', '.') AS DECIMAL(8,2)) FROM #pedidos;
+SELECT TRY_CAST(REPLACE(total_txt, ',', '.') AS DECIMAL(8,2)) FROM #pedidos;
 
 -- 3) Fechas: partes, días de espera y fin de mes
 SELECT pedido_id,
@@ -58,7 +58,6 @@ FROM #pedidos;
 -- 4) DATEDIFF cuenta límites cruzados: 1 "año" entre dos fechas separadas por un día
 SELECT DATEDIFF(year, '2025-12-31', '2026-01-01') AS anios,
        DATEDIFF(day,  '2025-12-31', '2026-01-01') AS dias;
-
 -- 5) Un rango relativo a "hoy": lo que va del mes (del día 1 hasta hoy, completo)
 DECLARE @hoy_pasteleria DATE = '2026-02-28';
 SELECT pedido_id, pedido
@@ -66,7 +65,6 @@ FROM #pedidos
 WHERE pedido >= DATEFROMPARTS(YEAR(@hoy_pasteleria), MONTH(@hoy_pasteleria), 1)   -- 1 de febrero, 00:00
   AND pedido <  DATEADD(day, 1, @hoy_pasteleria);                                 -- antes del 1 de marzo, 00:00
 GO
-
 
 /* ============================================================
    ✍️ EJERCICIO 1 — Etiquetas de bienvenida
@@ -89,13 +87,19 @@ GO
 DROP TABLE IF EXISTS #respuesta;
 DECLARE @hoy DATE = '2026-06-30';
 -- Tu código aquí (termina tu SELECT con INTO #respuesta antes del FROM)
-
+SELECT
+    cliente_id,
+    CONCAT(UPPER(apellido_paterno),',',' ',nombres) AS etiqueta,
+    SUBSTRING(correo,CHARINDEX('@',correo) +1 ,LEN(correo)) AS dominio_correo
+INTO #respuesta
+FROM core.cliente
+WHERE fecha_alta = @hoy
 
 EXEC chk.s04_e1;
 GO
 /* Para pensar: ¿qué pasaría con la etiqueta si armaras el texto con +
-   y el cliente no tuviera nombres registrados? */
-
+   y el cliente no tuviera nombres registrados?
+   Lo más seguro es que si sumanos 'nombre' + NULL el resultado es: NULL*/
 
 /* ============================================================
    ✍️ EJERCICIO 2 — Cumpleañeros de Cusco este mes
@@ -116,16 +120,37 @@ GO
    -- 5. ¿Qué muestro? cliente_id, fecha_nacimiento, edad_que_cumple = ______
 ============================================================ */
 DROP TABLE IF EXISTS #respuesta;
+SELECT TOP 100 * FROM core.cliente
 DECLARE @hoy DATE = '2026-06-30';
 -- Tu código aquí
-
+SELECT
+    cliente_id,
+    fecha_nacimiento,
+    DATEDIFF(YEAR,fecha_nacimiento,@hoy) AS edad_que_cumple
+INTO #respuesta
+FROM core.cliente
+WHERE 
+    estado = 'Activo'
+    AND (MONTH(fecha_nacimiento) = MONTH(@hoy))
+    AND DAY(fecha_nacimiento) <= DAY(@hoy)
+    AND ubigeo_id LIKE '08%'
+    
 
 EXEC chk.s04_e2;
 GO
 /* Para pensar: los clientes sin fecha de nacimiento no aparecen.
-   ¿Por qué? ¿Cuántos clientes de Cusco se quedan sin saludo por eso? */
-
-
+   ¿Por qué? ¿Cuántos clientes de Cusco se quedan sin saludo por eso?
+   No aparecen por las cláusula WHERE ya que esta solo filtra los TRUE, no, los NULL.
+   Por otro lado, son un total de 547 personas que se quedan sin saludo por
+   no llenar correctamente los datos independientemente del mes de Junio*/
+DECLARE @hoy DATE = '2026-06-30';
+SELECT
+    COUNT(*) AS clientes_s_f_cusco
+FROM core.cliente
+WHERE 
+    estado = 'Activo'
+    AND ubigeo_id LIKE '08%'
+GO
 /* ============================================================
    ✍️ EJERCICIO 3 — ¿Qué pasó la última semana?
    El lunes, la gerenta pregunta cómo fue la semana: cuántas
@@ -145,13 +170,22 @@ GO
 DROP TABLE IF EXISTS #respuesta;
 DECLARE @hoy DATE = '2026-06-30';
 -- Tu código aquí
-
+SELECT
+    COUNT(*) AS total_operaciones,
+    SUM(monto) AS monto_total
+INTO #respuesta
+FROM core.transaccion
+WHERE
+    estado = 'Aprobada'
+    AND moneda = 'PEN'
+    AND (fecha_hora >= DATEADD(DAY,-6,@HOY) AND fecha_hora < DATEADD(DAY,1,@HOY))
 
 EXEC chk.s04_e3;
 GO
 /* Para pensar: ¿cómo sabrías si fue una buena semana? ¿Con qué
-   semana la compararías y por qué? */
-
+   semana la compararías y por qué? 
+   Se compara contra las anteriores semanas para medir el crecimiento o comportamiento real. Ya que un solo dato, es un registro,
+   no una métrica.*/
 
 /* ============================================================
    ✍️ EJERCICIO 4 — Créditos del mes pasado
@@ -174,13 +208,23 @@ GO
 DROP TABLE IF EXISTS #respuesta;
 DECLARE @hoy DATE = '2026-06-30';
 -- Tu código aquí
-
+SELECT
+    credito_id,
+    fecha_desembolso,
+    DATEDIFF(DAY,fecha_desembolso,@hoy) AS dias_desde_desembolso,
+    DATEADD(MONTH,1,fecha_desembolso) AS fecha_primera_cuota
+INTO #respuesta
+FROM core.credito
+WHERE
+    (fecha_desembolso > DATEADD(MONTH,-2,@hoy))
+    AND fecha_desembolso <= EOMONTH(DATEADD(MONTH,-1,@hoy))
 
 EXEC chk.s04_e4;
 GO
 /* Para pensar: al 30 de junio, ¿cuántos de estos créditos ya tuvieron
-   su primera cuota vencida? ¿Por qué eso importa para medir mora? */
-
+   su primera cuota vencida? ¿Por qué eso importa para medir mora?
+   Todos ya vencieron a la fecha de @hoy. Además, importa por que si no pagar la primera coutar se le dió
+   el préstamo a quien no se debia, ese crédito se perdió*/
 
 /* ============================================================
    🏋️ RETO FINAL — La última semana, día por día
@@ -204,8 +248,22 @@ GO
 DROP TABLE IF EXISTS #respuesta;
 DECLARE @hoy DATE = '2026-06-30';
 -- Tu código aquí
-
-
+SELECT
+    CAST(fecha_hora AS DATE) AS fecha,
+    COUNT(*) AS operaciones,
+    SUM(monto) AS monto_total,
+    DATEDIFF(MONTH, CAST(fecha_hora AS DATE), DATEADD(DAY, 1, CAST(fecha_hora AS DATE))) AS es_fin_de_mes
+INTO #respuesta
+FROM core.transaccion
+WHERE
+    estado = 'Aprobada'
+    AND moneda = 'PEN'
+    AND (fecha_hora >= DATEADD(DAY,-6,@HOY)
+    AND fecha_hora < DATEADD(DAY,1,@HOY))
+GROUP BY
+    CAST(fecha_hora AS DATE)
+ORDER BY
+    fecha ASC
 EXEC chk.s04_reto;
 GO
 
@@ -217,15 +275,17 @@ GO
       sola semana puedes concluir que "a fin de mes se vende más"?
       ¿Qué consulta harías para comprobarlo?
       Respuesta:
-
+      No necesariamente, una semana no prueba nada.
+      Lo compararía con históricos de ventas agrupando por el fin de mes en varios meses.
    2. Si el reporte diario se hiciera con FORMAT(fecha_hora, 'dd/MM')
       y se ordenara por esa columna, ¿qué vería mal la gerenta en
       un reporte de varios meses?
       Respuesta:
-
+      Se vería desordenado. Ya que, se juntan todos los días 1 del año, luego todos los 2, etc.
    3. ¿Qué pasaría con "la última semana" si PayMarket tuviera clientes
       en otro país con otra zona horaria?
       Respuesta:
-
-   Tu avance: EXEC chk.ver_progreso 'S04';
+      Lo más seguro es que se descuadre el reporte por completo.
+   Tu avance: ';
    ============================================================ */
+   EXEC chk.ver_progreso 'S04'

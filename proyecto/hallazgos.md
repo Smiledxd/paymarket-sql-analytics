@@ -15,6 +15,16 @@ Cómo llenar cada pregunta (lo irás completando sesión a sesión; la sección 
 
 **Qué encontré:**
 
+Los días que destacan más son:
+- El día 1	con 10165 operaciones
+- El día 15 con 10832 operaciones
+- El día 16 con 11148 operaciones
+Una hipótesis seria que en esas fechas es cuando depositán y se cobran los sueldos a gastar.
+Cabe mencionar que no tomamos el día 31,30, ya que no todos los meses cuentan que estos días.
+Sin embargo, posteriormente se puede analizar el último día de cada mes
+
+
+
 **Qué recomendaría:**
 
 ---
