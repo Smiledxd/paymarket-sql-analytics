@@ -17,6 +17,7 @@ GO
    1. ¿Cómo evolucionan el volumen y la facturación, y qué
       estacionalidad tiene el negocio?
    ------------------------------------------------------------ */
+
 --Días del mes (del 1 al 31) con más operaciones aprobadas
 SELECT
     DAY(fecha_hora) AS fecha_mes,
@@ -90,6 +91,25 @@ WHERE
     (fecha_hora >= '2025-01-01' AND fecha_hora < '2026-01-01')
     AND estado = 'Rechazada'
     AND codigo_respuesta = '51'
+
+-- intentos y las tasas de rechazo del cliente, técnico y por fraude
+SELECT
+    CASE canal_id WHEN 1 THEN 'App móvil' WHEN 2 THEN 'Web' WHEN 3 THEN 'POS físico' WHEN 4 THEN 'Pago con QR' END AS canal_id,
+    MONTH(fecha_hora) AS mes,
+    COUNT(*) AS intentos,
+    100.0 * COUNT(CASE WHEN codigo_respuesta IN('57','55','54','51','14','05','61','75') THEN 1 END) AS rechazos_cliente,
+    100.0 * COUNT(CASE WHEN codigo_respuesta IN('96','91','68') THEN 1 END) / COUNT(*) AS tasa_rechazo_tecnico,
+    100.0 * COUNT(CASE WHEN codigo_respuesta IN('59','43','41') THEN 1 END) / COUNT(*) AS rechazos_fraude
+FROM core.transaccion
+WHERE
+    (fecha_hora >= '20250101'
+    AND fecha_hora < '20260701')
+GROUP BY
+    canal_id,
+    MONTH(fecha_hora)
+ORDER BY
+    canal_id ASC,
+    mes ASC
 
 /* ------------------------------------------------------------
    4. ¿Qué clientes se registran y no usan la billetera?

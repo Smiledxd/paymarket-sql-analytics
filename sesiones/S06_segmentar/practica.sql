@@ -86,14 +86,26 @@ GO
 ============================================================ */
 DROP TABLE IF EXISTS #respuesta;
 -- Tu código aquí (termina tu SELECT con INTO #respuesta antes del FROM)
-
+SELECT
+    canal_id,
+    --CASE canal_id WHEN 1 THEN 'App móvil' WHEN 2 THEN 'Web' WHEN 3 THEN 'POS físico' WHEN 4 THEN 'Pago con QR' END AS canal_id,
+    COUNT(*) AS intentos,
+    SUM(CASE WHEN codigo_respuesta = '00' THEN 1 ELSE 0 END) AS aprobadas,
+    100.0 *SUM(CASE WHEN codigo_respuesta = '00' THEN 1 ELSE 0 END) / COUNT(*) AS tasa_aprobacion
+--INTO #respuesta
+FROM core.transaccion
+WHERE
+    (fecha_hora >= '20260101'
+    AND fecha_hora < '20260701')
+GROUP BY
+    canal_id
 
 EXEC chk.s06_e1;
 GO
 /* Para pensar: las diferencias entre canales son de pocos puntos. Con
    unos 175 mil intentos en el semestre, ¿cuántas ventas representa un punto
    de diferencia? */
-
+   /*Un punto de diferencia en la tasa de aprobación representa 1,750 ventas aprox. en el semestre.*/
 
 /* ============================================================
    ✍️ EJERCICIO 2 — Operaciones por tramo de monto
@@ -117,13 +129,34 @@ GO
 ============================================================ */
 DROP TABLE IF EXISTS #respuesta;
 -- Tu código aquí
-
-
+SELECT
+    CASE
+        WHEN monto >= 200 THEN 'alto'
+        WHEN monto >= 50 THEN 'medio'
+        ELSE 'bajo'
+    END AS tramo,
+    COUNT(*) AS operaciones,
+    SUM(monto) AS facturacion
+INTO #respuesta
+FROM core.transaccion
+WHERE
+    fecha_hora >= '20260601' AND fecha_hora < '20260701'
+    AND moneda = 'PEN'
+    AND estado = 'Aprobada'
+GROUP BY
+    CASE
+        WHEN monto >= 200 THEN 'alto'
+        WHEN monto >= 50 THEN 'medio'
+        ELSE 'bajo'
+    END
+ORDER BY
+    operaciones DESC
 EXEC chk.s06_e2;
 GO
 /* Para pensar: ¿qué tramo tiene más operaciones y cuál más facturación?
    Si PayMarket cobra un porcentaje, ¿qué tramo le conviene cuidar? */
-
+   /*El tramo bajo tiene más operaciones. Sin embargo, el tramo alto es el que tiene más facturación
+   Bajo el porcentaje por comisión conviene cuidar el tramo alto*/
 
 /* ============================================================
    ✍️ EJERCICIO 3 — Comercios grandes con ticket alto
@@ -143,13 +176,33 @@ GO
 ============================================================ */
 DROP TABLE IF EXISTS #respuesta;
 -- Tu código aquí
-
-
+SELECT
+    comercio_id,
+    COUNT(*) AS operaciones,
+    AVG(monto) AS ticket_promedio
+INTO #respuesta
+FROM core.transaccion
+WHERE
+    (fecha_hora >= '20260101'
+    AND fecha_hora < '20260701')
+    AND moneda = 'PEN'
+    AND estado = 'Aprobada'
+GROUP BY
+    comercio_id
+HAVING
+    COUNT(*) > 500
+    AND AVG(monto) > 80
+ORDER BY
+    operaciones DESC
+    
 EXEC chk.s06_e3;
 GO
 /* Para pensar: un comercio con 400 operaciones de S/ 300 no entra al
    programa. ¿Está bien diseñada la regla? ¿Qué criterio propondrías? */
-
+   /*No esta bien diseñada, porque 400 ventas de S/ 300 suman S/ 120,000,que es mucho más que el
+   mínimo de la regla actual (500 x S/ 80 = S/ 40,000).
+   De modo que, estamos dejando fuera a un cliente grande. Lo ideal sería evaluar la suma total de ventas
+   (SUM(monto)) en lugar de exigir tantas operaciones.*/
 
 /* ============================================================
    ✍️ EJERCICIO 4 — Tabla cruzada de rechazos por canal
@@ -168,17 +221,51 @@ GO
    -- 5. ¿Qué muestro? canal_id y los tres conteos.
 ============================================================ */
 -- Consulta al catálogo (sin INTO):
+SELECT TOP 100 *
+FROM core.codigo_respuesta
+ORDER BY tipo_respuesta ASC
+/*
+codigo_respuesta	descripcion	tipo_respuesta
+00	Aprobada	Aprobada
 
+57	Operación no permitida al titular	Rechazo del cliente
+55	Clave incorrecta	Rechazo del cliente
+54	Tarjeta vencida	Rechazo del cliente
+51	Fondos insuficientes	Rechazo del cliente
+14	Número de tarjeta inválido	Rechazo del cliente
+05	No autorizada por el emisor	Rechazo del cliente
+61	Excede el límite de monto	Rechazo del cliente
+75	Excedió los intentos de clave	Rechazo del cliente
 
+96	Falla del sistema	Rechazo técnico
+91	Emisor no disponible	Rechazo técnico
+68	Respuesta tardía (tiempo agotado)	Rechazo técnico
+
+59	Sospecha de fraude	Sospecha de fraude
+43	Tarjeta reportada como robada	Sospecha de fraude
+41	Tarjeta reportada como perdida	Sospecha de fraude
+*/
 DROP TABLE IF EXISTS #respuesta;
 -- Tu código aquí
-
+SELECT
+    canal_id,
+    COUNT(CASE WHEN codigo_respuesta IN('57','55','54','51','14','05','61','75') THEN 1 END) AS rechazos_cliente,
+    COUNT(CASE WHEN codigo_respuesta IN('96','91','68') THEN 1 END) AS rechazos_tecnicos,
+    COUNT(CASE WHEN codigo_respuesta IN('59','43','41') THEN 1 END) AS rechazos_fraude
+INTO #respuesta
+FROM core.transaccion
+WHERE
+    (fecha_hora >= '20260101'
+    AND fecha_hora < '20260701')
+GROUP BY
+    canal_id
 
 EXEC chk.s06_e4;
 GO
 /* Para pensar: ¿qué canal tiene más rechazos técnicos? ¿Es justo
    compararlos en número o deberías compararlos en tasa? ¿Por qué? */
-
+   /*El Canal 3 (POS físico) es el que tiene más rechazos. Pero lo justo es compararlos en tasa (%),
+   porque el número suelto no nos dice qué proporción representan del total de operaciones*/
 
 /* ============================================================
    🏋️ RETO FINAL — Tablero mensual del primer semestre
@@ -200,7 +287,22 @@ GO
 ============================================================ */
 DROP TABLE IF EXISTS #respuesta;
 -- Tu código aquí
-
+SELECT
+    MONTH(fecha_hora) AS mes,
+    COUNT(*) AS intentos,
+    100.0 * COUNT(CASE WHEN codigo_respuesta = '00' THEN 1 END) / COUNT(*) AS tasa_aprobacion,
+    100.0 * COUNT(CASE WHEN codigo_respuesta IN('96','91','68') THEN 1 END) / COUNT(*) AS tasa_rechazo_tecnico,
+    SUM(CASE WHEN estado = 'Aprobada' AND moneda = 'PEN' THEN monto END) AS facturacion_pen
+--INTO #respuesta
+FROM
+    core.transaccion
+WHERE
+    fecha_hora >= '20260101'
+    AND fecha_hora < '20260701'
+GROUP BY
+    MONTH(fecha_hora)
+ORDER BY
+    mes ASC
 
 EXEC chk.s06_reto;
 GO
@@ -214,14 +316,28 @@ GO
       tendrías que saber antes?
       Respuesta:
 
+      El canal 1 (App Móvil) tiene la mejor tasa de aprobación con 93.69%. Sin embargo, 
+      NO recomendaría empujar a los clientes hacia ese canal porque las tasas de todos los canales son muy similares (entre 92.2% y 93.6%),
+      así que la ganancia sería mínima. Además, sería incómodo para el usuario forzarlo a cambiar su forma de pago.
+      Por otro lado, se necesitaría saber qué canal mueve más dinero en total
+
    2. En el tablero mensual, ¿la facturación crece mes a mes? ¿La tasa
       de aprobación se mantiene? ¿Qué pasaría si la facturación crece
       pero la aprobación cae?
       Respuesta:
+      
+      Con relación a la facturación, sí en el tablero mensual esta crece mes a mes pasando de S/ 2,881,181.58 a S/ 4,135,223.37 en el lapso de 6 meses.
+      De igual forma, la tasa de aprobación se mantiene (entre 93.1% y 93.4%). De modo que, si la facturación crece y la aprobación cae, estaríamos en una situación
+      donde el negocio factura más por puro volumen de tráfico, pero se vuelve menos eficiente, 
+      perdiendo muchas ventas que ya estaban listas para pagarse (costo de oportunidad) y generando mala experiencia en los clientes.
 
    3. ¿Por qué medir la aprobación con el código '00' y la facturación
       con el estado 'Aprobada'? ¿No debería ser lo mismo?
       Respuesta:
 
-   Tu avance: EXEC chk.ver_progreso 'S06';
+      No es igual porque una compra con código '00' después puede ser extornada.Ya que, con '00' 
+      medimos que el pago pasó sin fallas, y con estado 'Aprobada' sumamos solo el dinero que de verdad se quedó en el negocio (sin devoluciones).
+
+   Tu avance: ;
    ============================================================ */
+   EXEC chk.ver_progreso 'S06'

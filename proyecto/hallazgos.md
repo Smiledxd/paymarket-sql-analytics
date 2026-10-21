@@ -55,7 +55,17 @@ Cómo llenar cada pregunta (lo irás completando sesión a sesión; la sección 
 En el año 2025 hubo un total de 129,122 transacciones `nro_transacciones`.
 Asimismo,  hubo un total de 9,156 transacciones rechazadas `nro_transacciones_rechazadas`.
 De las cuales, 4,482 fueron por fondos insuficientes `fondos_insuficientes`.
-De modo que, el porcentajes de rechazos por fondos insuficientes seria de 48.95%
+De modo que, el porcentajes de rechazos por fondos insuficientes seria de 48.95%.
+
+- **Por tipo de rechazo (¿Qué canal rechaza más?):**
+  - **Rechazos del cliente:** Es el motivo más común en general, pero ningún canal destaca sobre otro; todos se mantienen muy similares y estables entre **5.5% y 6.4%** una vez que tienen buen volumen de intentos.
+  - **Rechazos técnicos:** El canal **Web** es el que mantiene las tasas habituales más altas (**entre 0.9% y 1.7%**), seguido del **POS físico** (**entre 0.8% y 1.0%**). App móvil y QR suelen estar más bajos (**0.5% a 0.8%**).
+  - **Rechazos por fraude:** El canal **Web** es por lejos el que más rechaza por fraude (**entre 0.50% y 0.88%** en 2026), superando al resto de canales
+
+- **Fuera de lo normal (Para investigar en S13):**
+  - **Anomalía crítica (2025-09 en Pago con QR):** En septiembre de 2025, con **4,410 intentos**, la `tasa_rechazo_tecnico` de **Pago con QR** se disparó a **9.66%**, cuando su comportamiento normal todos los demás meses es de apenas **0.5% a 0.8%**. Queda marcado para investigar en S13 qué falla del sistema pasó ese mes.
+  - **Ruido inicial (Primeros meses de 2025):** Entre los primeros meses se ven variaciones bruscas en **App móvil** (rechazo de cliente sube de 4.26% a 7.45%) y **Web** (8.70% en cliente y 2.78% en técnico). Pero se debe a que recién iniciaban y tenían muy pocos intentos. Desde mediados de 2025 los intentos crecen y los porcentajes se estabilizan.
+
 **Qué recomendaría:**
 
 ---

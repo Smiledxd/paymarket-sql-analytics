@@ -236,11 +236,11 @@ En [proyecto/hallazgos.md](../../proyecto/hallazgos.md) anota qué canal rechaza
 
 ## ✅ Cierre
 
-- [ ] Puedo explicar con un ejemplo cuándo una condición va en `WHERE` y cuándo en `HAVING`.
-- [ ] Puedo escribir un `CASE` buscado y explicar por qué importa el orden de los `WHEN`.
-- [ ] Sé contar con `SUM(CASE ...)` y por qué `COUNT(... ELSE 0)` cuenta todo.
-- [ ] Puedo calcular una tasa con decimales y definir claramente la parte y el total.
-- [ ] Superé los verificadores de la sesión (`EXEC chk.ver_progreso 'S06';`).
+- [x] Puedo explicar con un ejemplo cuándo una condición va en `WHERE` y cuándo en `HAVING`.
+- [x] Puedo escribir un `CASE` buscado y explicar por qué importa el orden de los `WHEN`.
+- [x] Sé contar con `SUM(CASE ...)` y por qué `COUNT(... ELSE 0)` cuenta todo.
+- [x] Puedo calcular una tasa con decimales y definir claramente la parte y el total.
+- [x] Superé los verificadores de la sesión (`EXEC chk.ver_progreso 'S06';`).
 
 ```bash
 git add .
