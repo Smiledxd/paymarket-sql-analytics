@@ -231,12 +231,12 @@ En [proyecto/hallazgos.md](../../proyecto/hallazgos.md) anota los tres grupos qu
 
 ## ✅ Cierre
 
-- [ ] Puedo explicar por qué los datos se separan en tablas y qué hace un `JOIN`.
-- [ ] Puedo escribir el camino de joins entre dos tablas mirando el diagrama.
-- [ ] Uso alias en todas las columnas y sé leer el error de columna ambigua.
-- [ ] Sé unir por fecha con `tipo_cambio` y convertir solo los montos en dólares.
+- [x] Puedo explicar por qué los datos se separan en tablas y qué hace un `JOIN`.
+- [x] Puedo escribir el camino de joins entre dos tablas mirando el diagrama.
+- [x] Uso alias en todas las columnas y sé leer el error de columna ambigua.
+- [x] Sé unir por fecha con `tipo_cambio` y convertir solo los montos en dólares.
 - [ ] Respondí la ficha de traducción en comentarios antes de escribir cada consulta.
-- [ ] Superé los verificadores de la sesión (`EXEC chk.ver_progreso 'S07';`).
+- [x] Superé los verificadores de la sesión (`EXEC chk.ver_progreso 'S07';`).
 
 ```bash
 git add .

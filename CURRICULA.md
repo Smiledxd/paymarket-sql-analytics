@@ -89,7 +89,7 @@ Fechas propuestas: martes y jueves. Ajústalas a tu semana.
 | S04 | mar 13/10 | ✔ | |
 | S05 | jue 15/10 | ✔ | |
 | S06 | mar 20/10 | ✔ | |
-| S07 | jue 22/10 | ☐ | |
+| S07 | jue 22/10 | ✔ | |
 | S08 | mar 27/10 | ☐ | |
 | S09 | jue 29/10 | ☐ | Post 1 |
 | S10 | mar 3/11 | ☐ | |

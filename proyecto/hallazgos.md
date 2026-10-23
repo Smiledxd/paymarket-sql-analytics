@@ -43,6 +43,13 @@ Cómo llenar cada pregunta (lo irás completando sesión a sesión; la sección 
 
 **Qué encontré:** Seleccioné 10, y todas son de la modalidad presencial, con una tasa_pct de 0% y probablemente Paymarket maneja esta estrategia por el volumen que manejan las transacciones diarias.
 
+- **Los 3 grupos con más comisiones son:**
+  - **Retail** con un total de S/ 261,257.37 en comisiones, lo cual, representa un 24.37% del total
+  - **Alimentos y bebidas** con un total de S/ 212,167.16 en comisiones lo cual, representa un 19.79% del total
+  - **Educación** con un total de S/ 104,461.39 en comisiones, lo cual, representa un 9.74% del total
+
+    Estos 3 rubros en conjunto son el **53.90%** de total. De modo que, esto representa más de la mitad de ingresos generados por comisiones para PayMarket
+
 **Qué recomendaría:**
 
 ---
