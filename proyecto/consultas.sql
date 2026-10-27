@@ -144,6 +144,24 @@ SELECT
     COUNT(*) - COUNT(COALESCE(correo,celular)) AS total_clientes_scontacto
 FROM core.cliente
 
+--mes de alta del cliente
+SELECT
+    YEAR(cl.fecha_alta) AS año,
+    MONTH(cl.fecha_alta) AS mes,
+    COUNT(DISTINCT cl.cliente_id) AS clientes,
+    CAST(100.00 * COUNT(DISTINCT CASE WHEN t.transaccion_id IS NULL THEN cl.cliente_id END) / COUNT(DISTINCT cl.cliente_id) AS DECIMAL(10,2)) AS pct_nunca_operacion_aprobada
+FROM core.cliente AS cl
+LEFT JOIN core.cuenta AS cu ON cu.cliente_id = cl.cliente_id
+LEFT JOIN core.transaccion AS t ON t.cuenta_id = cu.cuenta_id AND t.estado = 'Aprobada'
+GROUP BY
+    YEAR(cl.fecha_alta),
+    MONTH(cl.fecha_alta)
+ORDER BY
+    año ASC,
+    mes ASC
+
+
+
     
 
 

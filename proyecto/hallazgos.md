@@ -92,6 +92,23 @@ De modo que, el porcentajes de rechazos por fondos insuficientes seria de 48.95%
 PayMarket podría usar su correo o celular; sin embargo,
 no lograría contactar a los clientes sin ningún registro.
 
+**Hallazgos  Clientes registrados que nunca pagaron**
+
+1. Porcentaje general de inactividad
+- **Total de clientes registrados:** 20,000
+- **Clientes sin ninguna operación aprobada:** 5,999
+- **Porcentaje general:** **30 %** ( 5,999/20,000 )
+
+2. Variación por canal de adquisición (Ejercicio 2)
+Sí cambia drásticamente según el canal por el que entraron:
+- **Campaña digital:** **45.34%** sin pago (3,006 de 6,630). Es el canal menos eficiente; casi la mitad nunca usa la app.
+- **Orgánico:** **24.73%** sin pago (2,355 de 9,522).
+- **Referido:** **16.58%** sin pago (638 de 3,848). Es el canal más rentable y con mejor activación.
+
+3. Variación por mes de alta y el caso de Junio 2026
+- **Comportamiento por mes:** Durante 2025 la tasa de clientes sin pago se mantuvo estable entre **24.6% y 32.3%**. En 2026 empieza a subir (abril **39.77%**, mayo **37.83%**) y en **junio de 2026 se dispara a 63.02%**.
+- **¿Cómo tener en cuenta a los de junio de 2026?:** Como el corte de datos es el 30 de junio de 2026, los registrados ese mes llevan apenas días o semanas en la plataforma y aún no han tenido tiempo de hacer su primera compra. Para no distorsionar el análisis, **excluiría el último mes (junio 2026)** al evaluar la tendencia histórica o daría una ventana mínima de maduración (por ejemplo, medir solo clientes con al menos 30 días de antigüedad).
+
 **Qué recomendaría:**
 
 ---

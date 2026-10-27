@@ -235,11 +235,11 @@ En [proyecto/hallazgos.md](../../proyecto/hallazgos.md) anota el porcentaje gene
 
 ## ✅ Cierre
 
-- [ ] Puedo explicar qué pasa con las filas sin pareja en un `INNER JOIN` y en un `LEFT JOIN`.
-- [ ] Puedo escribir un anti-join y sé en qué columna revisar el `IS NULL`.
-- [ ] Puedo explicar con un ejemplo por qué una condición en el `WHERE` convierte un `LEFT JOIN` en `INNER JOIN`.
+- [x] Puedo explicar qué pasa con las filas sin pareja en un `INNER JOIN` y en un `LEFT JOIN`.
+- [x] Puedo escribir un anti-join y sé en qué columna revisar el `IS NULL`.
+- [x] Puedo explicar con un ejemplo por qué una condición en el `WHERE` convierte un `LEFT JOIN` en `INNER JOIN`.
 - [ ] Sé detectar el fan-out y contar entidades con `COUNT(DISTINCT)` o con `COUNT(columna_de_la_derecha)`.
-- [ ] Superé los verificadores de la sesión (`EXEC chk.ver_progreso 'S08';`).
+- [x] Superé los verificadores de la sesión (`EXEC chk.ver_progreso 'S08';`).
 
 ```bash
 git add .
