@@ -40,7 +40,8 @@
 | | S06 | Segmentar | `WHERE` vs `HAVING`, `CASE` simple y buscado, conteo condicional con `SUM(CASE ...)`, tasas, tablas cruzadas | ¿Qué canal tiene la mejor tasa de aprobación? |
 | 3. Relacionar tablas | S07 | INNER JOIN | Por qué los datos se separan en tablas, unir 2, 3 y 4 tablas, alias de tabla, convertir dólares a soles con `tipo_cambio` | ¿Qué rubros y departamentos facturan más? |
 | | S08 | LEFT JOIN | Filas sin pareja, anti-join, `ON` vs `WHERE` en un `LEFT JOIN`, duplicación de filas al unir (fan-out) y cómo detectarla | ¿Qué clientes se registraron y nunca pagaron nada? |
-| | S09 | UNION, EXISTS y self-join | `UNION` vs `UNION ALL`, `EXISTS`/`NOT EXISTS`, unir una tabla consigo misma (referidos) | ¿Los clientes referidos gastan más que los orgánicos? → **Post 1** |
+| | S09a | UNION y EXISTS | `UNION` vs `UNION ALL`, `EXISTS`/`NOT EXISTS` | ¿Qué clientes estuvieron activos este mes? |
+| | S09b | Self-join y cierre del módulo | Unir una tabla consigo misma (referidos), reto armado por etapas | ¿Los clientes referidos gastan más que los orgánicos? → **Post 1** |
 | 4. Pensar en pasos | S10 | Subconsultas | Escalares, en `WHERE` con `IN`/`EXISTS`, correlacionadas, tablas derivadas | ¿Qué comercios venden por encima del promedio de su rubro? |
 | | S11 | CTEs | `WITH`, encadenar pasos, legibilidad, construir un análisis por etapas | Pipeline: actividad por cliente → segmento → resumen |
 | 5. Funciones de ventana | S12 | Rankings | `OVER`, `PARTITION BY`, `ROW_NUMBER`, `RANK`, `DENSE_RANK`, top N por grupo | ¿Cuáles son los 3 comercios líderes de cada departamento? |
@@ -58,7 +59,7 @@
 | 9. Cierre | S24 | Simulacro | Prueba técnica de 60 minutos con preguntas nuevas, sobre 20 puntos, calificada por `chk.simulacro_resultado` | — |
 | | S25 | Publicación | README final, hallazgos, capturas, repositorio público, **Post 3** | — |
 
-**Estado de construcción del curso:** las sesiones S00 a S09 están listas (fases A y B). Las siguientes se agregan por fases; al recibir sesiones nuevas ejecuta `.\base\instalar.ps1 -ActualizarVerificadores` (no borra lo que creaste).
+**Estado de construcción del curso:** las sesiones S00 a S09b están listas (fases A y B). S09 se partió en dos (S09a y S09b) para que cada parte quepa en una hora. Si los JOIN te enredan, usa la [hoja de repaso de JOIN](guias/repaso_joins.md) y su práctica. Las siguientes se agregan por fases; al recibir sesiones nuevas ejecuta `.\base\instalar.ps1 -ActualizarVerificadores` (no borra lo que creaste).
 
 ---
 
@@ -91,20 +92,21 @@ Fechas propuestas: martes y jueves. Ajústalas a tu semana.
 | S06 | mar 20/10 | ✔ | |
 | S07 | jue 22/10 | ✔ | |
 | S08 | mar 27/10 | ✔ | |
-| S09 | jue 29/10 | ☐ | Post 1 |
-| S10 | mar 3/11 | ☐ | |
-| S11 | jue 5/11 | ☐ | |
-| S12 | mar 10/11 | ☐ | |
-| S13 | jue 12/11 | ☐ | |
-| S14 | mar 17/11 | ☐ | Post 2 |
-| S15 | jue 19/11 | ☐ | |
-| S16 | mar 24/11 | ☐ | |
-| S17 | jue 26/11 | ☐ | |
-| S18 | mar 1/12 | ☐ | |
-| S19 | jue 3/12 | ☐ | |
-| S20 | mar 8/12 | ☐ | |
-| S21 | jue 10/12 | ☐ | |
-| S22 | mar 15/12 | ☐ | |
-| S23 | jue 17/12 | ☐ | Dashboard |
-| S24 | mar 22/12 | ☐ | Simulacro |
-| S25 | jue 24/12 | ☐ | Post 3 + repositorio público |
+| S09a | jue 29/10 | ☐ | |
+| S09b | mar 3/11 | ☐ | Post 1 (escríbelo otro día) |
+| S10 | jue 5/11 | ☐ | |
+| S11 | mar 10/11 | ☐ | |
+| S12 | jue 12/11 | ☐ | |
+| S13 | mar 17/11 | ☐ | |
+| S14 | jue 19/11 | ☐ | Post 2 |
+| S15 | mar 24/11 | ☐ | |
+| S16 | jue 26/11 | ☐ | |
+| S17 | mar 1/12 | ☐ | |
+| S18 | jue 3/12 | ☐ | |
+| S19 | mar 8/12 | ☐ | |
+| S20 | jue 10/12 | ☐ | |
+| S21 | mar 15/12 | ☐ | |
+| S22 | jue 17/12 | ☐ | |
+| S23 | mar 22/12 | ☐ | Dashboard |
+| S24 | jue 24/12 | ☐ | Simulacro |
+| S25 | mar 29/12 | ☐ | Post 3 + repositorio público |

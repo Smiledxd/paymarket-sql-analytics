@@ -81,7 +81,7 @@ Un cliente puede tener varias cuentas, pero cada cuenta tiene un solo dueño: es
 
 La FK además **protege** los datos: SQL Server no te deja registrar una venta de un producto que no existe. Lo verás en el ejemplo de juguete.
 
-Un caso especial: `core.cliente.cliente_referidor_id` apunta a la misma tabla `core.cliente` (un cliente invita a otro). Lo usarás en S09.
+Un caso especial: `core.cliente.cliente_referidor_id` apunta a la misma tabla `core.cliente` (un cliente invita a otro). Lo usarás en S09b.
 
 ### 5. Leer el diagrama
 
