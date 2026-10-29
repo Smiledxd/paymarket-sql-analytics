@@ -72,4 +72,13 @@ cd base
 
 ## Autor
 
-`[COMPLETAR]` Nombre, universidad, enlace a LinkedIn.
+**Parker David Cárdenas Cabanillas**
+Estudiante de Ingeniería Industrial (8.º ciclo, UTP). Vengo de almacén, despacho y abastecimiento retail, y hoy me formo en análisis de datos.
+
+Hice este proyecto para practicar SQL con preguntas de negocio reales: limpiar datos sucios, modelar en capas y responder qué decisión conviene tomar. Los datos son simulados.
+
+- LinkedIn: [linkedin.com/in/parkercardenas-data](https://www.linkedin.com/in/parkercardenas-data/)
+- Portafolio: [smiledxd.github.io](https://smiledxd.github.io)
+- Correo: cardenascabanillaspd@gmail.com
+
+Las guías del curso las armé con apoyo de Claude; las consultas y el análisis son míos.

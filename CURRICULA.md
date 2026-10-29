@@ -92,21 +92,22 @@ Fechas propuestas: martes y jueves. Ajústalas a tu semana.
 | S06 | mar 20/10 | ✔ | |
 | S07 | jue 22/10 | ✔ | |
 | S08 | mar 27/10 | ✔ | |
-| S09a | jue 29/10 | ☐ | |
-| S09b | mar 3/11 | ☐ | Post 1 (escríbelo otro día) |
-| S10 | jue 5/11 | ☐ | |
-| S11 | mar 10/11 | ☐ | |
-| S12 | jue 12/11 | ☐ | |
-| S13 | mar 17/11 | ☐ | |
-| S14 | jue 19/11 | ☐ | Post 2 |
-| S15 | mar 24/11 | ☐ | |
-| S16 | jue 26/11 | ☐ | |
-| S17 | mar 1/12 | ☐ | |
-| S18 | jue 3/12 | ☐ | |
-| S19 | mar 8/12 | ☐ | |
-| S20 | jue 10/12 | ☐ | |
-| S21 | mar 15/12 | ☐ | |
-| S22 | jue 17/12 | ☐ | |
-| S23 | mar 22/12 | ☐ | Dashboard |
-| S24 | jue 24/12 | ☐ | Simulacro |
-| S25 | mar 29/12 | ☐ | Post 3 + repositorio público |
+| Repaso JOIN | jue 29/10 | ✔ |  |
+| S09a | mar 3/11 | ☐ |  |
+| S09b | jue 5/11 | ☐ | Post 1 (escríbelo otro día) |
+| S10 | mar 10/11 | ☐ |  |
+| S11 | jue 12/11 | ☐ |  |
+| S12 | mar 17/11 | ☐ |  |
+| S13 | jue 19/11 | ☐ |  |
+| S14 | mar 24/11 | ☐ | Post 2 |
+| S15 | jue 26/11 | ☐ |  |
+| S16 | mar 1/12 | ☐ |  |
+| S17 | jue 3/12 | ☐ |  |
+| S18 | mar 8/12 | ☐ |  |
+| S19 | jue 10/12 | ☐ |  |
+| S20 | mar 15/12 | ☐ |  |
+| S21 | jue 17/12 | ☐ |  |
+| S22 | mar 22/12 | ☐ |  |
+| S23 | jue 24/12 | ☐ | Dashboard |
+| S24 | mar 29/12 | ☐ | Simulacro |
+| S25 | jue 31/12 | ☐ | Post 3 + repositorio público |
