@@ -95,7 +95,6 @@ FROM #alumnos AS a
 WHERE NOT EXISTS (SELECT 1 FROM #pagos AS p WHERE p.mes = 'marzo' AND p.estado = 'pagado');
 GO
 
-
 /* ============================================================
    ✍️ EJERCICIO 1 — La línea de tiempo de un cliente
    El cliente 222 llamó para revisar sus movimientos de junio de 2026.
@@ -116,13 +115,36 @@ GO
 ============================================================ */
 DROP TABLE IF EXISTS #respuesta;
 -- Tu código aquí (el INTO #respuesta va en la PRIMERA parte del UNION)
-
-
+SELECT
+    CAST(t.fecha_hora AS DATE) AS fecha,
+    'billetera' AS tipo_movimiento,
+    t.monto
+INTO #respuesta
+FROM core.transaccion AS t
+JOIN core.cuenta AS c ON t.cuenta_id = c.cuenta_id
+WHERE
+    t.estado = 'Aprobada'
+    AND (t.fecha_hora >= '20260601'
+    AND t.fecha_hora < '20260701')
+    AND c.cliente_id = '222'
+UNION ALL
+SELECT
+    pc.fecha_pago,
+    'cuota',
+    pc.monto  
+FROM core.pago_cuota AS pc
+JOIN core.credito AS cr ON cr.credito_id = pc.credito_id
+WHERE
+    (pc.fecha_pago >= '20260601'
+    AND pc.fecha_pago < '20260701')
+    AND cr.cliente_id = '222'
 EXEC chk.s09_e1;
 GO
 /* Para pensar: si este cliente usa la billetera casi a diario, ¿qué
    producto adicional le ofrecerías? */
-
+   /*Una tarjeta de crédito con cashback en compras frecuentes o una línea de crédito
+   rotativa vinculada a su app. Como ya mueve su dinero a diario, le conviene acumular beneficios
+   para sus gastos diarios*/
 
 /* ============================================================
    ✍️ EJERCICIO 2 — Clientes con actividad en junio
@@ -134,22 +156,44 @@ GO
    Columna: cliente_id
 
    FICHA DE TRADUCCIÓN (respóndela tú)
-   -- 1. ¿Qué me piden?
-   -- 2. ¿Dónde está?
-   -- 3. ¿Qué filas?
-   -- 4. ¿Resumir?
-   -- 5. ¿Qué muestro?
+   -- 1. ¿Qué me piden? una lista
+   -- 2. ¿Dónde está? core.transacciom y core.pago_cuota
+   -- 3. ¿Qué filas? cliente_id
+   -- 4. ¿Resumir? no
+   -- 5. ¿Qué muestro? una lista
 ============================================================ */
 DROP TABLE IF EXISTS #respuesta;
 -- Tu código aquí
-
-
+SELECT
+    c.cliente_id AS cliente_id
+--INTO #respuesta
+FROM core.transaccion AS t
+JOIN core.cuenta AS c ON t.cuenta_id = c.cuenta_id
+WHERE
+    t.estado = 'Aprobada'
+    AND t.fecha_hora >= '20260601'
+    AND t.fecha_hora < '20260701'
+UNION
+SELECT
+    cr.cliente_id
+FROM core.credito AS cr
+JOIN core.pago_cuota AS pc ON cr.credito_id = pc.credito_id
+WHERE
+    pc.fecha_pago >= '20260601'
+    AND pc.fecha_pago < '20260701'
+    --8174
 EXEC chk.s09_e2;
 GO
 /* Para pensar: ¿qué porcentaje de los clientes registrados estuvo activo
    en junio? ¿Te parece una buena definición de "activo"? */
 
+SELECT COUNT(cliente_id) AS clientes_total
+FROM core.cliente -- 20000
 
+ /* El 40.87 % ( 8174/20000 * 100 )de los clientes realizaron un movimiento en Junio.
+ No me parece una buena definición llamarlos activos. Ya que se confunde con los clientes "activo"
+ según su estado. */
+    
 /* ============================================================
    ✍️ EJERCICIO 3 — Clientes con crédito que dejaron de usar la billetera
    Riesgos sospecha que un cliente que deja de usar la billetera podría
@@ -159,7 +203,7 @@ GO
 
    Qué lograr: una fila por cliente (cada uno una sola vez).
    Columna: cliente_id
-
+   
    FICHA DE TRADUCCIÓN (respóndela tú)
    -- 1. ¿Qué me piden?
    -- 2. ¿Dónde está?
@@ -169,7 +213,20 @@ GO
 ============================================================ */
 DROP TABLE IF EXISTS #respuesta;
 -- Tu código aquí
-
+SELECT
+    DISTINCT cr.cliente_id
+INTO #respuesta
+FROM core.credito AS cr
+WHERE
+    cr.estado = 'Vigente'
+    AND NOT EXISTS (SELECT 1
+        FROM core.transaccion AS t
+        JOIN core.cuenta AS cu ON t.cuenta_id = cu.cuenta_id
+        WHERE
+            cr.cliente_id = cu.cliente_id
+            AND (t.fecha_hora >= '20260501'
+            AND t.fecha_hora < '20260601')
+            AND t.estado = 'Aprobada')
 
 EXEC chk.s09_e3;
 GO
@@ -182,6 +239,9 @@ GO
    ¿qué harías con ella? ¿Cómo comprobarías después si la sospecha
    era cierta?
    Respuesta:
+   Cruzaría la lista con sus saldos pendientes, días de retraso y su score de crediticio
+   para priorizar a los más críticos
 
-   Tu avance: EXEC chk.ver_progreso 'S09';
+   Tu avance: ;
    ============================================================ */
+   EXEC chk.ver_progreso 'S09'

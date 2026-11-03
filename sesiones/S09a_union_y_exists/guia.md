@@ -188,10 +188,10 @@ Esta vez es corto. En [proyecto/hallazgos.md](../../proyecto/hallazgos.md), bajo
 
 ## ✅ Cierre
 
-- [ ] Puedo explicar la diferencia entre `JOIN` (al costado) y `UNION` (debajo).
-- [ ] Sé elegir entre `UNION ALL` y `UNION` con la pregunta "¿son dos cosas o la misma repetida?".
-- [ ] Puedo leer un `NOT EXISTS` en español y sé qué línea lo conecta con la consulta de afuera.
-- [ ] Superé los verificadores `s09_e1`, `s09_e2` y `s09_e3` (`EXEC chk.ver_progreso 'S09';`).
+- [x] Puedo explicar la diferencia entre `JOIN` (al costado) y `UNION` (debajo).
+- [x] Sé elegir entre `UNION ALL` y `UNION` con la pregunta "¿son dos cosas o la misma repetida?".
+- [x] Puedo leer un `NOT EXISTS` en español y sé qué línea lo conecta con la consulta de afuera.
+- [x] Superé los verificadores `s09_e1`, `s09_e2` y `s09_e3` (`EXEC chk.ver_progreso 'S09';`).
 
 ```bash
 git add .

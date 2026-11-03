@@ -93,7 +93,7 @@ Fechas propuestas: martes y jueves. Ajústalas a tu semana.
 | S07 | jue 22/10 | ✔ | |
 | S08 | mar 27/10 | ✔ | |
 | Repaso JOIN | jue 29/10 | ✔ |  |
-| S09a | mar 3/11 | ☐ |  |
+| S09a | mar 3/11 | ✔ |  |
 | S09b | jue 5/11 | ☐ | Post 1 (escríbelo otro día) |
 | S10 | mar 10/11 | ☐ |  |
 | S11 | jue 12/11 | ☐ |  |

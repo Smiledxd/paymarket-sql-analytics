@@ -79,7 +79,7 @@ De modo que, el porcentajes de rechazos por fondos insuficientes seria de 48.95%
 
 ## 4. ¿Qué clientes se registran y no usan la billetera? ¿Cómo retiene cada cohorte?
 
-**Tablas que necesito:** `core.canal`, `core.cliente`, `core.transacciones`
+**Tablas que necesito:** `core.cuenta`, `core.cliente`, `core.transacciones`
 
 **Qué encontré:**
 
@@ -92,7 +92,7 @@ De modo que, el porcentajes de rechazos por fondos insuficientes seria de 48.95%
 PayMarket podría usar su correo o celular; sin embargo,
 no lograría contactar a los clientes sin ningún registro.
 
-**Hallazgos  Clientes registrados que nunca pagaron**
+**Hallazgos Clientes registrados que nunca pagaron**
 
 1. Porcentaje general de inactividad
 - **Total de clientes registrados:** 20,000
@@ -108,6 +108,9 @@ Sí cambia drásticamente según el canal por el que entraron:
 3. Variación por mes de alta y el caso de Junio 2026
 - **Comportamiento por mes:** Durante 2025 la tasa de clientes sin pago se mantuvo estable entre **24.6% y 32.3%**. En 2026 empieza a subir (abril **39.77%**, mayo **37.83%**) y en **junio de 2026 se dispara a 63.02%**.
 - **¿Cómo tener en cuenta a los de junio de 2026?:** Como el corte de datos es el 30 de junio de 2026, los registrados ese mes llevan apenas días o semanas en la plataforma y aún no han tenido tiempo de hacer su primera compra. Para no distorsionar el análisis, **excluiría el último mes (junio 2026)** al evaluar la tendencia histórica o daría una ventana mínima de maduración (por ejemplo, medir solo clientes con al menos 30 días de antigüedad).
+
+**Clientes activos en junio de 2026** 
+-En el mes de Junio 8,174 clientes realizó al menos un pago **aprobado** con la billetera o pagó al menos una cuota de crédito. Lo cual, representa el **40.87%** ( 8,174/20,000*100 ) de clientes registrados en la plataforma que realizaron un movimiento en Junio.
 
 **Qué recomendaría:**
 
