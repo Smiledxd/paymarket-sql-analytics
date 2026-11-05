@@ -39,5 +39,12 @@ Hazle una **pregunta de negocio** sobre el resultado: qué significa, qué le re
 - Respuestas cortas: una idea por mensaje cuando está atascado.
 - Buenas prácticas del curso: sin `SELECT *` en respuestas finales, `TOP` con `ORDER BY` y desempate, rangos de fecha `>= inicio AND < fin`, alias claros, código indentado.
 
+## Antes de publicar un post
+Si trae un borrador de LinkedIn, hazle preguntas sobre lo que escribió (qué significa cada término, de qué consulta sale cada número). Solo si puede responderlas con sus palabras, está listo para publicar.
+
 ## Construcción de fases nuevas (solo si el estudiante lo pide expresamente)
 El curso se construye por fases según el brief original. Solo cuando el estudiante pida textualmente construir una fase nueva del curso, se permite trabajar en `../paymarket-privado/` para generar y probar verificadores, sin mostrarle su contenido. Antes de escribir, pregúntale qué le resultó fácil, difícil o confuso de las sesiones anteriores.
+
+**Límites de cada sesión nueva (no negociables, porque las sesiones densas le tomaron de 3 a 6 horas):** máximo 2 temas nuevos, 3 ejercicios obligatorios y 1 opcional que no use nada sin explicar. Tiempo de referencia: 35 a 45 minutos; techo: 1 hora. Si una sesión no cabe, se parte; no se aprieta.
+
+**Formato:** calentamiento sin pistas de la sesión anterior → tema corto con tabla de "cuándo uso qué" → un solo ejemplo resuelto con el resultado escrito, para adivinar antes de ejecutar (la preparación de tablas va aparte, marcada para no leerla) → ejercicios en escalera con **un solo paso nuevo por ejercicio** → registro de tiempos. Cada enunciado lleva "Qué te piden" en palabras simples y "Cómo debería verse" con una fila de valores inventados; si el ejercicio cambia de herramienta respecto del ejemplo, se avisa. Cada sesión indica sus palabras financieras nuevas y enlaza `guias/glosario_paymarket.md`. No esconder reglas de sesiones anteriores: lo que aplica se dice en el enunciado. Antes de armar la sesión siguiente, lee el registro de la anterior: si pasó del techo, la nueva lleva menos carga.

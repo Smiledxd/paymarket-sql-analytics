@@ -8,7 +8,7 @@
 | **Antes de empezar** | S08. Si todavía te enredan los JOIN, haz primero (otro día) la [hoja de repaso de JOIN](../../guias/repaso_joins.md) con su práctica |
 | **Archivos** | Esta guía + [practica.sql](practica.sql) |
 
-S09 se partió en dos para que cada parte quepa en una hora. Esta es la **parte A**: dos herramientas nuevas y **3 ejercicios**. La parte B ([S09b](../S09b_self_join_y_post1/guia.md)) es el self-join, el reto del módulo y el Post 1.
+S09 se partió en dos para que cada parte quepa en una hora. Esta es la **parte A**: dos herramientas nuevas y **3 ejercicios**. Sigue un repaso ([R09](../R09_repaso_left_join_y_not_exists/guia.md)) y luego [S09b](../S09b_self_join/guia.md) (self-join) y [S09c](../S09c_reto_y_post1/guia.md) (reto del módulo y Post 1).
 
 **Objetivos**
 1. Apilar dos resultados con `UNION ALL` y `UNION`, y elegir el correcto.
@@ -182,7 +182,7 @@ WHERE ____
 
 ## 🧱 Avance del proyecto
 
-Esta vez es corto. En [proyecto/hallazgos.md](../../proyecto/hallazgos.md), bajo la pregunta 4, anota cuántos clientes estuvieron activos en junio de 2026 (ejercicio 2) y qué porcentaje de los 20 mil registrados representan. Nada más: el resto lo harás en S09b.
+Esta vez es corto. En [proyecto/hallazgos.md](../../proyecto/hallazgos.md), bajo la pregunta 4, anota cuántos clientes estuvieron activos en junio de 2026 (ejercicio 2) y qué porcentaje de los 20 mil registrados representan. Nada más: el resto lo harás en S09c.
 
 ---
 

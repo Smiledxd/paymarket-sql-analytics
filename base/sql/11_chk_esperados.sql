@@ -368,6 +368,25 @@ INSERT INTO chk.ejercicio_columna (ejercicio_id, orden, nombre, familia, hash_co
     ('s09_reto', 4, N'facturacion', 'numero', 0xF6CE1F1F09D4731135194AAE031081E15AA4B10C6A7C868749FB269688BBC5A5, NULL),
     ('s09_reto', 5, N'gasto_por_cliente_con_pago', 'numero', 0xF7DC07F6B1C15437C7A673D111D80BC3D567895B22E3FAE390D49FA3CA186FB6, N'Es la facturación dividida entre los clientes que sí pagaron, no entre todos.');
 
+INSERT INTO chk.ejercicio (ejercicio_id, sesion, titulo, num_filas, pista_filas, hash_total) VALUES
+    ('r09_e1', 'R09', N'Clientes de enero de 2025 que nunca recibieron un crédito', 351, N'Son clientes que se registraron en enero de 2025 y para los que NO EXISTE ningún crédito. Si tienes 0 filas, revisa la línea que conecta el crédito con el cliente de afuera. Si tienes muchas, revisa el filtro de fecha.', 0x6DFCBB9EA6FE349571A139C63D5880A3C12459C93B4C5A735E52E7ADF2441E60);
+INSERT INTO chk.ejercicio_columna (ejercicio_id, orden, nombre, familia, hash_columna, pista) VALUES
+    ('r09_e1', 1, N'cliente_id', 'numero', 0x3A1BE71AE54148A30CC7C09ED7E17B3E6433E842D3EB1E1BE23C3E5217B91C26, NULL),
+    ('r09_e1', 2, N'nombres', 'texto', 0x28DDA958FDEFA435FB12B199CC4333ED513A34AFAE0BF4DF649EC8B29C842C83, NULL);
+
+INSERT INTO chk.ejercicio (ejercicio_id, sesion, titulo, num_filas, pista_filas, hash_total) VALUES
+    ('r09_e2', 'R09', N'Todas las librerías y sus ventas de junio', 18, N'Deben salir TODAS las librerías (MCC 5942), también las que no vendieron en junio. Si te faltan, revisa si una condición sobre la operación quedó en el WHERE: va en el ON.', 0xC02C2EC3926D6671B426010B19EF1378D1F0B2A1505BDFF357E505F705130B1A);
+INSERT INTO chk.ejercicio_columna (ejercicio_id, orden, nombre, familia, hash_columna, pista) VALUES
+    ('r09_e2', 1, N'comercio_id', 'numero', 0x9F4CF998C50B3832E4318943E4F17710077AC7059AF6F329FB7485B6EC844B72, NULL),
+    ('r09_e2', 2, N'nombre_comercial', 'texto', 0x38C86BDB1C92654D896FE44893F73A51B58F9FC94C744289AC995459BEB6B25E, NULL),
+    ('r09_e2', 3, N'operaciones_aprobadas', 'numero', 0x75BA86FEDDAA23318C3D9DE34E680AA78B02C6C4915BD6C979E6D4C40FB08283, N'Una librería sin ventas debe mostrar 0. COUNT(*) cuenta su fila y da 1: cuenta una columna de la tabla de operaciones.');
+
+INSERT INTO chk.ejercicio (ejercicio_id, sesion, titulo, num_filas, pista_filas, hash_total) VALUES
+    ('r09_e3', 'R09', N'Clientes antiguos que dejaron de pagar con la billetera', 407, N'Son clientes con estado ''Activo'', registrados en enero de 2025, para los que NO EXISTE un pago aprobado en junio de 2026. Si tienes 0 filas, revisa la línea que conecta la subconsulta con el cliente de afuera.', 0x1CC7B71315B3844FD9164D0BF8AD6142BC4781255A8112C851DE52A827C0F9D2);
+INSERT INTO chk.ejercicio_columna (ejercicio_id, orden, nombre, familia, hash_columna, pista) VALUES
+    ('r09_e3', 1, N'cliente_id', 'numero', 0x38FBF3F248D6DB65347AE9ECCCAA89BAD6D4689828432B0E31A540BBAE038E6E, NULL),
+    ('r09_e3', 2, N'nombres', 'texto', 0x58462A3C93AFB0092377AF0822966D1BA7B335D08528755972C6FA4BF53E3F53, NULL);
+
 GO
 CREATE OR ALTER PROCEDURE chk.s00_e1 AS EXEC chk.verificar 's00_e1';
 GO
@@ -466,4 +485,10 @@ GO
 CREATE OR ALTER PROCEDURE chk.s09_e4 AS EXEC chk.verificar 's09_e4';
 GO
 CREATE OR ALTER PROCEDURE chk.s09_reto AS EXEC chk.verificar 's09_reto';
+GO
+CREATE OR ALTER PROCEDURE chk.r09_e1 AS EXEC chk.verificar 'r09_e1';
+GO
+CREATE OR ALTER PROCEDURE chk.r09_e2 AS EXEC chk.verificar 'r09_e2';
+GO
+CREATE OR ALTER PROCEDURE chk.r09_e3 AS EXEC chk.verificar 'r09_e3';
 GO

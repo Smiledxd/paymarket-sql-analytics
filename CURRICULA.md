@@ -9,7 +9,9 @@
 
 **Meta:** resolver problemas de negocio reales con SQL sin quedarse en blanco, y terminar con un repositorio público, un dashboard en Power BI, tres publicaciones de LinkedIn y un simulacro de prueba técnica.
 
-**Ritmo:** 2 sesiones por semana de 60 minutos exactos. Si una sesión se alarga, se termina en la siguiente antes de avanzar.
+**Ritmo:** hasta 2 sesiones por semana, con un **techo de 1 hora** cada una. Al llegar al techo se para, aunque falte: lo demás sigue en la siguiente sesión. Terminar no es la meta; entender sí.
+
+**Límites de cada sesión (desde R09):** máximo 2 temas nuevos, 3 ejercicios obligatorios y 1 opcional. Tiempo de referencia: 35 a 45 minutos. Si sigues trabado 15 minutos después de la pista 3, marcas ⏭️ y pasas al siguiente ejercicio. Cada sesión termina con un registro de tiempos, y si una pasa del techo, la siguiente lleva menos carga.
 
 **Reglas**
 - Tú escribes todo el código de análisis. No hay solucionario.
@@ -21,9 +23,9 @@
 
 | Sesiones | Ficha |
 |---|---|
-| S00–S06 | Guiada: algunos pasos vienen respondidos y otros con huecos |
-| S07–S14 | Vacía: solo las 5 preguntas; las respondes tú en comentarios |
-| S15–S25 | Sin ficha: se recuerda solo en el reto final, como opción |
+| S00–S14 | Guiada: preguntas concretas con huecos para pensar el ejercicio |
+| S15–S20 | Más corta: solo las preguntas clave |
+| S21–S25 | Sin ficha: se recuerda solo en el reto final, como opción |
 
 ---
 
@@ -41,7 +43,9 @@
 | 3. Relacionar tablas | S07 | INNER JOIN | Por qué los datos se separan en tablas, unir 2, 3 y 4 tablas, alias de tabla, convertir dólares a soles con `tipo_cambio` | ¿Qué rubros y departamentos facturan más? |
 | | S08 | LEFT JOIN | Filas sin pareja, anti-join, `ON` vs `WHERE` en un `LEFT JOIN`, duplicación de filas al unir (fan-out) y cómo detectarla | ¿Qué clientes se registraron y nunca pagaron nada? |
 | | S09a | UNION y EXISTS | `UNION` vs `UNION ALL`, `EXISTS`/`NOT EXISTS` | ¿Qué clientes estuvieron activos este mes? |
-| | S09b | Self-join y cierre del módulo | Unir una tabla consigo misma (referidos), reto armado por etapas | ¿Los clientes referidos gastan más que los orgánicos? → **Post 1** |
+| | R09 | Repaso | Cuándo usar `JOIN`, `LEFT JOIN` o `NOT EXISTS`; `ON` vs `WHERE`; cómo se lee un `NOT EXISTS` | ¿Qué clientes dejaron de pagar? |
+| | S09b | Self-join | Unir una tabla consigo misma (referidos) | ¿Quién invitó a cada cliente nuevo? |
+| | S09c | Reto del módulo | `COUNT(DISTINCT CASE ...)` por capas y consulta armada por etapas | ¿Los clientes referidos gastan más que los orgánicos? → **Post 1** |
 | 4. Pensar en pasos | S10 | Subconsultas | Escalares, en `WHERE` con `IN`/`EXISTS`, correlacionadas, tablas derivadas | ¿Qué comercios venden por encima del promedio de su rubro? |
 | | S11 | CTEs | `WITH`, encadenar pasos, legibilidad, construir un análisis por etapas | Pipeline: actividad por cliente → segmento → resumen |
 | 5. Funciones de ventana | S12 | Rankings | `OVER`, `PARTITION BY`, `ROW_NUMBER`, `RANK`, `DENSE_RANK`, top N por grupo | ¿Cuáles son los 3 comercios líderes de cada departamento? |
@@ -59,7 +63,9 @@
 | 9. Cierre | S24 | Simulacro | Prueba técnica de 60 minutos con preguntas nuevas, sobre 20 puntos, calificada por `chk.simulacro_resultado` | — |
 | | S25 | Publicación | README final, hallazgos, capturas, repositorio público, **Post 3** | — |
 
-**Estado de construcción del curso:** las sesiones S00 a S09b están listas (fases A y B). S09 se partió en dos (S09a y S09b) para que cada parte quepa en una hora. Si los JOIN te enredan, usa la [hoja de repaso de JOIN](guias/repaso_joins.md) y su práctica. Las siguientes se agregan por fases; al recibir sesiones nuevas ejecuta `.\base\instalar.ps1 -ActualizarVerificadores` (no borra lo que creaste).
+**Estado de construcción del curso:** las sesiones S00 a S09c están listas (fases A y B). Las sesiones de S10 en adelante se construyen con los límites de arriba, y las más pesadas se parten en dos. Al recibir sesiones nuevas ejecuta `.\base\instalar.ps1 -ActualizarVerificadores` (no borra lo que creaste).
+
+**Hojas de apoyo:** [glosario de palabras financieras](guias/glosario_paymarket.md), [repaso de JOIN](guias/repaso_joins.md) y [receta de 5 pasos](guias/receta_5_pasos.md).
 
 ---
 
@@ -68,7 +74,7 @@
 | Hito | Sesiones | Qué se agrega a `proyecto/` |
 |---|---|---|
 | P0 | S00–S04 | Tablas necesarias por pregunta y primeras consultas exploratorias (tasas, rechazos, contacto, estacionalidad por día) |
-| P1 | S05–S09 | KPIs por canal y rubro, clientes que nunca pagaron, referidos vs orgánicos → 📣 **Post 1** |
+| P1 | S05–S09c | KPIs por canal y rubro, clientes que nunca pagaron, referidos vs orgánicos → 📣 **Post 1** |
 | P2 | S10–S14 | Comercios sobre su rubro, evolución mensual, Pareto de comercios → 📣 **Post 2** |
 | P3 | S15–S20 | Calidad de datos, conciliación POS, modelo estrella y vistas `rpt` |
 | P4 | S21–S25 | Mora por cosecha, retención por cohorte, dashboard, recomendaciones → 📣 **Post 3 + repositorio público** |
@@ -79,7 +85,7 @@ Los posts los escribes tú, con un hallazgo concreto que hayas calculado y la ac
 
 ## 3. Progreso
 
-Fechas propuestas: martes y jueves. Ajústalas a tu semana.
+Fechas propuestas: martes y jueves, con **una sola sesión por semana del 16/11 al 2/1** (entregas de GCI, cierre de ciclo en la UTP y fiestas). Python va lunes y miércoles. Las sesiones pesadas pueden partirse: hay margen hasta fines de febrero, antes de postular en marzo de 2027. Ajústalas a tu semana.
 
 | Sesión | Fecha objetivo | Hecha | Notas |
 |---|---|---|---|
@@ -94,20 +100,22 @@ Fechas propuestas: martes y jueves. Ajústalas a tu semana.
 | S08 | mar 27/10 | ✔ | |
 | Repaso JOIN | jue 29/10 | ✔ |  |
 | S09a | mar 3/11 | ✔ |  |
-| S09b | jue 5/11 | ☐ | Post 1 (escríbelo otro día) |
-| S10 | mar 10/11 | ☐ |  |
-| S11 | jue 12/11 | ☐ |  |
-| S12 | mar 17/11 | ☐ |  |
-| S13 | jue 19/11 | ☐ |  |
-| S14 | mar 24/11 | ☐ | Post 2 |
-| S15 | jue 26/11 | ☐ |  |
-| S16 | mar 1/12 | ☐ |  |
-| S17 | jue 3/12 | ☐ |  |
-| S18 | mar 8/12 | ☐ |  |
-| S19 | jue 10/12 | ☐ |  |
-| S20 | mar 15/12 | ☐ |  |
-| S21 | jue 17/12 | ☐ |  |
-| S22 | mar 22/12 | ☐ |  |
-| S23 | jue 24/12 | ☐ | Dashboard |
-| S24 | mar 29/12 | ☐ | Simulacro |
-| S25 | jue 31/12 | ☐ | Post 3 + repositorio público |
+| R09 | jue 5/11 | ✔ |  |
+| S09b | mar 10/11 | ☐ |  |
+| S09c | jue 12/11 | ☐ | Post 1: otro día, cuando estés listo |
+| S10 | mar 17/11 | ☐ |  |
+| S11 | mar 24/11 | ☐ |  |
+| S12 | mar 1/12 | ☐ |  |
+| S13 | mar 8/12 | ☐ |  |
+| S14 | mar 15/12 | ☐ | Post 2 |
+| S15 | mar 22/12 | ☐ |  |
+| S16 | mar 29/12 | ☐ |  |
+| S17 | mar 5/1 | ☐ |  |
+| S18 | jue 7/1 | ☐ |  |
+| S19 | mar 12/1 | ☐ |  |
+| S20 | jue 14/1 | ☐ |  |
+| S21 | mar 19/1 | ☐ |  |
+| S22 | jue 21/1 | ☐ |  |
+| S23 | mar 26/1 | ☐ | Dashboard |
+| S24 | jue 28/1 | ☐ | Simulacro |
+| S25 | mar 2/2 | ☐ | Post 3 + repositorio público |
