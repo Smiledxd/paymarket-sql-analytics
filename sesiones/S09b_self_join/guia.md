@@ -86,8 +86,8 @@ WHERE ____
 
 Di en voz alta, sin mirar:
 
-- [ ] ¿Por qué un self-join necesita dos alias?
-- [ ] En el `ON`, ¿qué columna va contra cuál?
+- [x] ¿Por qué un self-join necesita dos alias?
+- [x] En el `ON`, ¿qué columna va contra cuál?
 
 **Antes de irte, llena el registro** al final de `practica.sql`.
 

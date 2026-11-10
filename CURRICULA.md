@@ -61,7 +61,13 @@
 | | S22 | Caso clientes | Cohortes de retención mensual, segmentación RFM con `NTILE`, clientes en riesgo de abandono | ¿Qué clientes debemos intentar retener primero? |
 | | S23 | Dashboard en Power BI | Conectar a las vistas de `rpt`, relaciones, 3 o 4 medidas DAX simples (`SUM`, `DIVIDE`, `CALCULATE` básico), tablero de una página | ¿Qué ve la gerencia cada lunes? |
 | 9. Cierre | S24 | Simulacro | Prueba técnica de 60 minutos con preguntas nuevas, sobre 20 puntos, calificada por `chk.simulacro_resultado` | — |
-| | S25 | Publicación | README final, hallazgos, capturas, repositorio público, **Post 3** | — |
+| 10. Nube (opcional) | AZ1 | Crear la base gratis | Qué es Azure SQL Database, servidor lógico y serverless, pausa automática, qué consume los segundos de vCore, crear la base en el nivel gratis con pausa al llegar al límite | ¿Por qué una fintech no guarda su base en la laptop del analista? |
+| | AZ2 | Seguridad básica | Firewall solo con tu IP, usuario de solo lectura para las vistas de `rpt`, qué nunca subir al repositorio | ¿Quién debe poder ver qué? |
+| | AZ3 | Migrar y comprobar | Cargar los datos en la base gratis ya creada, comparar conteos y totales contra la base local, respaldo `.bacpac` probado | ¿Llegó todo? ¿Cómo lo demuestro? |
+| | AZ4 | Power BI en la nube | Cambiar la fuente del dashboard, Import vs DirectQuery, ver los segundos restantes y crear una alerta | ¿Qué conviene para no agotar el límite? |
+| 9. Cierre | S25 | Publicación | README final con el diagrama local → Azure → Power BI, hallazgos, capturas, repositorio público, **Post 3** | — |
+
+**Módulo de nube (opcional):** va entre S24 y S25 y se construye justo antes de hacerlo. Azure se activa recién en enero de 2027, sin tarjeta y sin pasar a pago por uso. Antes de crear la base, confirma que tu oferta no sea "Azure for Students Starter", porque esa no admite el nivel gratis. El objetivo es usar la nube, documentarla con capturas y saber explicar las decisiones; no hace falta mantenerla. Si no se puede activar o falta tiempo, el curso sigue sin él: tu base local nunca se apaga.
 
 **Estado de construcción del curso:** las sesiones S00 a S09c están listas (fases A y B). Las sesiones de S10 en adelante se construyen con los límites de arriba, y las más pesadas se parten en dos. Al recibir sesiones nuevas ejecuta `.\base\instalar.ps1 -ActualizarVerificadores` (no borra lo que creaste).
 
@@ -101,7 +107,7 @@ Fechas propuestas: martes y jueves, con **una sola sesión por semana del 16/11 
 | Repaso JOIN | jue 29/10 | ✔ |  |
 | S09a | mar 3/11 | ✔ |  |
 | R09 | jue 5/11 | ✔ |  |
-| S09b | mar 10/11 | ☐ |  |
+| S09b | mar 10/11 | ✔ |  |
 | S09c | jue 12/11 | ☐ | Post 1: otro día, cuando estés listo |
 | S10 | mar 17/11 | ☐ |  |
 | S11 | mar 24/11 | ☐ |  |
@@ -118,4 +124,8 @@ Fechas propuestas: martes y jueves, con **una sola sesión por semana del 16/11 
 | S22 | jue 21/1 | ☐ |  |
 | S23 | mar 26/1 | ☐ | Dashboard |
 | S24 | jue 28/1 | ☐ | Simulacro |
-| S25 | mar 2/2 | ☐ | Post 3 + repositorio público |
+| AZ1 | mar 2/2 | ☐ | Opcional |
+| AZ2 | jue 4/2 | ☐ | Opcional |
+| AZ3 | mar 9/2 | ☐ | Opcional; si pesa, se parte en dos |
+| AZ4 | jue 11/2 | ☐ | Opcional |
+| S25 | mar 16/2 | ☐ | Post 3 + repositorio público |

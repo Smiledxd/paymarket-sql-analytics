@@ -27,6 +27,8 @@ Ejemplo: Ana paga S/ 20 en una bodega escaneando un QR. La plata sale de su **bi
 | **POS** | La maquinita donde pasas la tarjeta en la tienda |
 | **QR** | El código cuadrado que escaneas con el celular para pagar |
 | **Operación / transacción** | Un **intento** de pago. Puede aprobarse o no |
+| **Pago con la billetera** | El cliente le paga a una tienda: es una operación aprobada (`core.transaccion`). No es lo mismo que pagar una cuota |
+| **Pago de cuota** | El cliente devuelve parte de su crédito (`core.pago_cuota`) |
 | **Aprobada** | El pago pasó y la tienda recibió el dinero |
 | **Rechazada** | El pago no pasó. No se movió dinero |
 | **Extornada** | El pago se aprobó, pero después **se devolvió** (como anular una compra) |
