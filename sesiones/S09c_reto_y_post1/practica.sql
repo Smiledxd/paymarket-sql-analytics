@@ -12,8 +12,8 @@ GO
    1. En un self-join, ¿por qué necesito dos alias?:
    2. ¿Qué herramienta uso para "los clientes que nunca recibieron un crédito"?:
    ============================================================ */
-
-
+   /*Necesita 2 alias la misma tabla se comporta de maneras distintas dependiendo de la llave*/
+   /*not exists*/
 /* ------------------------------------------------------------
    PREPARACIÓN: no hace falta leerlo. Selecciónalo y ejecútalo.
    ------------------------------------------------------------ */
@@ -64,23 +64,72 @@ GO
 
    FICHA
    -- ¿Qué es una fila? Un canal de adquisición.
-   -- ¿Qué tabla no quiero perder? ______
-   -- ¿Qué condiciones van en el ON y cuál en el WHERE? ______
+   -- ¿Qué tabla no quiero perder? core.clientes
+   -- ¿Qué condiciones van en el ON y cuál en el WHERE? En el ON las de pago, en el WHERE las de la tabla principal FROM
 ============================================================ */
 
 -- ETAPA 1: solo los JOIN y un SELECT TOP (20) para MIRAR las filas (sin INTO, sin GROUP BY).
 --          ¿Aparecen clientes con NULL en las columnas de la operación?
+SELECT TOP 20 *
+FROM core.cliente AS cl
+JOIN core.cuenta AS cu ON cu.cliente_id = cl.cliente_id
+LEFT JOIN core.transaccion AS tr ON tr.cuenta_id = cu.cuenta_id
 
+-- ETAPA 2: agrega los filtros. Vuelve a mirar: ¿siguen apareciendo los NULL?(sí)
 
--- ETAPA 2: agrega los filtros. Vuelve a mirar: ¿siguen apareciendo los NULL?
-
+SELECT TOP 20 *
+FROM core.cliente AS cl
+JOIN core.cuenta AS cu ON cu.cliente_id = cl.cliente_id
+LEFT JOIN core.transaccion AS tr
+    ON tr.cuenta_id = cu.cuenta_id
+    AND tr.estado = 'Aprobada'
+    AND tr.moneda = 'PEN'
+WHERE
+    (cl.fecha_alta >= '20250101'
+    AND cl.fecha_alta < '20260101')
 
 -- ETAPA 3: agrega el GROUP BY y las columnas de resumen, de una en una.
-
-
+SELECT
+    cl.canal_adquisicion,
+    COUNT(DISTINCT cl.numero_documento) AS clientes,
+    COUNT(DISTINCT CASE WHEN tr.transaccion_id IS NOT NULL THEN cl.numero_documento END) AS clientes_con_pago,
+    SUM(tr.monto) AS facturacion,
+    SUM(tr.monto) / COUNT(DISTINCT CASE WHEN tr.transaccion_id IS NOT NULL THEN cl.numero_documento END) AS gasto_por_cliente_con_pago
+FROM core.cliente AS cl
+JOIN core.cuenta AS cu ON cu.cliente_id = cl.cliente_id
+LEFT JOIN core.transaccion AS tr
+    ON tr.cuenta_id = cu.cuenta_id
+    AND tr.estado = 'Aprobada'
+    AND tr.moneda = 'PEN'
+WHERE
+    (cl.fecha_alta >= '20250101'
+    AND cl.fecha_alta < '20260101')
+GROUP BY
+    cl.canal_adquisicion
+ORDER BY
+    facturacion DESC
 -- ETAPA 4: tu consulta final con INTO #respuesta.
 DROP TABLE IF EXISTS #respuesta;
-
+SELECT
+    cl.canal_adquisicion,
+    COUNT(DISTINCT cl.numero_documento) AS clientes,
+    COUNT(DISTINCT CASE WHEN tr.transaccion_id IS NOT NULL THEN cl.numero_documento END) AS clientes_con_pago,
+    SUM(tr.monto) AS facturacion,
+    SUM(tr.monto) / COUNT(DISTINCT CASE WHEN tr.transaccion_id IS NOT NULL THEN cl.numero_documento END) AS gasto_por_cliente_con_pago
+INTO #respuesta
+FROM core.cliente AS cl
+JOIN core.cuenta AS cu ON cu.cliente_id = cl.cliente_id
+LEFT JOIN core.transaccion AS tr
+    ON tr.cuenta_id = cu.cuenta_id
+    AND tr.estado = 'Aprobada'
+    AND tr.moneda = 'PEN'
+WHERE
+    (cl.fecha_alta >= '20250101'
+    AND cl.fecha_alta < '20260101')
+GROUP BY
+    cl.canal_adquisicion
+ORDER BY
+    facturacion DESC
 
 EXEC chk.s09_reto;
 GO
@@ -90,19 +139,23 @@ GO
    💬 UNA SOLA PREGUNTA
    ¿Los referidos gastan más? Si fueras de marketing, ¿qué harías con
    ese dato?
-   Respuesta:
+   Respuesta: Sí los clientes con pago, que son referidos gastán que los orgánicos.
+   Sí fuera Marketing impulsaría el programa de referidos dando mayores beneficios a las personas que
+   refieran a más personas, y estás tengan consumos constantes en la billetera
 
 
    📋 REGISTRO (llénalo al terminar; me sirve para ajustar lo siguiente)
-   Hora de inicio:
-   Hora de fin:
+   Hora de inicio: 4:55
+   5:30 Tuve un inconveniente y me fui de clase y regresé 5:48
+   Hora de fin: 5:53 (terminé de responder a la pregunta)
 
    Ejercicio | Minutos | ¿Lo saltaste? (⏭️) | Pistas que abriste
-   Reto      |         |                    |
+   Reto      |   5:02 a    5:26 aprox   |                    | 0
 
-   ¿Usaste IA? ¿Para qué?:
-   ¿Qué palabra o parte del enunciado te confundió?:
-   Dificultad del 1 al 5:
+   ¿Usaste IA? ¿Para qué?: para recordar el join self como se escribia
+   ¿Qué palabra o parte del enunciado te confundió?: ninguna, gracias a "las palabras de hoy"
+   Dificultad del 1 al 5: 3
 
-   Tu avance: EXEC chk.ver_progreso 'S09';
+   Tu avance: ;
    ============================================================ */
+   EXEC chk.ver_progreso 'S09'

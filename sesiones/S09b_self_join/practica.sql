@@ -76,7 +76,7 @@ SELECT
     r.cliente_id AS referidor_id,
     r.nombres AS nombre_referidor,
     DATEDIFF(DAY,r.fecha_alta,n.fecha_alta) AS dias_desde_alta_referidor
---INTO #respuesta
+INTO #respuesta
 FROM core.cliente AS n
 JOIN core.cliente AS r ON n.cliente_referidor_id= r.cliente_id
 WHERE

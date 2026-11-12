@@ -92,7 +92,7 @@ De modo que, el porcentajes de rechazos por fondos insuficientes seria de 48.95%
 PayMarket podría usar su correo o celular; sin embargo,
 no lograría contactar a los clientes sin ningún registro.
 
-**Hallazgos Clientes registrados que nunca pagaron**
+**Hallazgos Clientes registrados que nunca pagaron:**
 
 1. Porcentaje general de inactividad
 - **Total de clientes registrados:** 20,000
@@ -110,7 +110,10 @@ Sí cambia drásticamente según el canal por el que entraron:
 - **¿Cómo tener en cuenta a los de junio de 2026?:** Como el corte de datos es el 30 de junio de 2026, los registrados ese mes llevan apenas días o semanas en la plataforma y aún no han tenido tiempo de hacer su primera compra. Para no distorsionar el análisis, **excluiría el último mes (junio 2026)** al evaluar la tendencia histórica o daría una ventana mínima de maduración (por ejemplo, medir solo clientes con al menos 30 días de antigüedad).
 
 **Clientes activos en junio de 2026** 
--En el mes de Junio 8,174 clientes realizó al menos un pago **aprobado** con la billetera o pagó al menos una cuota de crédito. Lo cual, representa el **40.87%** ( 8,174/20,000*100 ) de clientes registrados en la plataforma que realizaron un movimiento en Junio.
+- En el mes de Junio 8,174 clientes realizó al menos un pago **aprobado** con la billetera o pagó al menos una cuota de crédito. Lo cual, representa el **40.87%** ( 8,174/20,000*100 ) de clientes registrados en la plataforma que realizaron un movimiento en Junio.
+
+**Qué canal gasta más por cliente:**
+- El canal de adquisión de `Referido` presenta 2,045 clientes registrados de cuales 1830 han realizados pagos. Además, cuenta con una facturacción total de S/ 8,500,479.11. Asimismo, el gasto por cliente por pago de **S/ 4,645.07** (8,500,479.11 / 1830). De modo que, es el canal de adquisión donde el cliente gasta más frente a `Orgánico` y `Campaña digital`
 
 **Qué recomendaría:**
 

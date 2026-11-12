@@ -108,7 +108,7 @@ Fechas propuestas: martes y jueves, con **una sola sesión por semana del 16/11 
 | S09a | mar 3/11 | ✔ |  |
 | R09 | jue 5/11 | ✔ |  |
 | S09b | mar 10/11 | ✔ |  |
-| S09c | jue 12/11 | ☐ | Post 1: otro día, cuando estés listo |
+| S09c | jue 12/11 | ✔ | Post 1: otro día, cuando estés listo |
 | S10 | mar 17/11 | ☐ |  |
 | S11 | mar 24/11 | ☐ |  |
 | S12 | mar 1/12 | ☐ |  |

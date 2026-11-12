@@ -124,8 +124,8 @@ En [proyecto/hallazgos.md](../../proyecto/hallazgos.md), bajo la pregunta 4, esc
 
 Di en voz alta, sin mirar:
 
-- [ ] ¿Qué hace cada capa de `COUNT(DISTINCT CASE ...)`?
-- [ ] ¿Por qué las condiciones del pago no van en el `WHERE`?
+- [x] ¿Qué hace cada capa de `COUNT(DISTINCT CASE ...)`?
+- [x] ¿Por qué las condiciones del pago no van en el `WHERE`?
 
 **Antes de irte, llena el registro** al final de `practica.sql`.
 
